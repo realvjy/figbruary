@@ -8,8 +8,9 @@ export default function Header() {
       <Container>
         <HeadWrap>
           <NavMenu>
-            Header
-
+            <img src='figbruary-logo.svg' />
+            <p>Challenges using Figma for the next 28 days</p>
+            <a href="https://twitter.com/realvjy">Follow along</a>
           </NavMenu>
         </HeadWrap>
       </Container>
