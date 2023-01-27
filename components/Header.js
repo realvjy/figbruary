@@ -1,37 +1,24 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import Nav from 'components/nav'
-import Footer from 'components/footer'
-import Header from 'components/header'
+
 import styled from "styled-components";
-import { Container } from 'components/ReusableStyles'
+import { Container } from "./ReusableStyles";
+export default function Header() {
 
-
-
-export default function Home() {
   return (
-    <>
-      <HeaderContainer>
-        <Container>
-          <HeadWrap>
-            <NavMenu>
-              <img src='figbruary-logo.svg' />
-              <p>Challenges using Figma for the next 28 days</p>
-              <a href="https://twitter.com/realvjy">Follow along</a>
-            </NavMenu>
-          </HeadWrap>
-        </Container>
-      </HeaderContainer>
-      <Footer />
-    </>
+    <HeaderContainer>
+      <Container>
+        <HeadWrap>
+          <NavMenu>
+            Header
+
+          </NavMenu>
+        </HeadWrap>
+      </Container>
+    </HeaderContainer>
   )
 }
 
 const HeaderContainer = styled.div`
   position: relative;
-  min-height: 1000vh;
-  overflow: auto;
   &::before{
     content: "";
     position: absolute;
@@ -50,7 +37,7 @@ const HeaderContainer = styled.div`
     left: -50px;
     top: -60px;
     filter: blur(60px); */
-    overflow: unset;
+    overflow: auto;
   }
   @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
     
@@ -59,8 +46,6 @@ const HeaderContainer = styled.div`
 
 const HeadWrap = styled.div`
   padding: 0 20px;
-  height: 300px;
-  margin-top: 400px;
 `
 
 const NavMenu = styled.div`
@@ -68,20 +53,8 @@ const NavMenu = styled.div`
   -webkit-box-pack: justify;
   justify-content: space-between;
   align-items: center;
-  flex-direction: column;
   height: 125px;
-  p{
-    color: var(--white);
-    font-size: 20px;
-    
-  }
-  a{
-    font-size: 18px;
-    background-color: var(--black);
-    color: var(--white);
-    padding: 8px 22px;
-    border-radius: 12px;
-  }
+  background-color: red;
 `
 
 const Logo = styled.div`
