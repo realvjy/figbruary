@@ -25,7 +25,7 @@ const PromptData = [
   },
   {
     day: 2,
-    date: "28 Jan, 2023",
+    date: "29 Jan, 2023",
     name: `Let’s warmup`,
     tag: ['some', 'tags'],
     description: `Create a cool camping illustration, night time, fire, Create a cool camping illustration, night time, fire`,
