@@ -6,7 +6,7 @@ export default function Layout({ children }) {
     <Main >
       {children}
       <svg id="texture"><filter id="noise">
-        <feTurbulence type="fractalNoise" baseFrequency="1" numOctaves="2" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter><rect width="100%" height="100%" filter="url(#noise)"></rect>
+        <feTurbulence type="fractalNoise" baseFrequency="1" numOctaves="4" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter><rect width="100%" height="100%" filter="url(#noise)"></rect>
       </svg>
     </Main>
   )
@@ -39,9 +39,9 @@ const Main = styled.main`
     z-index: -99;
     width: 100%;
     height: calc(100vh + 200px);
-    opacity: 0.2;
+    opacity: 0.1;
     pointer-events: none;
     transform: translateY(0px);
-    filter: contrast(200%) brightness(260%);
+    filter: contrast(200%) brightness(200%);
   }
 `;
