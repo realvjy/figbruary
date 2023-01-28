@@ -5,7 +5,7 @@ export default function Layout({ children }) {
   return (
     <Main >
       {children}
-      <svg id="texture"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="4" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter><rect width="100%" height="100%" filter="url(#noise)"></rect></svg>
+      <svg id="texture"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency=".6" numOctaves="6" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter><rect width="100%" height="100%" filter="url(#noise)"></rect></svg>
     </Main>
   )
 }
@@ -13,7 +13,22 @@ export default function Layout({ children }) {
 const Main = styled.main`
   position: relative;
   min-height: 100vh;
-  
+  &::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -100;
+    background-image: url('/gradient-bg.svg');
+    background-repeat: no-repeat;
+    background-position: top, bottom;
+    background-size: 1400px auto;
+    margin-top: -100px;
+    filter: blur(12px);
+    @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
+      background-size: 800px auto;
+      margin-top: -10px;
+    }
+  }
   #texture{
     position: fixed;
     top: 0px;
@@ -21,9 +36,9 @@ const Main = styled.main`
     z-index: -99;
     width: 100%;
     height: calc(100vh + 200px);
-    opacity: 0.25;
+    opacity: 0.2;
     pointer-events: none;
     transform: translateY(0px);
-    filter: contrast(120%) brightness(120%);
+    filter: contrast(100%) brightness(160%);
   }
 `;
