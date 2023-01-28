@@ -5,6 +5,7 @@ import Head from "next/head";
 import { darkTheme, lightTheme } from "../styles/theme.config";
 import { ThemeProvider } from "styled-components";
 import useDarkMode from "use-dark-mode";
+import { GoogleAnalytics } from "nextjs-google-analytics";
 
 export default function App({ Component, pageProps }) {
   const darkMode = useDarkMode(true, { storageKey: null, onChange: null })
@@ -14,6 +15,7 @@ export default function App({ Component, pageProps }) {
     setIsMounted(true);
   }, [])
   return <>
+    <GoogleAnalytics />
     <ThemeProvider theme={lightTheme}>
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />

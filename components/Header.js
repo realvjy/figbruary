@@ -12,7 +12,6 @@ export default function Header() {
             <Pen className='pen' />
             <img src='figbruary-logo.svg' className="logo" />
             <p>Challenges using Figma for the next 28 days</p>
-            <a href="https://twitter.com/realvjy">Follow along</a>
           </HeadLogo>
         </HeadWrap>
       </Container>
@@ -26,7 +25,7 @@ const HeaderContainer = styled.div`
   min-height: 400px;
   margin-bottom: 24px;
   @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
-      min-height: 300px;
+      min-height: 280px;
    }
 `
 
@@ -49,9 +48,11 @@ const HeadLogo = styled.div`
     }
   p{
     color: var(--white);
+    text-align: center;
     font-size: 20px;
+    opacity: .7;
+    margin: 0 24px;
     @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
-      font-size: 18px;
    }
   }
   .pen{

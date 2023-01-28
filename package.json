@@ -13,6 +13,7 @@
     "@next/font": "13.1.5",
     "next": "13.1.5",
     "next-seo": "^5.15.0",
+    "nextjs-google-analytics": "^2.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "styled-components": "^5.3.6",

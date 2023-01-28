@@ -37,6 +37,9 @@ const HomeWrap = styled.div`
 const HomeBox = styled.div`
   padding: 0 20px;
   margin: 32px;
+  @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
+    margin: 32px auto;
+  }
   p{
     font-size: 18px;
     line-height: 150%;

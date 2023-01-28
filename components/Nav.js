@@ -18,7 +18,7 @@ export default function Nav() {
       <Container>
         <NavWrap>
           <NavMenu>
-            {/* <ul>
+            <ul>
               <li>
                 <Link passHref href={'/'} className={page('/') ? 'active' : ''}>
                   home
@@ -34,8 +34,8 @@ export default function Nav() {
                   faqs
                 </Link>
               </li>
-            </ul> */}
-            <h4>Prompts coming soon</h4>
+            </ul>
+            {/* <h4>Prompts coming soon</h4> */}
           </NavMenu>
         </NavWrap>
       </Container>
@@ -80,11 +80,7 @@ const NavMenu = styled.div`
             border-radius: 3px;
             margin-top: 30px;
             margin-left: calc(50% - 15px);
-            @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
-              background-size: 700px auto;
-              margin-top: -60px;
-              filter: blur(8px);
-            }
+           
           }
         }
       }
