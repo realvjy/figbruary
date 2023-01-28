@@ -10,8 +10,8 @@ export default function Footer() {
       <Container>
         <NavWrap>
           <Credit>
-            <p>Not officially related to Figma.</p>
-            <p>Initiated by @realvjy, contributed by community</p>
+            <p>Not officially related to Figma</p>
+            <p>Initiated by <a href="https://twitter.com/realvjy">@realvjy</a>, contributed by community</p>
           </Credit>
         </NavWrap>
       </Container>
@@ -57,8 +57,15 @@ const Menus = styled.div`
 `
 
 const Credit = styled.div`
+text-align: center;
   p{
-    color: var(--black);
-    opacity: .4;
+    color: var(--tag-black);
+    margin: 8px 0;
+    font-weight: 500;
   }
+  a{
+      font-weight: 700;
+      color: var(--black);
+    }
+
 `

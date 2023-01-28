@@ -10,7 +10,24 @@ export default function Nav() {
       <Container>
         <NavWrap>
           <NavMenu>
-            This is Nav
+            {/* <ul>
+              <li>
+                <Link passHref href={'/'} className={'active'}>
+                  home
+                </Link>
+              </li>
+              <li>
+                <Link passHref href={'/'} className={'active'} >
+                  prompts
+                </Link>
+              </li>
+              <li>
+                <Link passHref href={'/'} className={'active'}>
+                  faqs
+                </Link>
+              </li>
+            </ul> */}
+            <h4>Prompts coming soon</h4>
           </NavMenu>
         </NavWrap>
       </Container>
@@ -20,14 +37,51 @@ export default function Nav() {
 
 const NavWrap = styled.div`
   padding: 0 20px;
+  margin-top: 40px;
+  @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
+      margin-top: 20px;
+  }
 `
 
 const NavMenu = styled.div`
   display: flex;
   -webkit-box-pack: justify;
-  justify-content: space-between;
   align-items: center;
-  height: 125px;
+  justify-content: center;
+  h4{
+    color: var(--white);
+  }
+  ul{
+    display: flex;
+    li{
+      a{
+        padding: 12px;
+        color: var(--white);
+        line-height: 30px;
+        font-size: 20px;
+        &.active{
+          font-weight: 800;
+          position: relative;
+          &::before{
+            content: "";
+            position: absolute;
+            z-index: -100;
+            height: 6px;
+            width: 6px;
+            background: var(--white);
+            border-radius: 3px;
+            margin-top: 30px;
+            margin-left: calc(50% - 15px);
+            @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
+              background-size: 700px auto;
+              margin-top: -60px;
+              filter: blur(8px);
+            }
+          }
+        }
+      }
+    }
+  }
 `
 
 const Logo = styled.div`

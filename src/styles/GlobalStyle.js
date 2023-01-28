@@ -53,10 +53,10 @@ body.light-mode, body[data-theme="light"] {
   --selection-bg: #00FFFF;
 
 } 
-/* ::selection {
-    background: var(--selection-bg);
-    color: var(--text-primary);
-} */
+::selection {
+    background: var(--selection-pink);
+    color: var(--white);
+}
 
 * {
   --bg-light-yellow: #F2F2EE;

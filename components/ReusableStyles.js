@@ -10,7 +10,7 @@ export const Container = styled.div`
   margin: 0 auto;
   @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
     width: 100%;
-    padding:  0 8px;
+    padding:  0 12px;
   }
 `;
 

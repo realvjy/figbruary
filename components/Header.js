@@ -1,5 +1,6 @@
 
 import styled from "styled-components";
+import { Pen } from "./icons";
 import { Container } from "./ReusableStyles";
 export default function Header() {
 
@@ -8,6 +9,7 @@ export default function Header() {
       <Container>
         <HeadWrap>
           <HeadLogo>
+            <Pen className='pen' />
             <img src='figbruary-logo.svg' className="logo" />
             <p>Challenges using Figma for the next 28 days</p>
             <a href="https://twitter.com/realvjy">Follow along</a>
@@ -22,8 +24,9 @@ const HeaderContainer = styled.div`
   position: relative;
   overflow: auto;
   min-height: 400px;
+  margin-bottom: 24px;
   @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
-    
+      min-height: 300px;
    }
 `
 
@@ -40,16 +43,33 @@ const HeadLogo = styled.div`
   align-items: center;
   flex-direction: column;
   margin-top: 200px;
+  color: var(--white);
+    @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
+      margin-top: 80px;
+    }
   p{
     color: var(--white);
     font-size: 20px;
+    @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
+      font-size: 18px;
+   }
   }
+  .pen{
+    margin-bottom: 24px;
+    margin-left: -20px;
+    @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
+      transform: scale(.7);
+      margin-bottom: 8px;
+    }
+  }
+  
   a{
     font-size: 18px;
     background-color: var(--black);
     color: var(--white);
     padding: 8px 22px;
     border-radius: 12px;
+    margin-top: 20px;
   }
   .logo{
     height: 32px;
