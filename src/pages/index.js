@@ -8,6 +8,7 @@ import styled from "styled-components";
 import { Container } from 'components/ReusableStyles'
 import HomePage from 'components/HomePage'
 import Seo from 'components/Seo'
+import seoData from 'next-seo.config';
 
 
 
