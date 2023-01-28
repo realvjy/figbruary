@@ -3,7 +3,15 @@ import Link from "next/link";
 import styled from "styled-components";
 import { FigmaIcon } from "./icons";
 import { Container } from "./ReusableStyles";
+import { useRouter } from 'next/router';
+import { useState, useEffect } from "react"
+
 export default function Nav() {
+  const path = useRouter().pathname;
+
+  const page = (p) => {
+    return p === path;
+  };
 
   return (
     <>
@@ -12,17 +20,17 @@ export default function Nav() {
           <NavMenu>
             {/* <ul>
               <li>
-                <Link passHref href={'/'} className={'active'}>
+                <Link passHref href={'/'} className={page('/') ? 'active' : ''}>
                   home
                 </Link>
               </li>
               <li>
-                <Link passHref href={'/'} className={'active'} >
+                <Link passHref href={'/prompts'} className={page('/prompts') ? 'active' : ''} >
                   prompts
                 </Link>
               </li>
               <li>
-                <Link passHref href={'/'} className={'active'}>
+                <Link passHref href={'/faq'} className={page('/faq') ? 'active' : ''}>
                   faqs
                 </Link>
               </li>

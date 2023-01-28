@@ -21,6 +21,7 @@ export default function Footer() {
 
 const NavWrap = styled.div`
   padding: 0 20px;
+  margin-top: 40px;
 `
 
 const NavMenu = styled.div`
