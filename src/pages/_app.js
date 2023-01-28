@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }) {
     setIsMounted(true);
   }, [])
   return <>
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={lightTheme}>
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <link rel="icon" href="/favicon.ico" />

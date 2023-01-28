@@ -7,9 +7,7 @@ const GlobalStyle = createGlobalStyle`
 
 body.dark-mode, body[data-theme="dark"] {
   --img: invert(1);
-  #texture{
-    filter: contrast(30%) brightness(50%);
-  }
+
   --img-shadow: 6px 6px 12px -6px rgb(0 0 0 / 50%), 24px 24px 30px -6px rgb(0 0 0 / 50%);
   --img-shadow-2: 2px 2px 4px -2px rgb(0 0 0 / 50%), 24px 24px 30px -6px rgb(0 0 0 / 50%);
   --hover-bg: linear-gradient(90deg, rgba(30, 28, 50, 0.8) 0%, rgba(43, 22, 29, 0.7) 100%);
@@ -126,7 +124,7 @@ html{
 }
 
 body {
-  background: ${({ theme }) => theme.bg.primary};
+  background: var(--yellowhite);
   color: ${({ theme }) => theme.text.primary};
   font-family: 'Manrope', sans-serif;
   text-rendering: optimizeLegibility;

@@ -6,7 +6,7 @@ export default function Layout({ children }) {
     <Main >
       {children}
       <svg id="texture"><filter id="noise">
-        <feTurbulence type="fractalNoise" baseFrequency=".6" numOctaves="2" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter><rect width="100%" height="100%" filter="url(#noise)"></rect>
+        <feTurbulence type="fractalNoise" baseFrequency="1" numOctaves="2" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter><rect width="100%" height="100%" filter="url(#noise)"></rect>
       </svg>
     </Main>
   )
