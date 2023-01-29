@@ -10,8 +10,10 @@ export default function Footer() {
       <Container>
         <NavWrap>
           <Credit>
-            <p>Not officially related to Figma</p>
-            <p>Initiated by <a href="https://twitter.com/realvjy">@realvjy</a>, contributed by community</p>
+            <p className="small">This is not affiliated with Figma in any way</p>
+
+            <p>Crafted by <a href="https://twitter.com/realvjy">@realvjy</a>, contributed by community</p>
+
           </Credit>
         </NavWrap>
       </Container>
@@ -20,8 +22,9 @@ export default function Footer() {
 }
 
 const NavWrap = styled.div`
-  padding: 0 20px;
+  padding:  20px;
   margin-top: 40px;
+  
 `
 
 const NavMenu = styled.div`
@@ -63,6 +66,10 @@ text-align: center;
     color: var(--tag-black);
     margin: 8px 0;
     font-weight: 500;
+    
+  }
+  .small{
+    font-size: 14px;
   }
   a{
       font-weight: 700;

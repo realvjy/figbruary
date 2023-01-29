@@ -10,14 +10,22 @@ export default function HomePage() {
       <Container>
         <HomeWrap>
           <HomeBox>
-            <p><strong>Figbruary</strong> is an finctional month created by combining Figma + February where you can experiment and design things daily to push the limits</p>
+            <p><strong>Figbruary</strong> is a finctional month created by combining Figma + February where you can experiment and design things daily to push the limits.</p>
           </HomeBox>
           <HomeBox>
-            <p>For every 24 hour day within this 672 hour timespan, we have prepared a prompt with instructions for you to design and create.</p>
+            <p>For every 24 hour day within this 672 hour timespan of the month, we have prepared a prompt with instructions for you to design and create.</p>
             <p className="small">PS. - You don’t have to follow the prompt exactly. Or even at all. </p>
           </HomeBox>
           <HomeBox>
-            <p>Share your work and tag it with <strong>#figruary</strong> and <strong>#figruary2023</strong></p>
+            <p>Share your work and tag it with <strong>#figbruary</strong> and <strong>#figbruary2023</strong></p>
+          </HomeBox>
+          <HomeBox>
+            <h3>Credit</h3>
+            <p>Thanks to
+              <a href='https://twitter.com/miggi'>Miggi</a>
+              <a href='https://twitter.com/agusegui'>Agu Seguí</a>
+              <a href='https://twitter.com/o_lonks'>Olonks</a>
+            </p>
           </HomeBox>
         </HomeWrap>
       </Container>
@@ -36,17 +44,34 @@ const HomeWrap = styled.div`
 
 const HomeBox = styled.div`
   padding: 0 20px;
-  margin: 32px;
+  margin: 40px 32px;
   @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
     margin: 32px auto;
+  }
+  h3{
+    font-size: 20px;
+    margin-top: 12px;
+    margin-bottom: 12px;
   }
   p{
     font-size: 18px;
     line-height: 150%;
     margin: 8px 0;
+    letter-spacing: -.1px;
     &.small{
       font-size: 16px;
       color: var(--gray);
+    }
+  }
+  a{
+    display: inline-flex;
+    font-weight: 600;
+    text-decoration: underline;
+    line-height: 140%;
+    margin-left: 8px;
+    opacity: .7;
+    &:hover{
+      opacity: 1;
     }
   }
 `

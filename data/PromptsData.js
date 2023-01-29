@@ -5,21 +5,23 @@ const PromptData = [
     day: 0,
     date: "28 Jan, 2023",
     name: `Let’s warmup`,
-    tag: ['some', 'tags'],
+    tag: ['plugin', 'tags'],
     description: `Create a cool camping illustration, night time, fire, Create a cool camping illustration, night time, fire`,
     credit: "realvjy",
     creditLink: "#",
+    hidden: true,
     finished: true,
     link: "#"
   },
   {
     day: 1,
     date: "1 Feb, 2023",
-    name: `Let’s warmup`,
-    tag: ['some', 'tags'],
-    description: `Create a cool camping illustration, night time, fire, Create a cool camping illustration, night time, fire`,
+    name: `Campfire`,
+    tag: ['illlustration'],
+    description: `Create a cool camping illustration, night time, Starry night.`,
     credit: "realvjy",
     creditLink: "#",
+    hidden: false,
     finished: true,
     link: "#"
   },
@@ -27,11 +29,12 @@ const PromptData = [
     day: 2,
     date: "29 Jan, 2023",
     name: `Let’s warmup`,
-    tag: ['some', 'tags'],
+    tag: ['some', 'plugin'],
     description: `Create a cool camping illustration, night time, fire, Create a cool camping illustration, night time, fire`,
     credit: "realvjy",
     creditLink: "#",
     finished: true,
+    hidden: true,
     link: "#"
   },
   {
@@ -43,6 +46,7 @@ const PromptData = [
     credit: "realvjy",
     creditLink: "#",
     finished: true,
+    hidden: true,
     link: "#"
   },
   {
@@ -54,6 +58,7 @@ const PromptData = [
     credit: "realvjy",
     creditLink: "#",
     finished: true,
+    hidden: true,
     link: "#"
   },
 

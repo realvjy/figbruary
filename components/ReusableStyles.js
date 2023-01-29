@@ -142,12 +142,12 @@ export const ButtonLink = styled.a`
 
 export const SectionTitle = styled.h2`
     padding: 0 16px;
-    font-size: 14px;
+    font-size: 24px;
     margin: 0;
+    font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--light-gray);
-    opacity: .7;
+    color: var(--black);
+    text-align: center;
     &.center{
       text-align: center;
     }
@@ -374,4 +374,60 @@ export const SupportLink = styled.div`
       }
     }
   }
+`
+
+export const TypeTag = styled.div`
+  position: relative;
+  display: inline-grid;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 14px;
+  padding: 1px 6px;
+  border-radius: 9px;
+  margin-right: 6px;
+  @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
+      font-size: 10px;
+  }
+  &.blue{
+    background:linear-gradient(270deg, #E5E4FF 0%, #DCE8FF 100%);
+    color: rgba(7,4,138, .7);
+  }
+  &.red{
+    background: linear-gradient(90deg,#ffc4c4 0%,#ffe7e7 100%);
+    color: rgba(211,0,0, .7);
+  }
+  &.pink{
+    background:  linear-gradient(90deg, #FFD5E3 0%, #FFF0F8 100%);
+    color: rgba(216, 44, 106, 0.8);
+  }
+  &.purple{
+    background: linear-gradient(180deg, #F5F1FF 0%, #EBE9FF 100%);
+    color: rgba(92, 27, 174, 0.8);
+  }
+  
+  &.teal{
+    background: linear-gradient(270deg, #CCFAFF 0%, #AFD4FF 99.55%);
+    color: rgba(0, 113, 194, 0.8);
+  }
+  &.orange{
+    background:linear-gradient(270deg, #FFCEDF 0%, #F7D1FF 100%);
+    color: rgba(140, 0, 126, 0.8);
+  }
+  &.yellow{
+    background: linear-gradient(90deg,#ffd566 0%,#fff8e6 100%);
+    color: rgb(223 93 9 / 80%);
+    /* background: linear-gradient(90deg, #FFD7D7 0%, #FFF4E6 100%);
+    color: rgba(204, 61, 0, .8); */
+  } 
+  
+  &.black{
+    background: linear-gradient(90deg,rgba(100,100,100,.2) 0%, rgba(200,200,200,.1) 100%);
+    color: var(--text-secondary);
+    /* background: linear-gradient(90deg, #FFD7D7 0%, #FFF4E6 100%);
+    color: rgba(204, 61, 0, .8); */
+  } 
+  &.green{
+    background: linear-gradient(90deg,#d8f9bb 0%,#fdf8cc 100%);
+    color: rgba(60, 132, 0, 0.8);
+  }   
 `
