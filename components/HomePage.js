@@ -10,7 +10,7 @@ export default function HomePage() {
       <Container>
         <HomeWrap>
           <HomeBox>
-            <p><strong>Figbruary</strong> is a finctional month created by combining Figma + February where you can experiment and design things daily to push the limits.</p>
+            <p><strong>Figbruary</strong> is a fictional month created by combining Figma + February where you can experiment and design things daily to push the limits.</p>
           </HomeBox>
           <HomeBox>
             <p>For every 24 hour day within this 672 hour timespan of the month, we have prepared a prompt with instructions for you to design and create.</p>
