@@ -6,7 +6,7 @@ export default {
         url: 'https://figbruary.com',
         description: 'Challenges using Figma for the next 28 days',
         locale: 'en_EN',
-        keywords: 'figma, figbruary, illustrator, indian designer, vijay verma, realvjy, illlustrations, indian illustrator, ui designer india, sushi design system, zomato designer, 3dicons, uiprint, vijay realvjy, indian ui designer, design india, overlayz, nft art',
+        keywords: 'figma, figbruary, illustrator, figma designer, vijay verma, realvjy, illlustrations, overlayz',
         images: [
             {
                 width: 1200,
