@@ -15,8 +15,11 @@ const getTagClass = (t) => {
     case 'illustration':
       return 'red'
       break;
-    case 'plugin':
-      return 'pink'
+    case 'prototype':
+      return 'blue'
+      break;
+    case 'UI':
+      return 'green'
       break;
     default:
       return 'orange'
@@ -73,6 +76,7 @@ const PromptList = (props) => {
             })
           }
 
+          <h3>More updating soon...</h3>
         </PromptWrapper>
       </Container>
     </PromptSection>
@@ -92,6 +96,9 @@ const PromptWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
+  h3{
+    text-align: center;
+  }
 `
 
 const PromptBox = styled.div`
@@ -101,14 +108,33 @@ const PromptBox = styled.div`
   /* box-shadow: inset 0px 0px 30px -2px rgba(255, 203, 203, 0.25); */
   border-radius: 20px;
   margin: 0 auto;
-  max-width: 550px;
+  width: 480px;
   transition: all ease 300ms;
-  
+  @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
+      width: 100%;
+  }
   .desc{
     font-weight: 500;
     opacity: .8;
   }
- 
+  &.green{
+    box-shadow: inset 0px 0px 30px -2px rgba(29, 162, 114, 0.09);
+    &:hover{
+      box-shadow: inset 0px 0px 30px -2px rgba(29, 162, 114, 0.12);
+    }
+  }
+  &.orange{
+    box-shadow: inset 0px 0px 30px -2px rgba(140, 0, 126, 0.08);
+    &:hover{
+      box-shadow: inset 0px 0px 30px -2px rgba(140, 0, 126, 0.2);
+    }
+  }
+  &.red{
+    box-shadow: inset 0px 0px 30px -2px rgba(211,0,0, .07);
+    &:hover{
+      box-shadow: inset 0px 0px 30px -2px rgba(211,0,0, .16);
+    }
+  }
   &.pink{
     box-shadow: inset 0px 0px 30px -2px rgba(216, 44, 106, 0.1);
     &:hover{
@@ -122,8 +148,9 @@ const PromptBox = styled.div`
     }
   }
   h2{
-    font-size: 24px;
+    font-size: 22px;
     display: flex;
+    font-weight: 800;
     align-items: center;
   }
 `
@@ -145,7 +172,7 @@ const Title = styled.div`
   align-items: center;
   margin: 8px 0;
   h3{
-    font-size: 20px;
+    font-size: 18px;
   }
 `
 const Tags = styled.div`
@@ -158,7 +185,7 @@ const PCredit = styled.div`
   margin-top: 12px;
   p{
     
-    font-size: 16px;
+    font-size: 14px;
     line-height: 20px;
   }
   a{

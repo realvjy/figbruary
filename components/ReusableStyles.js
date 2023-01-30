@@ -349,7 +349,7 @@ export const SupportLink = styled.div`
         }  
         &.green{
           background: linear-gradient(270deg, #FFF7E3 0%, #DAFFBC 96.72%);
-          color: rgba(29, 162, 114, 0.79);;
+          color: rgba(29, 162, 114, 0.79);
         }  
         &.teal{
           background: linear-gradient(270deg, #B8F8FF 0%, #AFD4FF 99.55%);;
@@ -393,7 +393,7 @@ export const TypeTag = styled.div`
     color: rgba(7,4,138, .7);
   }
   &.red{
-    background: linear-gradient(90deg,#ffc4c4 0%,#ffe7e7 100%);
+    background: linear-gradient(90deg,#ffc4c4 0%,#FFE0CA 100%);
     color: rgba(211,0,0, .7);
   }
   &.pink{

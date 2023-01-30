@@ -24,7 +24,7 @@ export default function Faq() {
             <SectionTitle>Faq</SectionTitle>
             <Question>
               <h3>What is Figbruary?</h3>
-              <p>Figbruary is a finctional month created by combining Figma + February where you can experiment and design things daily to push the limits.
+              <p>Figbruary is a fictional month created by combining Figma + February where you can experiment and design things daily to push the limits.
               </p>
             </Question>
             <Question>
