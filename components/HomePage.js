@@ -68,6 +68,7 @@ const HomeBox = styled.div`
     font-weight: 600;
     text-decoration: underline;
     line-height: 140%;
+    color: var(--black);
     margin-left: 8px;
     opacity: .7;
     &:hover{
@@ -105,5 +106,8 @@ const Credit = styled.div`
   p{
     color: var(--black);
     opacity: .4;
+  }
+  a{
+    color: var(--black);
   }
 `

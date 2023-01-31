@@ -152,7 +152,7 @@ export const SectionTitle = styled.h2`
       text-align: center;
     }
     @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
-      font-size: 12px;
+      font-size: 20px;
     }
 `
 export const SpacedTitle = styled.h2`

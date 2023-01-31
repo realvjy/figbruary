@@ -184,11 +184,12 @@ const Tags = styled.div`
 const PCredit = styled.div`
   margin-top: 12px;
   p{
-    
+    color: var(--black);
     font-size: 14px;
     line-height: 20px;
   }
   a{
+    color: var(--black);
     font-weight: 700;
   }
 `

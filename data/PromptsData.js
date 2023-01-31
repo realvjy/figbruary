@@ -112,7 +112,7 @@ const PromptData = [
   {
     day: 9,
     date: "9 Feb, 2023",
-    name: `Sidbar`,
+    name: `Sidebar`,
     tag: ['UI', 'prototype'],
     description: `Create a cool sidebar for dashboard or app`,
     credit: "realvjy",

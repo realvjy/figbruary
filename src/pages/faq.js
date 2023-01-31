@@ -56,6 +56,9 @@ export default function Faq() {
 
 const FaqSection = styled.div`
   margin-top: 80px;
+  @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
+     margin-top: 60px;
+  }
 `
 
 const FaqWrap = styled.div`
@@ -68,12 +71,15 @@ const Question = styled.div`
   margin-bottom: 32px;
   display: flex;
   flex-direction: column;
+  color: var(--black);
   h3{
     font-size: 20px;
     margin-top: 12px;
     margin-bottom: 12px;
+    color: var(--black);
   }
   a{
+    color: var(--black);
     display: block;
     font-weight: 600;
     text-decoration: underline;
