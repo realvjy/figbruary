@@ -133,6 +133,109 @@ const PromptData = [
     finished: true,
     link: "#"
   },
+
+  {
+    day: 11,
+    date: "11 Feb, 2023",
+    name: `Toggle`,
+    tag: ['prototype'],
+    description: `Smart animate a unique toggle. Get creative with it!`,
+    credit: "rogie",
+    creditLink: "#",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
+
+  {
+    day: 12,
+    date: "12 Feb, 2023",
+    name: `Temprature`,
+    tag: ['prototype'],
+    description: `Make a temperature interface for a shower or any product`,
+    credit: "Miggi",
+    creditLink: "#",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
+
+  {
+    day: 13,
+    date: "13 Feb, 2023",
+    name: `Isomorphic illustration`,
+    tag: ['illustration'],
+    description: `Create a cool illustration in isometric style`,
+    credit: "Agu Seguí",
+    creditLink: "#",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
+
+  {
+    day: 14,
+    date: "14 Feb, 2023",
+    name: `Heart`,
+    tag: ['illustration', 'animation'],
+    description: `Be creative and make whatever you want.`,
+    credit: "realvjy",
+    creditLink: "#",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
+
+  {
+    day: 15,
+    date: "15 Feb, 2023",
+    name: `Glitch effect`,
+    tag: ['prototype'],
+    description: `Yeah, can you do it? Break the matrix simulation..`,
+    credit: "rogie",
+    creditLink: "#",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
+  {
+    day: 16,
+    date: "16 Feb, 2023",
+    name: `Loading bar`,
+    tag: ['animation'],
+    description: `Make a cool loading animation`,
+    credit: "Miggi",
+    creditLink: "#",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
+
+  {
+    day: 17,
+    date: "17 Feb, 2023",
+    name: `Fire animation`,
+    tag: ['animation'],
+    description: `Create a fire animation`,
+    credit: "realvjy",
+    creditLink: "#",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
+
+  {
+    day: 18,
+    date: "18 Feb, 2023",
+    name: `HUD`,
+    tag: ['UI'],
+    description: `Create a sci-fi HUD interface`,
+    credit: "Olonk",
+    creditLink: "#",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
 ];
 
 export default PromptData;

@@ -41,7 +41,7 @@ const PromptList = (props) => {
             prompts.map((p, i) => {
               let promptDate = new Date(p.date);
               return (
-                <PromptBox key={p.day + i} className={getTagClass(p.tag[0])}>
+                <PromptBox key={p.day + i} className={`${getTagClass(p.tag[0])} ${checkIsToday(promptDate) ? 'today' : ''}`}>
                   <h2>
                     {p.date.split(',').shift()}.
                     {/* To get date only using split */}
@@ -110,8 +110,13 @@ const PromptBox = styled.div`
   margin: 0 auto;
   width: 480px;
   transition: all ease 300ms;
+  position: relative;
   @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
       width: 100%;
+  }
+  &.today{
+    background-color: var(--white);
+    border: 1px solid #7F52FF;
   }
   .desc{
     font-weight: 500;
@@ -131,6 +136,7 @@ const PromptBox = styled.div`
   }
   &.red{
     box-shadow: inset 0px 0px 30px -2px rgba(211,0,0, .07);
+    
     &:hover{
       box-shadow: inset 0px 0px 30px -2px rgba(211,0,0, .16);
     }

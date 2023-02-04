@@ -20,11 +20,26 @@ export default function HomePage() {
             <p>Share your work and tag it with <strong>#figbruary</strong> and <strong>#figbruary2023</strong></p>
           </HomeBox>
           <HomeBox>
-            <h3>Credit</h3>
-            <p>Thanks to
+            <h3>❤️ Credit</h3>
+            <p><span>Thanks to</span>
               <a href='https://twitter.com/miggi'>Miggi</a>
+              <a href='https://twitter.com/rogie'>Rogie</a>
               <a href='https://twitter.com/agusegui'>Agu Seguí</a>
               <a href='https://twitter.com/o_lonks'>Olonks</a>
+            </p>
+          </HomeBox>
+          <HomeBox>
+            <h3>🔗 All submissions</h3>
+            <p>
+              Find all the submissions curated by <strong>John Y</strong>
+              <span className="links"><a href="https://app.joyn.xyz/contest/figbruary--787d41d9c35c?">joyn.xyz</a></span>
+            </p>
+          </HomeBox>
+          <HomeBox>
+            <h3>🏅 Submit & featured</h3>
+            <p>
+              If you finished <strong>#figbruary</strong> challenge, please fill out the form. We will select the top 100<super>*</super> to be published.
+              <span className="disable">Link open soon...</span>
             </p>
           </HomeBox>
         </HomeWrap>
@@ -35,7 +50,7 @@ export default function HomePage() {
 
 const HomeWrap = styled.div`
   padding: 0 20px;
-  padding-top: 40px;
+  padding-top: 20px;
   padding-bottom: 40px;
   @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
     margin: auto;
@@ -43,25 +58,39 @@ const HomeWrap = styled.div`
 `
 
 const HomeBox = styled.div`
+  display: flex;
+  flex-direction: column;
   padding: 0 20px;
-  margin: 40px 32px;
+  margin: 32px 32px;
   @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
     margin: 32px auto;
   }
   h3{
     font-size: 20px;
     margin-top: 12px;
-    margin-bottom: 12px;
   }
   p{
     font-size: 18px;
     line-height: 150%;
     margin: 8px 0;
+    opacity: .9;
     letter-spacing: -.1px;
     &.small{
       font-size: 16px;
       color: var(--gray);
     }
+  }
+  .links{
+      margin-left: 8px;
+      font-weight: 600;
+  }
+  .disable{
+      margin-left: 8px;
+      opacity: .4;
+      font-weight: 600;
+  }
+  span{
+    margin-right: 12px;
   }
   a{
     display: inline-flex;
@@ -69,7 +98,7 @@ const HomeBox = styled.div`
     text-decoration: underline;
     line-height: 140%;
     color: var(--black);
-    margin-left: 8px;
+    margin-right: 12px;
     opacity: .7;
     &:hover{
       opacity: 1;
