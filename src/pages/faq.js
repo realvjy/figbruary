@@ -28,6 +28,17 @@ export default function Faq() {
               </p>
             </Question>
             <Question>
+              <h3>Why Prompts?</h3>
+              <p>Doing something consistently every day is really a great habit. It doesn't matter what you make and how you make it. If you just draw a circle or rectangle and come up with something every day, you are learning and improving. People wanted to create something but they stuck on what to create. Getting even a single word prompt gives them an idea and motivates them to create something.
+              </p>
+            </Question>
+            <Question>
+              <h3>Why 28 Days?</h3>
+              <p>
+                There is no specific reason; you can do it anytime and any day or month. Once you start doing something consistently, you will develop a habit of creating something daily, which leads to improving your craft.
+              </p>
+            </Question>
+            <Question>
               <h3>Do I have to follow prompts strictly?</h3>
               <p>No
               </p>
