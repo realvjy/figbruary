@@ -29,7 +29,7 @@ export default function Faq() {
             </Question>
             <Question>
               <h3>Why Prompts?</h3>
-              <p>Doing something consistently every day is really a great habit. It doesn't matter what you make and how you make it. If you just draw a circle or rectangle and come up with something every day, you are learning and improving. People wanted to create something but they stuck on what to create. Getting even a single word prompt gives them an idea and motivates them to create something.
+              <p>Doing something consistently every day is really a great habit. It doesn&lsquo;t matter what you make and how you make it. If you just draw a circle or rectangle and come up with something every day, you are learning and improving. People wanted to create something but they stuck on what to create. Getting even a single word prompt gives them an idea and motivates them to create something.
               </p>
             </Question>
             <Question>
