@@ -59,6 +59,7 @@ export default function Faq() {
             </Question>
           </FaqWrap>
         </Container>
+
       </FaqSection>
       <Footer />
     </>

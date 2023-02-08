@@ -41,7 +41,7 @@ const PromptList = (props) => {
             prompts.map((p, i) => {
               let promptDate = new Date(p.date);
               return (
-                <PromptBox key={p.day + i} className={`${getTagClass(p.tag[0])} ${checkIsToday(promptDate) ? 'today' : ''}`}>
+                <PromptBox key={p.day + i} className={`${getTagClass(p.tag[0])} ${checkIsToday(promptDate) ? 'today' : ''}`} id={`day-${p.day}`}>
                   <h2>
                     {p.date.split(',').shift()}.
                     {/* To get date only using split */}

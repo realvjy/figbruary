@@ -17,7 +17,7 @@ export default function HomePage() {
             <p className="small">PS. - You don’t have to follow the prompt exactly. Or even at all. </p>
           </HomeBox>
           <HomeBox>
-            <p>Share your work and tag it with <strong>#figbruary</strong> and <strong>#figbruary2023</strong></p>
+            <p>Share your work and tag it with <a href="https://twitter.com/hashtag/figbruary" target={'_blank'} className="hashtag">#figbruary</a> and <strong>#figbruary2023</strong></p>
           </HomeBox>
           <HomeBox>
             <h3>❤️ Credit</h3>
@@ -100,6 +100,10 @@ const HomeBox = styled.div`
     color: var(--black);
     margin-right: 12px;
     opacity: .7;
+    &.hashtag{
+      font-weight: 700;
+      opacity:.8;
+    }
     &:hover{
       opacity: 1;
     }
