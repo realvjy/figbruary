@@ -17,7 +17,7 @@ export default function HomePage() {
             <p className="small">PS. - You don’t have to follow the prompt exactly. Or even at all. </p>
           </HomeBox>
           <HomeBox>
-            <p>Share your work and tag it with <a href="https://twitter.com/hashtag/figbruary" target={'_blank'} className="hashtag">#figbruary</a> and <strong>#figbruary2023</strong></p>
+            <p>Share your work and tag it with <a href="https://twitter.com/hashtag/figbruary" target={'_blank'} rel="noreferrer" className="hashtag">#figbruary</a> and <strong>#figbruary2023</strong></p>
           </HomeBox>
           <HomeBox>
             <h3>❤️ Credit</h3>
