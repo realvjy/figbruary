@@ -76,7 +76,7 @@ const PromptList = (props) => {
             })
           }
 
-          <h3>More updating soon...</h3>
+          <h3>✦ ✦ ✦</h3>
         </PromptWrapper>
       </Container>
     </PromptSection>

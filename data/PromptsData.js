@@ -229,8 +229,138 @@ const PromptData = [
     date: "18 Feb, 2023",
     name: `HUD`,
     tag: ['UI'],
-    description: `Create a sci-fi HUD interface`,
+    description: `Create a sci-fi HUD interface.`,
     credit: "Olonk",
+    creditLink: "#",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
+  {
+    day: 19,
+    date: "19 Feb, 2023",
+    name: `Donut`,
+    tag: ['illustration'],
+    description: `Create an illustration system to create a variety of donuts.`,
+    credit: "realvjy",
+    creditLink: "#",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
+  {
+    day: 20,
+    date: "20 Feb, 2023",
+    name: `Simulate 3d Effect`,
+    tag: ['animation'],
+    description: `Using only squares, circles, or any other shape, simulate a 3D effect using Smart Animate.`,
+    credit: "rogie",
+    creditLink: "#",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
+
+  {
+    day: 21,
+    date: "21 Feb, 2023",
+    name: `Appicon`,
+    tag: ['illustration'],
+    description: `Create an appicon concept for any app (maybe for figbruary)`,
+    credit: "miggi",
+    creditLink: "#",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
+
+  {
+    day: 22,
+    date: "22 Feb, 2023",
+    name: `Cursor Follow`,
+    tag: ['prototype'],
+    description: `Create a prototype to fake cursor follow animation`,
+    credit: "Olonk",
+    creditLink: "#",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
+
+  {
+    day: 23,
+    date: "23 Feb, 2023",
+    name: `Pixel effect`,
+    tag: ['illustration', 'ui'],
+    description: `Create something based on a pixel grid, like an illustration or icon or anything.`,
+    credit: "Agu Seguí",
+    creditLink: "#",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
+
+  {
+    day: 24,
+    date: "24 Feb, 2023",
+    name: `Tiled pattern`,
+    tag: ['illustration'],
+    description: `Create a cool seamless pattern.`,
+    credit: "miggi",
+    creditLink: "#",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
+
+  {
+    day: 25,
+    date: "25 Feb, 2023",
+    name: `Single rectangle`,
+    tag: ['Anything'],
+    description: `Let's create anything using just a single rectangle on a frame. Use any style, fill, etc. to create a cool thing.`,
+    credit: "rogie",
+    creditLink: "#",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
+
+
+
+  {
+    day: 26,
+    date: "26 Feb, 2023",
+    name: `Water Effect`,
+    tag: ['prototype', 'animation'],
+    description: `Create a water fill effect using smart animate.`,
+    credit: "realvjy",
+    creditLink: "#",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
+
+  {
+    day: 27,
+    date: "27 Feb, 2023",
+    name: `Emoji`,
+    tag: ['illustration'],
+    description: `Make an emoji that expresses delight.`,
+    credit: "miggi",
+    creditLink: "#",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
+
+  {
+    day: 28,
+    date: "28 Feb, 2023",
+    name: `Badge`,
+    tag: ['ui', 'illustration'],
+    description: `Create a library using components to generate a variety of badges.`,
+    credit: "realvjy",
     creditLink: "#",
     hidden: false,
     finished: true,
