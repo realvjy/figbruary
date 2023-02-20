@@ -39,7 +39,7 @@ export default function HomePage() {
             <h3>🏅 Submit & featured</h3>
             <p>
               If you finished <strong>#figbruary</strong> challenge, please fill out the form. We will select the top 100<super>*</super> to be published.
-              <span className="disable">Link open soon...</span>
+              You can submit after 3 March.<span className="links"><a href="https://forms.gle/Ux31oPu6TeRdKTZb9">Link info updated here. </a></span>
             </p>
           </HomeBox>
         </HomeWrap>
