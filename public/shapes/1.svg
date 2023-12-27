@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" fill="none" viewBox="1 1 200 250">
+  <g>
+    <path fill="#F4C8C6" fill-rule="evenodd" stroke="#000" stroke-width="1.5"
+      d="M14 1C6.82 1 1 6.82 1 14v118c0 7.18 5.82 13 13 13h118c7.18 0 13-5.82 13-13V14c0-7.18-5.82-13-13-13H14Zm92 39H40v66h66V40Z"
+      clip-rule="evenodd"></path>
+    <animateMotion dur="10s"
+      path="M56.5517 1.67869C41.4867 -3.15334 26.1375 19.3021 17.3259 22.1443C-7.00548 22.1443 -1.71852 67.9079 17.3259 62.5072L67.9215 42.3257C76.4489 38.9149 74.1637 7.32765 56.5517 1.67869Z"
+      repeatCount="indefinite"></animateMotion>
+  </g>
+</svg>

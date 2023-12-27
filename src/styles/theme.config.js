@@ -1,4 +1,4 @@
-import GlobalStyle from "./GlobalStyle"
+import GlobalStyle from "./globals/GlobalStyle"
 
 GlobalStyle
 const light = {

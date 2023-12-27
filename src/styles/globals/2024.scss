@@ -1,0 +1,130 @@
+
+:root {
+  // colors
+  --background-gray: #b3c9d7;
+  --background-yellow: #f2cb58;
+  --bright-yellow: #f9df2b;
+  --font-black: #000;
+  --max-width: 770px;
+  --gray: rgba(0, 0, 0, 0.44);
+
+  // element colors
+  --background-color: var(--background-gray);
+  --font-color: var(--font-black);
+  --light-font-color: var(--gray);
+
+  //header
+  --header-link-color: var(--font-color);
+  --header-button-color: var(--bright-yellow);
+  --header-button-text-color: var(var(--font-black));
+
+  //variables
+  --body-padding: 26px;
+
+  //landing
+  --fig-background: white;
+  --fig-stroke: black;
+  --submit-btn-background: var(--font-black);
+  --submit-btn-color: white;
+
+  //sizes 
+  --mobile-padding: 20px;
+  --resize-starts: calc(var(--max-width) + var(--mobile-padding))
+}
+
+body {
+  cursor: url("/cursor.svg"), auto;
+  background: black;
+  padding: var(--body-padding);
+
+  *:hover {
+    cursor: url("/cursor.svg"), auto;
+  }
+  &:active *:hover {
+    cursor: url("/cursor.svg"), auto;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - var(--body-padding) * 2);
+  background: var(--background-color);
+  font-family: var(--syne-font);
+  border-radius: 32px;
+  position: relative;
+  overflow: hidden;
+  &.faq{
+    transition: background 1s ease ;
+    background: var(--background-yellow);
+  }
+  @media screen and (max-width: 848px){
+    padding: 0 20px;
+  };
+};
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.svg-wrapper {
+
+  .shape1 {
+    top: 45%;
+    left: 82%;
+    svg {
+      transform: rotate(30deg);
+    }
+  }
+  .shape2 {
+    top: 9%;
+    left: 80%;
+  };
+  .shape3{
+    top: 70%;
+    left: 70%;
+  }
+  .shape4{
+    top: 70%;
+    left: 16%;
+  }
+  .shape6 {
+    top: 12%;
+    left: 5%;
+  }
+  .shape5 {
+    top: 44%;
+    left: 12%;
+  }
+  .shape7 {
+    top: 37%;
+    left: 0;
+    transform: translateX(-50%);
+  }
+  
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(40%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    transform: translateY(-40%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
