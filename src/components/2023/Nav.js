@@ -28,11 +28,6 @@ export default function Nav() {
                   prompts
                 </Link>
               </li>
-              <li>
-                <Link scroll={false} passHref href={'faq'} className={page('faq') ? 'active' : ''}>
-                  faqs
-                </Link>
-              </li>
             </ul>
           </NavMenu>
         </NavWrap>

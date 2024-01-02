@@ -33,13 +33,7 @@ export default function HomePage() {
               <span className="links"><a href="https://app.joyn.xyz/contest/figbruary--787d41d9c35c?">joyn.xyz</a></span>
             </p>
           </HomeBox>
-          <HomeBox>
-            <h3>🏅 Submit & featured</h3>
-            <p>
-              If you finished <strong>#figbruary</strong> challenge, please fill out the form. We will select the top 100<super>*</super> to be published.
-              You can submit after 3 March.<span className="links"><a href="https://forms.gle/Ux31oPu6TeRdKTZb9">Link info updated here. </a></span>
-            </p>
-          </HomeBox>
+
         </HomeWrap>
       </Container>
     </>
