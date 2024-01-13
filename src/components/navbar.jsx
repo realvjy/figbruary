@@ -18,9 +18,8 @@ export default function Header() {
             <NavLink href="/" className={activePage("/") ? "active" : ""}>
               home
             </NavLink>
-            <V1NavigateLink href="/2023/home" >
-              2023
-            </V1NavigateLink>
+
+            <V1NavigateLink href="/2023/home">2023</V1NavigateLink>
             <NavLink href="/faq" className={activePage("/faq") ? "active" : ""}>
               faq
             </NavLink>
@@ -47,16 +46,16 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .link-wrapper{
+    .link-wrapper {
       justify-content: space-between;
       gap: 10px;
       width: 100%;
       @media screen and (max-width: 500px) {
-        a{
+        a {
           font-size: 14px;
         }
       }
-      .fig-btn{
+      .fig-btn {
         padding: 13px 20px;
       }
     }

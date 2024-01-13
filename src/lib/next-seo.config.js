@@ -6,7 +6,7 @@ export default {
         url: 'https://figbruary.com',
         description: 'Challenges using Figma for the next 28 days',
         locale: 'en_EN',
-        keywords: 'figma, figbruary, illustrator, figma designer, vijay verma, realvjy, illlustrations, overlayz',
+        keywords: 'figma, figbruary, illustrator, figma designer, vijay verma, realvjy, illlustrations, design, ui, ux, uiux, ui/ux, ui design, ux design, ui/ux design, ui/ux designer, ui designer, ux designer',
         images: [
             {
                 width: 1200,
@@ -17,7 +17,7 @@ export default {
         site_name: 'realvjy',
     },
     twitter: {
-        id:'357250088',
+        id: '357250088',
         handle: '@realvjy',
         site: 'vjy.me',
         cardType: 'summary_large_image',

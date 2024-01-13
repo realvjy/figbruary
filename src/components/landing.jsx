@@ -29,6 +29,7 @@ export default function LandingPage() {
           >
             submit prompts
           </SubmitButton>
+          {/* <CoolShapes type={"triangle"} shape={"2"} /> */}
         </Wrapper>
       </div>
       <SvgWrapper svgs={shapes} page={"landing"} />

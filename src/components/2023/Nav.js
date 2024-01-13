@@ -19,8 +19,13 @@ export default function Nav() {
           <NavMenu>
             <ul>
               <li>
-                <Link scroll={false} passHref href={'home'} className={page('home') ? 'active' : ''}>
+                <Link scroll={false} passHref href={'/'} >
                   home
+                </Link>
+              </li>
+              <li>
+                <Link scroll={false} passHref href={'home'} className={page('home') ? 'active' : ''}>
+                  2023
                 </Link>
               </li>
               <li>
