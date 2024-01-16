@@ -7,6 +7,6 @@ export const metadata = getMetaDataForPage('faq');
 
 export default function Faq() {
 
-  return <FaqPage/>
+  return <FaqPage/>x
   
 }

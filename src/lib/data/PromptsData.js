@@ -1,6 +1,6 @@
 // date 28 Jan, 2023
 // DD/MM/YYYY
-const PromptData = [
+export const promptData2023 = [
   {
     day: 0,
     date: "12 Jan, 2023",
@@ -368,4 +368,14 @@ const PromptData = [
   },
 ];
 
-export default PromptData;
+export const promptData2024 = promptData2023;
+
+export const getCurrentDatePrompt = () => {
+  const dateObj = new Date();
+  const month   = dateObj.getUTCMonth() + 1; // months from 1-12
+  const day     = dateObj.getUTCDate();
+  
+  if (month == 2){
+    return promptData2024.find((promptData)=> promptData.day == day)
+  }
+};

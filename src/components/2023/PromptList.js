@@ -1,7 +1,7 @@
 'use client'
 import styled from "styled-components";
 import { Container, TypeTag } from "./ReusableStyles";
-import promptData from "@/lib/data/PromptsData";
+import {promptData2023} from "@/lib/data/PromptsData";
 
 const checkIsToday = (d) => {
   let today = new Date();

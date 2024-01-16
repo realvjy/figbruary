@@ -3,15 +3,19 @@
   // colors
   --background-gray: #b3c9d7;
   --background-yellow: #f2cb58;
+  --background-purple: #BFBCE3; 
   --bright-yellow: #f9df2b;
   --font-black: #000;
   --max-width: 900px;
   --gray: rgba(0, 0, 0, 0.44);
+  --gray-hex: #2A2B37;
+  --orange: #FF9154;
 
   // element colors
   --background-color: var(--background-gray);
   --font-color: var(--font-black);
   --light-font-color: var(--gray);
+  --font-dark: var(--gray-hex);
 
   //header
   --header-link-color: var(--font-color);
@@ -29,7 +33,24 @@
 
   //sizes 
   --mobile-padding: 20px;
-  --resize-starts: calc(var(--max-width) + var(--mobile-padding))
+  --resize-starts: calc(var(--max-width) + var(--mobile-padding));
+
+  // prompts
+  --min-prompt-box-width: 290px;
+  --prompt-tag-color: var(--orange);
+  --prompt-box-border: #000;
+  --prompt-box-background: white;
+  --prompt-box-shadow: 0px 4px 0px 0px black;
+  --prompt-shadow-transition: cubic-bezier(0.89, -0.04, 0.52, 1.19);
+
+
+  --prompt-card-background: #f9d82b;
+  --prompt-card-border: black;
+  --prompt-card-shadow: 0px 4px 0px 0px #000;
+  --prompt-card-date-bg: #fff0c9;
+  --tag-color: var(--orange);
+  --tag-font-color: white;
+  --tag-border-color: #171717;
 }
 
 body {
@@ -58,7 +79,18 @@ main {
     transition: background 1s ease ;
     background: var(--background-yellow);
   }
-  @media screen and (max-width: 848px){
+  &.prompts{
+    transition: background 1s ease;
+    background: var(--background-purple);
+    @media screen and (max-width: 993px){
+      padding: 0 20px;
+      h1{
+        padding: 50px 0
+      }
+    };
+  }
+  
+  @media screen and (max-width: 984px){
     padding: 0 20px;
   };
 };
@@ -71,7 +103,6 @@ main {
 }
 
 .svg-wrapper {
-
   .shape1 {
     top: 45%;
     left: 82%;

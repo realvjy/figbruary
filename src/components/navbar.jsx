@@ -23,12 +23,15 @@ export default function Header() {
             <NavLink href="/faq" className={activePage("/faq") ? "active" : ""}>
               faq
             </NavLink>
-            <FigButton
-              href={"/figbruary"}
-              className={`fig-btn ${activePage("/figbruary") ? "active" : ""}`}
-            >
-              # figbruary
-            </FigButton>
+            <NavLink href="/prompts" className={activePage("/prompts") ? "active" : ""}>
+              prompts
+            </NavLink>
+              <FigButton
+                href={"/figbruary"}
+                className={`fig-btn ${activePage("/figbruary") ? "active" : ""}`}
+              >
+                # figbruary
+              </FigButton>
           </NavLinkWrapper>
         </Wrapper>
       </div>
@@ -38,11 +41,21 @@ export default function Header() {
 
 const Section = styled.section`
   padding: 32px 0;
+  
 `;
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  @media screen and (max-width: 720px) {
+  &:hover{
+    .button-wrapper{
+      width: 0;
+      a{
+        transform: translateX(calc(var(--max-width)*-1));
+        margin-left: 35px;
+      }
+    }
+  }
+  @media screen and (max-width: 800px) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -50,7 +63,7 @@ const Wrapper = styled.div`
       justify-content: space-between;
       gap: 10px;
       width: 100%;
-      @media screen and (max-width: 500px) {
+      @media screen and (max-width: 610px) {
         a {
           font-size: 14px;
         }
@@ -59,15 +72,26 @@ const Wrapper = styled.div`
         padding: 13px 20px;
       }
     }
-  }
+  };
+  
 `;
 
 const NavLinkWrapper = styled.div`
   transition: transform 500ms ease;
   display: flex;
-  justify-content: center;
+  justify-content: right;
+  width: 100%;
   align-items: center;
   gap: 45px;
+  transition: all 1s ease;
+
+  .button-wrapper{
+    position: relative;
+    max-width: 150px;
+    height: 40px;
+   
+    width: 100%;
+  }
 `;
 const NavStyle = `
   font-size: 21px;
@@ -90,7 +114,12 @@ const V1NavigateLink = styled.a`
   ${NavStyle}
 `;
 const FigButton = styled(NavLink)`
-  padding: 13px 33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 40px;
+
   border: 1px solid black;
   color: var(--header-button-text-color);
   background: var(--header-button-color);
@@ -104,6 +133,7 @@ const FigButton = styled(NavLink)`
 `;
 
 const LogoWrapper = styled(Link)`
+  z-index: 1;
   img {
     max-height: 64px;
     height: 100%;

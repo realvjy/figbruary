@@ -56,7 +56,6 @@ export default function _2023_Layout({ children }) {
       <StyledThemeProvider >
         <GlobalStyle />
         <Layout>
-          
           {children}
         </Layout>
       </StyledThemeProvider>

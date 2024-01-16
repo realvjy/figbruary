@@ -8,7 +8,7 @@ export default function Footer() {
         <Wrapper>
           <NoticeText>This is not affiliated with Figma in any way</NoticeText>
           <CreditText>
-            Initiated by{" "}
+            Initiated 2023/24 by{" "}
             <span>
               <a href="https//x.com/@realvjy">@realvjy</a>
             </span>
@@ -22,7 +22,7 @@ export default function Footer() {
 
 const Section = styled.section`
   margin-top: auto;
-  margin-bottom: 60px;
+  margin: 60px 0;
 `;
 const Wrapper = styled.div`
   text-align: center;

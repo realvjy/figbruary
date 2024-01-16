@@ -1,9 +1,6 @@
 "use client";
 
-import Footer from "@/components/footer";
-import Header from "@/components/navbar";
 import SvgWrapper from "@/components/svg-wrapper";
-import { syne } from "@/styles/globals/fonts";
 import styled from "styled-components";
 
 export default function Page() {

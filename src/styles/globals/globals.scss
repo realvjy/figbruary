@@ -3,4 +3,9 @@
 a{
   text-decoration: none;
   color: black;
+  &.underline{
+    &:hover{
+      text-decoration: underline;
+    }
+  }
 }
