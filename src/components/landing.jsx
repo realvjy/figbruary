@@ -23,7 +23,7 @@ export default function LandingPage() {
         <>
           <PromptInfoCard>
             <div className="date-wrapper">
-              <h3>today</h3>
+              <h3 className="shimmer">today</h3>
               <div className="date-text-wrapper">
                 <span className="date">{promptData.day}</span>
                 <span className="month">feb</span>

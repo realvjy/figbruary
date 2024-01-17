@@ -11,15 +11,17 @@ export default function Header() {
     <Section>
       <div className="container">
         <Wrapper>
-          <LogoWrapper className="logo-wrapper" href={"/"} scroll={false}>
-            <img src="/logo.svg" />
-          </LogoWrapper>
-          <FigButton
-            href={"/"}
-            className={`fig-btn ${activePage("/figbruary") ? "active" : ""}`}
-          >
-            # figbruary
-          </FigButton>
+          <LogNHash>
+            <LogoWrapper className="logo-wrapper" href={"/"} scroll={false}>
+              <img src="/logo.svg" className="logo" />
+            </LogoWrapper>
+            <FigButton
+              href={"/"}
+              className={`fig-btn ${activePage("/figbruary") ? "active" : ""}`}
+            >
+              #figbruary
+            </FigButton>
+          </LogNHash>
           <NavLinkWrapper className="link-wrapper">
             <NavLink href="/" className={activePage("/") ? "active" : ""}>
               home
@@ -98,10 +100,11 @@ const NavStyle = `
 
   transition: transform 500ms cubic-bezier(0.59, 0.03, 0, 1.69);
   &.active {
-    font-weight: 800;
+    font-weight: 700;
+    -webkit-text-stroke: 1px var(--font-dark);
   }
   &:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 `;
 const NavLink = styled(Link)`
@@ -110,31 +113,34 @@ const NavLink = styled(Link)`
 const V1NavigateLink = styled.a`
   ${NavStyle}
 `;
-const FigButton = styled(NavLink)`
+const FigButton = styled.a`
+  font-size: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 150px;
   height: 40px;
-
-  border: 1px solid black;
+  border: 2px solid black;
   color: var(--header-button-text-color);
   background: var(--header-button-color);
   border-radius: 100px;
   text-align: center;
   white-space: nowrap;
   padding: 20px !important;
-  &:hover {
-    transform: scale(1);
-    transform: rotate(5deg);
-  }
+  transform: translateX(-24px);
 `;
 
 const LogoWrapper = styled(Link)`
   z-index: 1;
-  display: flex;
-  img {
-    max-height: 64px;
-    height: 100%;
+  .logo {
+    width: 120px;
+    @media screen and (max-width: 910px) {
+      width: 60px;
+    }
   }
+`;
+
+const LogNHash = styled.div`
+  display: flex;
+  align-items: center;
 `;

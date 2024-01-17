@@ -8,16 +8,16 @@ export const Tags = styled.ul`
 
 export const Tag = styled.li`
   display: flex;
-  border-radius: 12px;
-  border: 1px solid var(--tag-border-color);
+  border-radius: 14px;
   background: var(--prompt-tag-color);
   color: var(--tag-font-color);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
-  letter-spacing: -0.13px;
-  padding: 4px 8px;
+  letter-spacing: -0.1px;
+  line-height: 18px;
+  padding: 4px 10px;
   height: fit-content;
-
+  text-transform: capitalize;
   @media screen and (max-width: 725px) {
     font-size: 9px;
     padding: 0px 4px;
@@ -79,27 +79,30 @@ export const PromptInfoCard = styled.div`
   margin: 40px 0;
   display: flex;
   gap: 24px;
+  @media screen and (max-width: 725px) {
+    border-radius: 20px;
+  }
   .date-wrapper {
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 8px;
-    border: 1px solid #000;
+    border: 1.5px solid #000;
     background: var(--prompt-card-date-bg);
-    height: 160px;
     border-radius: 12px;
     margin: auto 0;
     h3 {
-      border-radius: 12px;
-      border: 1px solid #000;
-      background: var(--tag-color);
-      color: var(--tag-font-color);
-      font-size: 14px;
+      border-radius: 11px 11px 0 0;
+      background: var(--cursor-color);
+      color: var(--font-dark);
+      font-size: 16px;
       font-style: normal;
-      font-weight: 600;
+      font-weight: 700;
       line-height: 120%; /* 16.8px */
       padding: 4px 8px;
       text-align: center;
+      @media screen and (max-width: 725px) {
+        font-size: 14px;
+      }
     }
     .date-text-wrapper {
       display: flex;
@@ -114,11 +117,17 @@ export const PromptInfoCard = styled.div`
       .date {
         font-size: 50px;
         -webkit-text-stroke: 2px var(--font-dark);
+        @media screen and (max-width: 725px) {
+          font-size: 40px;
+        }
       }
       .month {
         font-size: 24px;
         font-weight: 700;
         -webkit-text-stroke: 1px var(--font-dark);
+        @media screen and (max-width: 725px) {
+          font-size: 22px;
+        }
       }
     }
   }
@@ -138,7 +147,7 @@ export const PromptInfoCard = styled.div`
     }
     h2 {
       color: #000;
-      font-size: 40px;
+      font-size: 36px;
       font-style: normal;
       font-weight: 700;
       letter-spacing: -0.5px;
@@ -198,14 +207,23 @@ export const PromptInfoCard = styled.div`
       h2 {
         font-size: 24px;
         letter-spacing: -0.6px;
+        @media screen and (max-width: 725px) {
+          font-size: 21px;
+        }
       }
       .description {
         font-size: 20px;
         margin: 4px 0;
         padding-bottom: 14px;
+        @media screen and (max-width: 725px) {
+          font-size: 16px;
+        }
       }
       .credit {
         font-size: 16px;
+        @media screen and (max-width: 725px) {
+          font-size: 14px;
+        }
       }
     }
   }

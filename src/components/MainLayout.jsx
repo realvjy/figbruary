@@ -56,7 +56,7 @@ const Wrapper = styled.div`
     margin: 16px 0;
     line-height: 140%;
     @media screen and (max-width: 721px) {
-      font-size: 18px;
+      font-size: 20px;
     }
   }
 
@@ -84,8 +84,10 @@ const Wrapper = styled.div`
   }
   @media screen and (max-width: 500px) {
     .desc {
-      font-size: 25px;
-      max-width: 300px;
+      font-size: 26px;
+      max-width: 320px;
+      letter-spacing: -0.2px;
+      margin-top: 10px;
     }
     .tag-text {
       font-size: 18px;
@@ -103,4 +105,7 @@ const Description = styled.h3`
   letter-spacing: -1.5px;
   font-weight: 400;
   max-width: 565px;
+  @media screen and (max-width: 725px) {
+    font-size: 24px;
+  }
 `;

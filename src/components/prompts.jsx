@@ -109,7 +109,9 @@ const Prompt = styled.li`
   &.today {
     background: var(--background-yellow);
   }
-
+  @media screen and (max-width: 725px) {
+    min-height: 200px;
+  }
   .header {
     display: flex;
     column-gap: 10px;
@@ -118,19 +120,26 @@ const Prompt = styled.li`
   }
   h2 {
     color: var(--font-dark);
-    font-size: 26px;
+    font-size: 30px;
     font-weight: 700;
-    letter-spacing: -0.48px;
+    letter-spacing: -0.4px;
     -webkit-text-stroke: 1px var(--font-dark);
+    @media screen and (max-width: 725px) {
+      font-size: 22px;
+    }
   }
   h3 {
     color: var(--font-color);
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 700;
     letter-spacing: -0.22px;
     display: flex;
     align-items: center;
     padding: 5px 0;
+    -webkit-text-stroke: 0.2px var(--font-dark);
+    @media screen and (max-width: 725px) {
+      font-size: 22px;
+    }
   }
   .description {
     color: var(--light-font-color);
@@ -140,6 +149,9 @@ const Prompt = styled.li`
     line-height: 130%; /* 23.4px */
     letter-spacing: -0.28px;
     padding: 5px 0;
+    @media screen and (max-width: 725px) {
+      font-size: 18px;
+    }
   }
 `;
 
@@ -149,13 +161,16 @@ const TagCredit = styled.div`
   justify-content: space-between;
   .credit-text {
     color: var(--font-color);
-    font-size: 14px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     letter-spacing: -0.28px;
     margin-top: auto;
     span {
       font-weight: 500;
+    }
+    @media screen and (max-width: 725px) {
+      font-size: 14px;
     }
   }
 `;

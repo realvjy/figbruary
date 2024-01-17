@@ -9,11 +9,34 @@ export const promptData2024 = [
     description: `Create a cool camping illustration, night time, fire, illustration, night time, fire`,
     credit: "realvjy",
     creditLink: "#",
-    hidden: true,
+    hidden: false,
     finished: true,
     link: "#"
   },
-
+  {
+    day: 1,
+    date: "1 feb, 2023",
+    name: `Let’s warmup`,
+    tag: ['plugin', 'tags'],
+    description: `Create a cool camping illustration, night time, fire, Create a cool camping illustration, night time, fire`,
+    credit: "realvjy",
+    creditLink: "#",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
+  {
+    day: 2,
+    date: "2 Feb, 2023",
+    name: `Campfire`,
+    tag: ['prototype'],
+    description: `Create a cool camping illustration, night time, Starry night.`,
+    credit: "realvjy",
+    creditLink: "#",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
 ];
 
 

@@ -16,7 +16,7 @@
   --font-color: var(--font-black);
   --light-font-color: var(--gray);
   --font-dark: var(--gray-hex);
-
+  --cursor-color: #A1D99E;
   //header
   --header-link-color: var(--font-color);
   --header-button-color: var(--bright-yellow);
@@ -173,4 +173,22 @@ main {
     transform: translateY(0%);
     opacity: 1;
   }
+}
+
+
+.shimmer {
+  color: grey;
+  display: inline-block;
+  -webkit-mask: linear-gradient(-60deg, #000 31%, transparent 31.2%, transparent 32%, #000 32.5%) right/300% 100%;
+  background-repeat: no-repeat;
+  animation: shimmer 2.5s infinite;
+  font-size: 50px;
+  max-width: 200px;
+  position: relative;
+}
+
+
+
+@keyframes shimmer {
+  100% {-webkit-mask-position:left}
 }
