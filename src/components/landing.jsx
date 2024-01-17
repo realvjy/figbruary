@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Layout from "./MainLayout";
 import Link from "next/link";
 import { promptData2024 } from "@/lib/data/PromptsData2024";
+
 import {
   getCurrentDatePrompt,
   getMetaDataForPage,
@@ -13,19 +14,12 @@ import { Tag, Tags, PromptInfoCard } from "@/styles/globals/common";
 import { useEffect, useState } from "react";
 
 export default function LandingPage() {
-  const [promptData, setPromptData] = useState(null);
+  let promptData = getCurrentDatePrompt(promptData2024);
 
-  const firstDay = promptData2024[1];
+  if (!promptData){
+    promptData = promptData2024[1];
+  }
 
-  useEffect(() => {
-    const today = getCurrentDatePrompt(promptData2024);
-    console.log(today);
-    if (today == undefined) {
-      setPromptData(firstDay);
-    }
-  }, [promptData]);
-
-  console.log(promptData);
   return (
     <Layout>
       {/* change this to null */}
