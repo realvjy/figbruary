@@ -44,7 +44,6 @@ const PromptList = (props) => {
                   <h2>
                     {p.date.split(',').shift()}.
                     {/* To get date only using split */}
-
                     {
                       checkIsToday(promptDate) ? <TodayTag>That&apos;s today</TodayTag> : ''
                     }
