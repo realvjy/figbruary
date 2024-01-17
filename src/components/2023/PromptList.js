@@ -29,7 +29,7 @@ const getTagClass = (t) => {
 
 
 const PromptList = (props) => {
-  let prompts = promptData.filter(f => f.hidden === false);
+  let prompts = promptData2023.filter(f => f.hidden === false);
 
 
   return (
