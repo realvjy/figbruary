@@ -14,24 +14,22 @@ export default function Header() {
           <LogoWrapper className="logo-wrapper" href={"/"} scroll={false}>
             <img src="/logo.svg" />
           </LogoWrapper>
+          <FigButton
+            href={"/"}
+            className={`fig-btn ${activePage("/figbruary") ? "active" : ""}`}
+          >
+            # figbruary
+          </FigButton>
           <NavLinkWrapper className="link-wrapper">
             <NavLink href="/" className={activePage("/") ? "active" : ""}>
               home
             </NavLink>
 
-            <V1NavigateLink href="/2023/home">2023</V1NavigateLink>
             <NavLink href="/faq" className={activePage("/faq") ? "active" : ""}>
-              faq
+              FAQs
             </NavLink>
-            <NavLink href="/prompts" className={activePage("/prompts") ? "active" : ""}>
-              prompts
-            </NavLink>
-              <FigButton
-                href={"/figbruary"}
-                className={`fig-btn ${activePage("/figbruary") ? "active" : ""}`}
-              >
-                # figbruary
-              </FigButton>
+
+            <V1NavigateLink href="/2023/home">2023</V1NavigateLink>
           </NavLinkWrapper>
         </Wrapper>
       </div>
@@ -41,16 +39,15 @@ export default function Header() {
 
 const Section = styled.section`
   padding: 32px 0;
-  
 `;
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  &:hover{
-    .button-wrapper{
+  &:hover {
+    .button-wrapper {
       width: 0;
-      a{
-        transform: translateX(calc(var(--max-width)*-1));
+      a {
+        transform: translateX(calc(var(--max-width) * -1));
         margin-left: 35px;
       }
     }
@@ -60,20 +57,20 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     .link-wrapper {
+      margin-top: 20px;
       justify-content: space-between;
       gap: 10px;
       width: 100%;
       @media screen and (max-width: 610px) {
         a {
-          font-size: 14px;
+          font-size: 16px;
         }
       }
       .fig-btn {
         padding: 13px 20px;
       }
     }
-  };
-  
+  }
 `;
 
 const NavLinkWrapper = styled.div`
@@ -85,11 +82,11 @@ const NavLinkWrapper = styled.div`
   gap: 45px;
   transition: all 1s ease;
 
-  .button-wrapper{
+  .button-wrapper {
     position: relative;
     max-width: 150px;
     height: 40px;
-   
+
     width: 100%;
   }
 `;
@@ -126,6 +123,7 @@ const FigButton = styled(NavLink)`
   border-radius: 100px;
   text-align: center;
   white-space: nowrap;
+  padding: 20px !important;
   &:hover {
     transform: scale(1);
     transform: rotate(5deg);
@@ -134,6 +132,7 @@ const FigButton = styled(NavLink)`
 
 const LogoWrapper = styled(Link)`
   z-index: 1;
+  display: flex;
   img {
     max-height: 64px;
     height: 100%;

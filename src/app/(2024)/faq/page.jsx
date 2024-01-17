@@ -47,6 +47,7 @@ const Wrapper = styled.div`
     font-size: 48px;
     font-style: normal;
     font-weight: 800;
+    padding: 80px 0;
   }
   .text-wrap {
     animation: 1s fadeInUp;

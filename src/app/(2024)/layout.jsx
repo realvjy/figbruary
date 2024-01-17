@@ -1,13 +1,12 @@
-import '@/styles/globals/2024.scss'
-import PageLayout from '@/components/layout'
-
-
+import "@/styles/globals/2024.scss";
+import PageLayout from "@/components/layout";
+import seoData from "@/lib/next-seo.config";
 
 export const metadata = {
   metadataBase: new URL(seoData.openGraph.url),
   title: {
     default: seoData.openGraph.title,
-    template : "2023 | %s"
+    template: "2023 | %s",
   },
   description: seoData.openGraph.description,
   keywords: seoData.openGraph.keywords,
@@ -48,12 +47,6 @@ export const metadata = {
   },
 };
 
-
-export default function Layout({children}){
-
-  return (
-    <PageLayout>
-      {children}
-    </PageLayout>
-  );
+export default function Layout({ children }) {
+  return <PageLayout>{children}</PageLayout>;
 }

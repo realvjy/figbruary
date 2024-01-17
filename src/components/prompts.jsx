@@ -1,39 +1,60 @@
 "use client";
-import { promptData2024 } from "@/lib/data/PromptsData";
+import { promptData2024 } from "@/lib/data/PromptsData2024";
 import styled from "styled-components";
-import { Tags, Tag } from "@/styles/globals/common";
+import { Tags, Tag, PromptInfoCard } from "@/styles/globals/common";
+
+import {
+  getCurrentDatePrompt,
+  getMetaDataForPage,
+  getTagClass,
+  getTodayDay,
+} from "@/lib/utils";
+
 export default function PromptsPage() {
+  const promptToday = getTodayDay();
 
   return (
     <Section>
       <div className="container">
         <Wrapper>
           <h1>prompts</h1>
+
           <PromptList>
-            {promptData2024.map((promptData, i)=>{
-              if (promptData.hidden){
-                return
+            {promptData2024.map((promptData, i) => {
+              if (promptData.hidden) {
+                return;
               }
-              return (<Prompt key={i}>
-                <h2 className="date">{promptData.day}.feb</h2>
-                <div className="header">
-                  <h3>
-                    {promptData.name}
-                  </h3>
-                  <Tags>
-                    {promptData.tag.map((tag)=><Tag>
-                      {tag}
-                    </Tag>)}
-                  </Tags>
-                </div>
-               
-                <p className="description">
-                  {promptData.description}
-                </p>
-                <div className="credit-text">
-                  credit: <span><a className="underline" href={promptData.creditLink}>@{promptData.credit}</a></span>
-                </div>
-              </Prompt>)
+              return (
+                <Prompt
+                  key={i}
+                  className={promptToday == promptData.day ? "today" : ""}
+                >
+                  <Info>
+                    <h2 className="date">{promptData.day} feb.</h2>
+                    <div className="header">
+                      <h3>{promptData.name}</h3>
+                    </div>
+                    <p className="description">{promptData.description}</p>
+                  </Info>
+                  <TagCredit>
+                    <div className="credit-text">
+                      credit:{"  "}
+                      <span>
+                        <a className="underline" href={promptData.creditLink}>
+                          @{promptData.credit}
+                        </a>
+                      </span>
+                    </div>
+                    <Tags>
+                      {promptData.tag.map((tag) => (
+                        <Tag className={getTagClass(tag)} key={tag}>
+                          {tag}
+                        </Tag>
+                      ))}
+                    </Tags>
+                  </TagCredit>
+                </Prompt>
+              );
             })}
           </PromptList>
         </Wrapper>
@@ -41,8 +62,6 @@ export default function PromptsPage() {
     </Section>
   );
 }
-
-
 
 const Section = styled.section``;
 const Wrapper = styled.div`
@@ -54,10 +73,10 @@ const Wrapper = styled.div`
     font-style: normal;
     font-weight: 800;
     text-align: center;
-    padding: 100px 0;
+    padding: 80px 0;
   }
   @media screen and (max-width: 725px) {
-    h1{
+    h1 {
       font-size: 30px;
       padding: 24px 0;
     }
@@ -66,24 +85,32 @@ const Wrapper = styled.div`
 const PromptList = styled.ul`
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(var(--min-prompt-box-width), 1fr));
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--min-prompt-box-width), 1fr)
+  );
 `;
 
 const Prompt = styled.li`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   height: 100%;
   border-radius: 24px;
-  border: 1px solid var(--prompt-box-border);
+  border: 1.5px solid var(--prompt-box-border);
   background: var(--prompt-box-background);
-  padding: 17px 26px;
-  min-height: 200px;
+  padding: 18px 20px;
+  min-height: 220px;
   transition: box-shadow 400ms var(--prompt-shadow-transition);
-  &:hover{
+  &:hover {
     box-shadow: var(--prompt-box-shadow);
   }
 
-  .header{
+  &.today {
+    background: var(--background-yellow);
+  }
+
+  .header {
     display: flex;
     column-gap: 10px;
     flex-wrap: wrap;
@@ -91,9 +118,10 @@ const Prompt = styled.li`
   }
   h2 {
     color: var(--font-dark);
-    font-size: 24px;
-    font-weight: 800;
+    font-size: 26px;
+    font-weight: 700;
     letter-spacing: -0.48px;
+    -webkit-text-stroke: 1px var(--font-dark);
   }
   h3 {
     color: var(--font-color);
@@ -106,13 +134,19 @@ const Prompt = styled.li`
   }
   .description {
     color: var(--light-font-color);
-    font-size: 18px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: 130%; /* 23.4px */
-    letter-spacing: -0.18px;
+    letter-spacing: -0.28px;
     padding: 5px 0;
   }
+`;
+
+const TagCredit = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   .credit-text {
     color: var(--font-color);
     font-size: 14px;
@@ -126,3 +160,4 @@ const Prompt = styled.li`
   }
 `;
 
+const Info = styled.div``;

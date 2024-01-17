@@ -1,5 +1,4 @@
-
-import seoData from './next-seo.config'
+import seoData from "./next-seo.config";
 
 export const getMetaDataForPage = (title) => {
   return {
@@ -29,6 +28,39 @@ export const getMetaDataForPage = (title) => {
       site: "vjy.me",
       images: [seoData.openGraph.images[0].url],
     },
-  
+  };
+};
+
+export const getCurrentDatePrompt = (data) => {
+  const dateObj = new Date();
+  const month = dateObj.getUTCMonth() + 1; // months from 1-12
+  const day = dateObj.getUTCDate();
+  // return data.find((date) => date.day == day);
+  if (month == 1) {
+    return data.find((date) => date.day == day);
+  }
+};
+
+export const getTodayDay = () => {
+  const dateObj = new Date();
+  const month = dateObj.getUTCMonth() + 1; // months from 1-12
+  const day = dateObj.getUTCDate();
+  return day;
+};
+
+export const getTagClass = (t) => {
+  switch (t) {
+    case "illustration":
+      return "orage";
+      break;
+    case "prototype":
+      return "purple";
+      break;
+    case "UI":
+      return "blue";
+      break;
+    default:
+      return "pink";
+      break;
   }
 };

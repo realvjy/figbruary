@@ -2,7 +2,7 @@
 import styled from "styled-components";
 import SvgWrapper from "./svg-wrapper";
 
-export default function Layout({children}) {
+export default function Layout({ children }) {
   const shapes = [
     "shape1",
     "shape2",
@@ -20,6 +20,7 @@ export default function Layout({children}) {
           <Description className="desc">
             Challenges using Figma for the next 29 days
           </Description>
+          <h1 className="hash-tag">#Figbruary2024</h1>
           {children}
         </Wrapper>
       </div>
@@ -35,6 +36,9 @@ const Wrapper = styled.div`
   align-items: center;
   animation: 800ms fadeInUp;
   padding-top: 100px;
+  @media screen and (max-width: 721px) {
+    padding-top: 20px;
+  }
   .fig-icon {
     .background {
       fill: var(--fig-background);
@@ -43,6 +47,19 @@ const Wrapper = styled.div`
       fill: var(--fig-stroke);
     }
   }
+
+  .hash-tag {
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: 16px 0;
+    line-height: 140%;
+    @media screen and (max-width: 721px) {
+      font-size: 18px;
+    }
+  }
+
   @media screen and (max-width: 721px) {
     .desc {
       margin-top: 20px;
@@ -83,6 +100,7 @@ const Description = styled.h3`
   text-align: center;
   font-size: 48px;
   font-style: normal;
-  font-weight: 500;
+  letter-spacing: -1.5px;
+  font-weight: 400;
   max-width: 565px;
 `;

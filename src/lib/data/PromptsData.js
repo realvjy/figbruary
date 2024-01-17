@@ -368,14 +368,4 @@ export const promptData2023 = [
   },
 ];
 
-export const promptData2024 = promptData2023;
 
-export const getCurrentDatePrompt = () => {
-  const dateObj = new Date();
-  const month   = dateObj.getUTCMonth() + 1; // months from 1-12
-  const day     = dateObj.getUTCDate();
-  
-  if (month == 2){
-    return promptData2024.find((promptData)=> promptData.day == day)
-  }
-};

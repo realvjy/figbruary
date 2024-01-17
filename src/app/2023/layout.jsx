@@ -3,12 +3,11 @@ import seoData from "@/lib/next-seo.config";
 import StyledThemeProvider from "@/components/2023/themeProvider";
 import Layout from "@/components/2023/Layout";
 
-
 export const metadata = {
   metadataBase: new URL(seoData.openGraph.url),
   title: {
     default: seoData.openGraph.title,
-    template : "2023 | %s"
+    template: "2023 | %s",
   },
   description: seoData.openGraph.description,
   keywords: seoData.openGraph.keywords,
@@ -49,15 +48,12 @@ export const metadata = {
   },
 };
 
-
 export default function _2023_Layout({ children }) {
   return (
     <>
-      <StyledThemeProvider >
+      <StyledThemeProvider>
         <GlobalStyle />
-        <Layout>
-          {children}
-        </Layout>
+        <Layout>{children}</Layout>
       </StyledThemeProvider>
     </>
   );
