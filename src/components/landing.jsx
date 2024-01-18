@@ -19,7 +19,7 @@ export default function LandingPage() {
 
   return (
     <Layout>
-      {!promptData && (
+      {promptData != null && (
         <>
           <PromptInfoCard>
             <div className="date-wrapper">
