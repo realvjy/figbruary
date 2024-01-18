@@ -7,23 +7,35 @@ import {
   getCurrentDatePrompt,
   getMetaDataForPage,
   getTagClass,
+  getTodayDay,
 } from "@/lib/utils";
 import { Tag, Tags, PromptInfoCard } from "@/styles/globals/common";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function LandingPage() {
-  // const promptData = getCurrentDatePrompt();
-  const [promptData, setPromptData] = useState(
-    getCurrentDatePrompt(promptData2024)
-  );
+  const [promptData, setPromptData] = useState(null);
 
+  const firstDay = promptData2024[1];
+
+  useEffect(() => {
+    const today = getCurrentDatePrompt(promptData2024);
+    console.log(today);
+    if (today == undefined) {
+      setPromptData(firstDay);
+    }
+  }, [promptData]);
+
+  console.log(promptData);
   return (
     <Layout>
-      {promptData != null && (
+      {/* change this to null */}
+      {null && (
         <>
           <PromptInfoCard>
             <div className="date-wrapper">
-              <h3 className="shimmer">today</h3>
+              <h3 className="shimmer">
+                {promptData.day == getTodayDay() ? "Today" : "First"}
+              </h3>
               <div className="date-text-wrapper">
                 <span className="date">{promptData.day}</span>
                 <span className="month">feb</span>
@@ -32,13 +44,16 @@ export default function LandingPage() {
             <div className="info-wrapper">
               <MetaInfo>
                 <div className="header">
-                  <h2>let's warm up</h2>
+                  <h2>{promptData.name}</h2>
                 </div>
                 <p className="description">{promptData.description}</p>
               </MetaInfo>
               <TagCredit>
                 <div className="credit">
-                  Credit : <span>{promptData.credit}</span>
+                  Credit :{" "}
+                  <span>
+                    <a href={promptData.creditLink}>@{promptData.credit}</a>
+                  </span>
                 </div>
                 <Tags>
                   {promptData.tag.map((tag) => (

@@ -12,15 +12,18 @@ import {
 
 export default function PromptsPage() {
   const promptToday = getTodayDay();
+  let prompts = promptData2024.filter((f) => f.hidden === false);
 
   return (
     <Section>
       <div className="container">
         <Wrapper>
-          <h1>prompts</h1>
-
+          <PromptHeader>
+            <h1>prompts</h1>
+            <h2 className="hash-tag">#Figbruary2024</h2>
+          </PromptHeader>
           <PromptList>
-            {promptData2024.map((promptData, i) => {
+            {prompts.map((promptData, i) => {
               if (promptData.hidden) {
                 return;
               }
@@ -30,7 +33,14 @@ export default function PromptsPage() {
                   className={promptToday == promptData.day ? "today" : ""}
                 >
                   <Info>
-                    <h2 className="date">{promptData.day} feb.</h2>
+                    <h2 className="date">
+                      {promptData.day} feb.{" "}
+                      {promptToday == promptData.day ? (
+                        <span className="shimmer">today</span>
+                      ) : (
+                        ""
+                      )}
+                    </h2>
                     <div className="header">
                       <h3>{promptData.name}</h3>
                     </div>
@@ -68,20 +78,38 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
+`;
+
+const PromptHeader = styled.div`
+  padding: 80px 20px 40px 20px;
+  @media screen and (max-width: 725px) {
+    padding: 40px 10px 20px 10px;
+  }
   h1 {
     font-size: 48px;
     font-style: normal;
     font-weight: 800;
     text-align: center;
-    padding: 80px 0;
-  }
-  @media screen and (max-width: 725px) {
-    h1 {
+    @media screen and (max-width: 725px) {
       font-size: 30px;
-      padding: 24px 0;
+      padding: 0;
+    }
+  }
+
+  .hash-tag {
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: 16px 0;
+    line-height: 140%;
+    text-align: center;
+    @media screen and (max-width: 721px) {
+      font-size: 20px;
     }
   }
 `;
+
 const PromptList = styled.ul`
   display: grid;
   gap: 20px;
@@ -107,7 +135,7 @@ const Prompt = styled.li`
   }
 
   &.today {
-    background: var(--background-yellow);
+    background: var(--bright-yellow);
   }
   @media screen and (max-width: 725px) {
     min-height: 200px;
@@ -118,16 +146,7 @@ const Prompt = styled.li`
     flex-wrap: wrap;
     align-items: center;
   }
-  h2 {
-    color: var(--font-dark);
-    font-size: 30px;
-    font-weight: 700;
-    letter-spacing: -0.4px;
-    -webkit-text-stroke: 1px var(--font-dark);
-    @media screen and (max-width: 725px) {
-      font-size: 22px;
-    }
-  }
+
   h3 {
     color: var(--font-color);
     font-size: 26px;
@@ -175,4 +194,30 @@ const TagCredit = styled.div`
   }
 `;
 
-const Info = styled.div``;
+const Info = styled.div`
+  h2.date {
+    color: var(--font-dark);
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+    -webkit-text-stroke: 1px var(--font-dark);
+    display: flex;
+    align-items: center;
+    span {
+      margin-left: 8px;
+      border-radius: 0px;
+      color: #fff;
+      background: var(--tag-green);
+      font-weight: 600;
+      font-size: 16px !important;
+      padding: 2px 12px;
+      text-transform: uppercase;
+      border-left: 6px solid var(--tag-dark-green);
+      letter-spacing: 2px;
+      -webkit-text-stroke: 0px !important;
+    }
+    @media screen and (max-width: 725px) {
+      font-size: 22px;
+    }
+  }
+`;

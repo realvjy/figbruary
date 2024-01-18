@@ -2,13 +2,13 @@
 :root {
   // colors
   --background-gray: #b3c9d7;
-  --background-yellow: #f2cb58;
+  --background-yellow: #f4c94a;
   --background-purple: #BFBCE3; 
   --bright-yellow: #f9df2b;
   --font-black: #000;
   --max-width: 900px;
   --gray: rgba(0, 0, 0, 0.64);
-  --gray-hex: #2A2B37;
+  --gray-hex: #000000;
   --orange: #FF9154;
 
   // element colors
@@ -56,6 +56,7 @@
   
   --tag-orange: #FF9154;
   --tag-green: #92BF77;
+  --tag-dark-green: #7aa75e;
   --tag-blue: #00B2FF;
   --tag-purple: #CD97E9;
   --tag-pink: #FF70D7;
@@ -97,9 +98,7 @@ main {
     background: var(--background-purple);
     @media screen and (max-width: 993px){
       padding: 0 20px;
-      h1{
-        padding: 50px 0
-      }
+
     };
   }
   

@@ -36,13 +36,14 @@ const PromptList = (props) => {
     <PromptSection>
       <Container>
         <PromptWrapper>
+          <h4>2023 Prompts</h4>
           {
             prompts.map((p, i) => {
               let promptDate = new Date(p.date);
               return (
                 <PromptBox key={p.day + i} className={`${getTagClass(p.tag[0])} ${checkIsToday(promptDate) ? 'today' : ''}`} id={`day-${p.day}`}>
                   <h2>
-                    {p.date.split(',').shift()}.
+                    {p.date.split(',').shift()}, 23
                     {/* To get date only using split */}
                     {
                       checkIsToday(promptDate) ? <TodayTag>That&apos;s today</TodayTag> : ''
@@ -96,6 +97,12 @@ const PromptWrapper = styled.div`
   gap: 24px;
   h3{
     text-align: center;
+  }
+  h4{
+    text-align: center;
+    font-size: 22px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
   }
 `
 

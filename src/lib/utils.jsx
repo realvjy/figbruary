@@ -36,7 +36,7 @@ export const getCurrentDatePrompt = (data) => {
   const month = dateObj.getUTCMonth() + 1; // months from 1-12
   const day = dateObj.getUTCDate();
   // return data.find((date) => date.day == day);
-  if (month == 1) {
+  if (month == 2) {
     return data.find((date) => date.day == day);
   }
 };

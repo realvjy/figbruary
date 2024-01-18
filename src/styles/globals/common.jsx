@@ -116,6 +116,8 @@ export const PromptInfoCard = styled.div`
       padding-top: 2px;
       .date {
         font-size: 50px;
+        line-height: 100%;
+        min-width: 60px;
         -webkit-text-stroke: 2px var(--font-dark);
         @media screen and (max-width: 725px) {
           font-size: 40px;
@@ -178,13 +180,14 @@ export const PromptInfoCard = styled.div`
       font-weight: 400;
     }
     .credit {
-      font-size: 22px;
+      font-size: 21px;
       font-style: normal;
       font-weight: 400;
       letter-spacing: -0.48px;
-
-      .span {
-        font-weight: 500;
+      margin-top: 6px;
+      .span,
+      a {
+        font-weight: 600 !important;
       }
     }
   }
