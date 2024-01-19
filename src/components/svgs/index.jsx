@@ -178,6 +178,61 @@ const Shape7 = (props) => (
   </svg>
 )
 
+const Shape8 = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={200}
+    height={200}
+    fill="none"
+    viewBox="-30 -30 300 300"
+    {...props}
+  >
+    <g>
+      <path
+        fill="#A1D99E"
+        fillRule="evenodd"
+        stroke="#000"
+        d="M14 1C6.82 1 1 6.82 1 14v118c0 7.18 5.82 13 13 13h118c7.18 0 13-5.82 13-13V14c0-7.18-5.82-13-13-13H14Zm92 39H40v66h66V40Z"
+        clipRule="evenodd"
+      />
+      <animateMotion
+        dur="20s"
+        path="M36.5 4.5C22.0841 -2.01799 3.29393 0.629524 0.885779 11.1366C8.5 25.5001 -2.5 28.5001 2.5 41.0001C7.5 53.5001 9.70025 58.6259 21.5 58.5001C33.2998 58.3743 32.0604 48.1092 40.4825 43.4637C48.9046 38.8183 53.3531 12.12 36.5 4.5Z"
+        repeatCount="indefinite"
+      />
+    </g>
+  </svg>
+)
+
+const Shape9 = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={150}
+    height={150}
+    fill="none"
+    viewBox="1 1 350 300"
+    {...props}
+  >
+    <g>
+      <circle
+        cx={-10}
+        cy={70}
+        r={80}
+        fill="#C7B9FF"
+        stroke="#000"
+        strokeWidth={1.5}
+        transform="matrix(-1 0 0 1 99 1)"
+      />
+      <animateMotion
+        dur="8s"
+        path="M57.681 43.0382C58.1133 27.2232 42.2925 27.7268 40.334 16.1385C40.9239 -14.5743 -3.50001 6.49996 1.57726 27.4114C1.57726 27.4114 3.5 35.5 10.5 43.0382C15.1903 48.0892 24.0126 54.3933 24.0126 54.3933C31.5 59.5 57.1756 61.527 57.681 43.0382Z"
+        repeatCount="indefinite"
+      />
+    </g>
+  </svg>
+)
+
+
 export const shapes = {
   "shape1":Shape1,
   "shape2": Shape2,
@@ -185,5 +240,7 @@ export const shapes = {
   "shape4":Shape4,
   "shape5": Shape5,
   "shape6":Shape6,
-  "shape7":Shape7
+  "shape7":Shape7,
+  "shape8": Shape8,
+  "shape9": Shape9
 }

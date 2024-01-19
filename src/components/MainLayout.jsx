@@ -10,7 +10,8 @@ export default function Layout({ children }) {
     "shape4",
     "shape5",
     "shape6",
-    "shape7",
+    "$shape7",
+    "shape8"
   ];
   return (
     <Section>

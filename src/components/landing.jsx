@@ -14,9 +14,9 @@ import { useEffect, useState } from "react";
 export default function LandingPage() {
   let promptData = getCurrentDatePrompt(promptData2024);
 
-  // if (!promptData){
-  //   promptData = promptData2024[1];
-  // }
+  if (!promptData){
+    promptData = promptData2024[1];
+  }
 
   return (
     <Layout>

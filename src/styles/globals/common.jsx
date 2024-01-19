@@ -234,3 +234,4 @@ export const PromptInfoCard = styled.div`
     }
   }
 `;
+

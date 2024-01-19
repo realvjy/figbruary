@@ -4,7 +4,7 @@ import SvgWrapper from "@/components/svg-wrapper";
 import styled from "styled-components";
 
 export default function Page() {
-  const shapes = ["shape1", "shape2", "shape3", "shape5", "shape6", "shape7"];
+  const shapes = ["shape1", "shape2", "shape3", "shape5", "shape6", "$shape7"];
   return (
     <>
       <Section>
