@@ -69,7 +69,7 @@ export default function PromptsPage() {
           </PromptList>
         </Wrapper>
       </div>
-      <SvgWrapper svgs={["shape1","shape2","shape3","shape4","shape5","shape6","shape7"]} page={"landing"} />
+      <SvgWrapper svgs={["shape1","shape2","shape3","shape4","shape5","shape6","$shape7"]} page={"landing"} />
     </Section>
   );
 }

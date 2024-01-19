@@ -232,7 +232,43 @@ const Shape9 = (props) => (
   </svg>
 )
 
-
+const Figma = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={55}
+    height={83}
+    fill="none"
+    {...props}
+  >
+    <g clipPath="url(#a)">
+      <path
+        fill="#1ABCFE"
+        d="M27.5 41.25a13.75 13.75 0 1 1 27.5 0 13.75 13.75 0 0 1-27.5 0Z"
+      />
+      <path
+        fill="#0ACF83"
+        d="M0 68.75A13.75 13.75 0 0 1 13.75 55H27.5v13.75a13.75 13.75 0 0 1-27.5 0Z"
+      />
+      <path
+        fill="#FF7262"
+        d="M27.5 0v27.5h13.75a13.75 13.75 0 0 0 0-27.5H27.5Z"
+      />
+      <path
+        fill="#F24E1E"
+        d="M0 13.75A13.75 13.75 0 0 0 13.75 27.5H27.5V0H13.75A13.75 13.75 0 0 0 0 13.75Z"
+      />
+      <path
+        fill="#A259FF"
+        d="M0 41.25A13.75 13.75 0 0 0 13.75 55H27.5V27.5H13.75A13.75 13.75 0 0 0 0 41.25Z"
+      />
+    </g>
+    <defs>
+      <clipPath id="a">
+        <path fill="#fff" d="M0 0h55v82.5H0z" />
+      </clipPath>
+    </defs>
+  </svg>
+)
 export const shapes = {
   "shape1":Shape1,
   "shape2": Shape2,
@@ -242,5 +278,6 @@ export const shapes = {
   "shape6":Shape6,
   "shape7":Shape7,
   "shape8": Shape8,
-  "shape9": Shape9
+  "shape9": Shape9,
+  "figma": Figma
 }

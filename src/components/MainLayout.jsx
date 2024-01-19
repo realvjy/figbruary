@@ -11,7 +11,8 @@ export default function Layout({ children }) {
     "shape5",
     "shape6",
     "$shape7",
-    "shape8"
+    "shape8",
+    "$figma"
   ];
   return (
     <Section>

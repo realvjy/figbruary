@@ -162,11 +162,17 @@ main {
     top: 600px;
     left: 12%;
   }
-  .shape7 {
+  .shape7,.figma {
     top: 37%;
     left: 0;
     transform: translateX(-50%);
   }
+  .figma{
+    transform: translateX(0);
+    top: 38%;
+    z-index: -1;
+  }
+
   .shape8{
     top: 1498.5px;
     left: 76%;
