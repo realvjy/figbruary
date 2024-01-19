@@ -49,11 +49,17 @@ export default function SvgWrapper({ svgs, page }) {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [elementClicked, setElementClicked] = useState(false);
   const [currentElement,setCurrentElement] = useState(null);
+  const wrapperRef = useRef(null);
+  
   const setPos = (e) => {
     if (e.type == "touchmove"){
       e = e.touches[0];
     }
-    setMousePos({ x: e.clientX, y: e.clientY });
+    var bounds = wrapperRef.current.getBoundingClientRect();
+    var x = e.clientX - bounds.left;
+    var y = e.clientY - bounds.top;
+  
+    setMousePos({ x, y});
   };
   useEffect(() => {
     if (elementClicked) {
@@ -78,7 +84,7 @@ export default function SvgWrapper({ svgs, page }) {
     };
   });
   return (
-    <div className={`${page} svg-wrapper`}>
+    <div className={`${page} svg-wrapper`} ref={wrapperRef}>
       {svgs.map((svg, i) => {
         const Svg = shapes[svg];
         return (

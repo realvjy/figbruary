@@ -4,14 +4,14 @@ import styled from "styled-components";
 import { Tags, Tag, PromptInfoCard } from "@/styles/globals/common";
 
 import {
-  getCurrentDatePrompt,
-  getMetaDataForPage,
   getTagClass,
-  getTodayDay,
+  getCurrentDate,
 } from "@/lib/utils";
+import { promptData2023 } from "@/lib/data/PromptsData";
+import SvgWrapper from "./svg-wrapper";
 
 export default function PromptsPage() {
-  const promptToday = getTodayDay();
+  const promptToday = getCurrentDate().day; 
   let prompts = promptData2024.filter((f) => f.hidden === false);
 
   return (
@@ -30,12 +30,12 @@ export default function PromptsPage() {
               return (
                 <Prompt
                   key={i}
-                  className={promptToday == promptData.day ? "today" : ""}
+                  className={promptToday === promptData.day ? "today" : ""}
                 >
                   <Info>
                     <h2 className="date">
                       {promptData.day} feb.{" "}
-                      {promptToday == promptData.day ? (
+                      {promptToday === promptData.day ? (
                         <span className="shimmer">today</span>
                       ) : (
                         ""
@@ -69,6 +69,7 @@ export default function PromptsPage() {
           </PromptList>
         </Wrapper>
       </div>
+      <SvgWrapper svgs={["shape1","shape2","shape3","shape4","shape5","shape6","shape7"]} page={"landing"} />
     </Section>
   );
 }
@@ -129,9 +130,15 @@ const Prompt = styled.li`
   background: var(--prompt-box-background);
   padding: 18px 20px;
   min-height: 220px;
-  transition: box-shadow 400ms var(--prompt-shadow-transition);
+  
+  transition-property: box-shadow, transform;
+  transition-duration: 200ms;
+  transition-timing-function: var(--prompt-shadow-transition);
+
+
   &:hover {
-    box-shadow: var(--prompt-box-shadow);
+    transform: translateY(var(--prompt-card-translate));
+    box-shadow: var(--prompt-card-shadow);
   }
 
   &.today {

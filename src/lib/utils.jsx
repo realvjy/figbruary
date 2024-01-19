@@ -35,7 +35,6 @@ export const getCurrentDatePrompt = (data) => {
   const dateObj = new Date();
   const month = dateObj.getUTCMonth() + 1; // months from 1-12
   const day = dateObj.getUTCDate();
-  // return data.find((date) => date.day == day);
   if (month == 2) {
     return data.find((date) => date.day == day);
   }
@@ -43,10 +42,18 @@ export const getCurrentDatePrompt = (data) => {
 
 export const getTodayDay = () => {
   const dateObj = new Date();
-  const month = dateObj.getUTCMonth() + 1; // months from 1-12
   const day = dateObj.getUTCDate();
   return day;
 };
+
+export const getCurrentDate = () => {
+  const dateObj = new Date();
+  const day = dateObj.getUTCDate();
+  const month = dateObj.getUTCMonth() + 1;
+  return {
+    day, month
+  }
+}
 
 export const getTagClass = (t) => {
   switch (t) {

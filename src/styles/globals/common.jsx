@@ -72,9 +72,12 @@ export const PromptInfoCard = styled.div`
   display: flex;
   position: relative;
   background: var(--prompt-card-background);
-  transition: box-shadow 400ms var(--prompt-shadow-transition);
+  transition-timing-function: var(--prompt-shadow-transition);
+  transition-duration: 200ms;
+  transition-property: box-shadow, transform;
   &:hover {
     box-shadow: var(--prompt-card-shadow);
+    transform: translateY(var(--prompt-card-translate));
   }
   margin: 40px 0;
   display: flex;
