@@ -40,9 +40,9 @@ export const promptData2024 = [
   {
     day: 3,
     date: "3 Feb, 2024",
-    name: `Single Frame`,
+    name: `Only Frames`,
     tag: ['anything'],
-    description: `You have only one thing given that is a single frame create now.`,
+    description: `You have only frames to create something creative.`,
     credit: "rogie",
     creditLink: "https://x.com/rogie",
     hidden: false,
