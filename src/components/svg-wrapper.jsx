@@ -7,8 +7,8 @@ function SvgElement(props) {
   const ref = useRef();
 
   useEffect(() => {
-    if (!props.isBeingClicked){
-      return
+    if (!props.isBeingClicked) {
+      return;
     }
     if (!props.mouseClicked) {
       return;
@@ -16,11 +16,11 @@ function SvgElement(props) {
     const pos = props.cursorPos;
     const elementWrapper = props.elementWrapper;
 
-    if (elementWrapper){
-      const bounds = elementWrapper.getBoundingClientRect()
-      pos.x = pos.x - bounds.left
-      pos.y = pos.y - bounds.top
-    };
+    if (elementWrapper) {
+      const bounds = elementWrapper.getBoundingClientRect();
+      pos.x = pos.x - bounds.left;
+      pos.y = pos.y - bounds.top;
+    }
 
     const currentElement = ref.current;
     currentElement.style.top = pos.y - currentElement.offsetHeight / 2 + "px";
@@ -28,8 +28,8 @@ function SvgElement(props) {
   }, [props.cursorPos]);
 
   useEffect(() => {
-    if (!props.isBeingClicked){
-      return
+    if (!props.isBeingClicked) {
+      return;
     }
     if (props.mouseClicked) {
       ref.current.children[0].pauseAnimations();
@@ -47,7 +47,7 @@ function SvgElement(props) {
       onTouchStart={(event) => {
         props.setClick();
       }}
-      className={"svg-element-wrap " + props.name }
+      className={"svg-element-wrap " + props.name}
     >
       {props.children}
     </ShapeWrapper>
@@ -56,23 +56,23 @@ function SvgElement(props) {
 export default function SvgWrapper({ svgs, page }) {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [elementClicked, setElementClicked] = useState(false);
-  const [currentElement,setCurrentElement] = useState(null);
+  const [currentElement, setCurrentElement] = useState(null);
   const wrapperRef = useRef(null);
-  const mainWrapperRef = useRef(null);  
-  
+  const mainWrapperRef = useRef(null);
+
   const setPos = (e) => {
-    if (e.type == "touchmove"){
+    if (e.type == "touchmove") {
       e = e.touches[0];
     }
     var x = e.clientX;
     var y = e.clientY;
-  
-    setMousePos({ x, y});
+
+    setMousePos({ x, y });
   };
   useEffect(() => {
     if (elementClicked) {
       window.addEventListener("mousemove", setPos, true);
-      window.addEventListener("touchmove",setPos,true);
+      window.addEventListener("touchmove", setPos, true);
     }
   }, [elementClicked]);
 
@@ -80,64 +80,57 @@ export default function SvgWrapper({ svgs, page }) {
     const mouseUp = () => {
       setElementClicked(false);
       window.removeEventListener("mousemove", setPos, true);
-      window.removeEventListener("touchmove",setPos,true)
+      window.removeEventListener("touchmove", setPos, true);
     };
     if (window !== "undefined") {
       window.addEventListener("mouseup", mouseUp, false);
-      window.addEventListener("touchend",mouseUp,false)
+      window.addEventListener("touchend", mouseUp, false);
     }
     return () => {
       window.removeEventListener("mouseup", mouseUp);
-      window.removeEventListener("touchend",mouseUp)
+      window.removeEventListener("touchend", mouseUp);
     };
   });
 
-  const getElementCommonProps = (svg,index, fixed) => {
-    return{
+  const getElementCommonProps = (svg, index, fixed) => {
+    return {
       mouseClicked: elementClicked,
       cursorPos: mousePos,
-      setClick:()=>{
+      setClick: () => {
         setElementClicked(true);
         setCurrentElement(svg);
       },
       key: index + svg + fixed,
-      name:fixed? svg.substring(1):svg,
+      name: fixed ? svg.substring(1) : svg,
       isBeingClicked: svg === currentElement,
       isFixed: fixed,
-      elementWrapper: fixed? mainWrapperRef.current : wrapperRef.current
-    }
-  }
+      elementWrapper: fixed ? mainWrapperRef.current : wrapperRef.current,
+    };
+  };
   return (
-
     <Wrapper className="main-svg-wrapper" ref={mainWrapperRef}>
-      {
-        svgs.map((svg,i)=>{
-          if (svg.startsWith("$")){
-              const Svg = shapes[svg.substring(1)]
-              return (
-                <SvgElement
-                {...getElementCommonProps(svg,i, true)}
-              >
-                <Svg />
-              </SvgElement>
-              )
-          }
-        })
-      }
-      <div className={`${page} svg-wrapper`} ref={wrapperRef}>
       {svgs.map((svg, i) => {
-        if (!svg.startsWith("$")){
-          const Svg = shapes[svg];
+        if (svg.startsWith("$")) {
+          const Svg = shapes[svg.substring(1)];
           return (
-            <SvgElement
-              {...getElementCommonProps(svg,i,false)}
-            >
+            <SvgElement {...getElementCommonProps(svg, i, true)}>
               <Svg />
             </SvgElement>
           );
         }
       })}
-    </div>
+      <div className={`${page} svg-wrapper`} ref={wrapperRef}>
+        {svgs.map((svg, i) => {
+          if (!svg.startsWith("$")) {
+            const Svg = shapes[svg];
+            return (
+              <SvgElement {...getElementCommonProps(svg, i, false)}>
+                <Svg />
+              </SvgElement>
+            );
+          }
+        })}
+      </div>
     </Wrapper>
   );
 }

@@ -3,15 +3,12 @@ import { promptData2024 } from "@/lib/data/PromptsData2024";
 import styled from "styled-components";
 import { Tags, Tag, PromptInfoCard } from "@/styles/globals/common";
 
-import {
-  getTagClass,
-  getCurrentDate,
-} from "@/lib/utils";
+import { getTagClass, getCurrentDate } from "@/lib/utils";
 import { promptData2023 } from "@/lib/data/PromptsData";
 import SvgWrapper from "./svg-wrapper";
 
 export default function PromptsPage() {
-  const promptToday = getCurrentDate().day; 
+  const promptToday = getCurrentDate().day;
   let prompts = promptData2024.filter((f) => f.hidden === false);
 
   return (
@@ -67,9 +64,23 @@ export default function PromptsPage() {
               );
             })}
           </PromptList>
+          <Soon>
+            <h3>✦ ✦ more soon.. ✦ ✦</h3>
+          </Soon>
         </Wrapper>
       </div>
-      <SvgWrapper svgs={["shape1","shape2","shape3","shape4","shape5","shape6","$shape7"]} page={"landing"} />
+      <SvgWrapper
+        svgs={[
+          "shape1",
+          "shape2",
+          "shape3",
+          "shape4",
+          "shape5",
+          "shape6",
+          "$shape7",
+        ]}
+        page={"landing"}
+      />
     </Section>
   );
 }
@@ -80,7 +91,17 @@ const Wrapper = styled.div`
   justify-content: center;
   flex-direction: column;
 `;
-
+const Soon = styled.div`
+  padding: 32px 0;
+  align-items: center;
+  vertical-align: middle;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  h3 {
+    font-size: 24px;
+  }
+`;
 const PromptHeader = styled.div`
   padding: 80px 20px 40px 20px;
   @media screen and (max-width: 725px) {
@@ -130,11 +151,10 @@ const Prompt = styled.li`
   background: var(--prompt-box-background);
   padding: 18px 20px;
   min-height: 220px;
-  
+
   transition-property: box-shadow, transform;
   transition-duration: 200ms;
   transition-timing-function: var(--prompt-shadow-transition);
-
 
   &:hover {
     transform: translateY(var(--prompt-card-translate));

@@ -4,17 +4,14 @@ import Layout from "./MainLayout";
 import Link from "next/link";
 import { promptData2024 } from "@/lib/data/PromptsData2024";
 
-import {
-  getCurrentDatePrompt,
-  getTagClass,
-} from "@/lib/utils";
+import { getCurrentDatePrompt, getTagClass } from "@/lib/utils";
 import { Tag, Tags, PromptInfoCard } from "@/styles/globals/common";
 import { useEffect, useState } from "react";
 
 export default function LandingPage() {
   let promptData = getCurrentDatePrompt(promptData2024);
 
-  if (!promptData){
+  if (!promptData) {
     promptData = promptData2024[1];
   }
 

@@ -26,7 +26,12 @@ export default function Header() {
             <NavLink href="/" className={activePage("/") ? "active" : ""}>
               home
             </NavLink>
-
+            <NavLink
+              href="/prompts"
+              className={activePage("/prompts") ? "active" : ""}
+            >
+              prompts
+            </NavLink>
             <NavLink href="/faq" className={activePage("/faq") ? "active" : ""}>
               FAQs
             </NavLink>
@@ -101,7 +106,7 @@ const NavStyle = `
   transition: transform 500ms cubic-bezier(0.59, 0.03, 0, 1.69);
   &.active {
     font-weight: 700;
-    -webkit-text-stroke: 1px var(--font-dark);
+    -webkit-text-stroke: 0.6px var(--font-dark);
   }
   &:hover {
     transform: scale(1.1);

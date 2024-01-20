@@ -1,5 +1,3 @@
-
-
 export const Shape1 = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -14,7 +12,7 @@ export const Shape1 = (props) => (
         fill="#F24E1E"
         fillRule="evenodd"
         stroke="#000"
-        strokeWidth={1.5}
+        strokeWidth={2}
         d="M14 1C6.82 1 1 6.82 1 14v118c0 7.18 5.82 13 13 13h118c7.18 0 13-5.82 13-13V14c0-7.18-5.82-13-13-13H14Zm92 39H40v66h66V40Z"
         clipRule="evenodd"
       />
@@ -27,7 +25,7 @@ export const Shape1 = (props) => (
   </svg>
 );
 
-export const Shape2 =  (props) => (
+export const Shape2 = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={250}
@@ -41,6 +39,7 @@ export const Shape2 =  (props) => (
         fill="#F4C8C6"
         fillRule="evenodd"
         stroke="#000"
+        strokeWidth={2}
         d="m130.5 3 22.444 65L218.5 40.5l-33.814 59.316L249 120.5l-64.314 20.684 35.97 62.401-67.712-33.149L130.5 238l-22.444-65L28.5 211l47.814-69.816L3 120.5l73.314-20.684-35.97-62.401 67.712 33.15L130.5 3Z"
         clipRule="evenodd"
       />
@@ -66,6 +65,7 @@ const Shape3 = (props) => (
       <path
         fill="#C7B9FF"
         stroke="#000"
+        strokeWidth={2}
         d="M162.442 209.552c15.017 5.096 31.921 4.781 47.57-2.157 33.064-14.66 48.004-53.333 33.37-86.38-6.927-15.641-19.237-27.219-33.788-33.521 5.109-15.019 4.808-31.92-2.119-47.56C192.841 6.886 154.174-8.02 121.11 6.639c-15.649 6.938-27.238 19.255-33.553 33.809-15.017-5.096-31.92-4.78-47.57 2.157-33.063 14.66-48.003 53.333-33.369 86.38 6.927 15.641 19.236 27.218 33.787 33.52-5.11 15.019-4.808 31.921 2.119 47.561 14.634 33.048 53.301 47.954 86.365 33.295 15.649-6.938 27.238-19.255 33.553-33.809Z"
       />
       <animateMotion
@@ -76,7 +76,6 @@ const Shape3 = (props) => (
     </g>
   </svg>
 );
-
 
 const Shape4 = (props) => (
   <svg
@@ -91,6 +90,7 @@ const Shape4 = (props) => (
       <path
         fill="#C7B9FF"
         stroke="#000"
+        strokeWidth={2}
         d="M50.339 1.19 1.969 157.761 129.72 55.128 50.339 1.19Z"
       />
       <animateMotion
@@ -110,7 +110,7 @@ const Shape4 = (props) => (
       />
     </g>
   </svg>
-)
+);
 
 const Shape5 = (props) => (
   <svg
@@ -125,7 +125,7 @@ const Shape5 = (props) => (
       <path
         fill="#CD97E9"
         stroke="#000"
-
+        strokeWidth={1}
         d="M99.5 50c0 27.338-22.162 49.5-49.5 49.5S.5 77.338.5 50 22.662.5 50 .5 99.5 22.662 99.5 50Zm-50 34.5c18.778 0 34-15.222 34-34s-15.222-34-34-34-34 15.222-34 34 15.222 34 34 34Z"
       />
       <animateMotion
@@ -136,7 +136,6 @@ const Shape5 = (props) => (
     </g>
   </svg>
 );
-
 
 const Shape6 = (props) => (
   <svg
@@ -151,6 +150,7 @@ const Shape6 = (props) => (
       <path
         fill="#F2CB58"
         stroke="#000"
+        strokeWidth={2}
         d="M94.333 1H75.667v61.617L30.892 17.844 17.841 30.896l44.772 44.772H1v18.666h61.598l-44.791 44.791 13.059 13.06 44.8-44.801V169h18.667v-61.612l44.801 44.801 13.052-13.052-44.802-44.802H169V75.668h-61.617l44.771-44.771-13.059-13.06L94.333 62.6V1Z"
       />
       <animateMotion
@@ -173,10 +173,11 @@ const Shape7 = (props) => (
     <path
       fill="#5551FF"
       stroke="#000"
+      strokeWidth={1}
       d="M123.117 59.962C138.376 53.788 148 44.755 148 34.692 148 16.085 115.093 1 74.5 1S1 16.085 1 34.692c0 10.063 9.624 19.096 24.883 25.27C10.624 66.135 1 75.168 1 85.23c0 10.063 9.624 19.095 24.883 25.269C10.624 116.674 1 125.706 1 135.769c0 10.063 9.624 19.096 24.883 25.269C10.624 167.212 1 176.245 1 186.308 1 204.915 33.907 220 74.5 220s73.5-15.085 73.5-33.692c0-10.063-9.624-19.096-24.883-25.27C138.376 154.865 148 145.832 148 135.769c0-10.063-9.624-19.095-24.883-25.269C138.376 104.326 148 95.294 148 85.23c0-10.062-9.624-19.095-24.883-25.269Z"
     />
   </svg>
-)
+);
 
 const Shape8 = (props) => (
   <svg
@@ -192,6 +193,7 @@ const Shape8 = (props) => (
         fill="#A1D99E"
         fillRule="evenodd"
         stroke="#000"
+        strokeWidth={1.5}
         d="M14 1C6.82 1 1 6.82 1 14v118c0 7.18 5.82 13 13 13h118c7.18 0 13-5.82 13-13V14c0-7.18-5.82-13-13-13H14Zm92 39H40v66h66V40Z"
         clipRule="evenodd"
       />
@@ -202,7 +204,7 @@ const Shape8 = (props) => (
       />
     </g>
   </svg>
-)
+);
 
 const Shape9 = (props) => (
   <svg
@@ -220,7 +222,7 @@ const Shape9 = (props) => (
         r={80}
         fill="#C7B9FF"
         stroke="#000"
-        strokeWidth={1.5}
+        strokeWidth={2}
         transform="matrix(-1 0 0 1 99 1)"
       />
       <animateMotion
@@ -230,7 +232,7 @@ const Shape9 = (props) => (
       />
     </g>
   </svg>
-)
+);
 
 const Figma = (props) => (
   <svg
@@ -268,16 +270,16 @@ const Figma = (props) => (
       </clipPath>
     </defs>
   </svg>
-)
+);
 export const shapes = {
-  "shape1":Shape1,
-  "shape2": Shape2,
-  "shape3":Shape3,
-  "shape4":Shape4,
-  "shape5": Shape5,
-  "shape6":Shape6,
-  "shape7":Shape7,
-  "shape8": Shape8,
-  "shape9": Shape9,
-  "figma": Figma
-}
+  shape1: Shape1,
+  shape2: Shape2,
+  shape3: Shape3,
+  shape4: Shape4,
+  shape5: Shape5,
+  shape6: Shape6,
+  shape7: Shape7,
+  shape8: Shape8,
+  shape9: Shape9,
+  figma: Figma,
+};
