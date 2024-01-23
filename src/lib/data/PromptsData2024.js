@@ -56,7 +56,7 @@ export const promptData2024 = [
     tag: ['prototype', 'Variable'],
     description: `Create a widget for app or website.`,
     credit: "Olonk",
-    creditLink: "https://x.com/realvjy",
+    creditLink: "https://twitter.com/o_lonks",
     hidden: false,
     finished: true,
     link: "#"
@@ -92,7 +92,7 @@ export const promptData2024 = [
     tag: ['Prototype', 'UI'],
     description: `Use a plugin to create something cool.`,
     credit: "Olonk",
-    creditLink: "https://x.com/realvjy",
+    creditLink: "https://twitter.com/o_lonks",
     hidden: false,
     finished: true,
     link: "#"
