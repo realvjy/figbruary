@@ -17,7 +17,7 @@ export const promptData2024 = [
     day: 1,
     date: "1 Feb, 2024",
     name: `Landscape`,
-    tag: ['illustration', 'anythging'],
+    tag: ['illustration', 'anything'],
     description: `Create a cool landscape illustration, city, skyscraper, night, sky, forest etc.`,
     credit: "realvjy",
     creditLink: "https://x.com/realvjy",
