@@ -90,7 +90,7 @@ export const promptData2024 = [
     date: "7 Feb, 2024",
     name: `AI speech visualizer`,
     tag: ['Prototype', 'UI'],
-    description: `Use a plugin to create something cool.`,
+    description: `Create a visually engaging interaction to creatively represent speech or talking.`,
     credit: "Olonk",
     creditLink: "https://twitter.com/o_lonks",
     hidden: false,
