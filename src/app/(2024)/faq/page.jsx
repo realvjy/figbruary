@@ -13,7 +13,7 @@ export default function Page() {
             <h1>FAQs</h1>
             <TextWrapper className="text-wrap">
               <p>
-                <span className="fig">figbruary</span> is an finctional month
+                <span className="fig">figbruary</span> is an fictional month
                 created by combining Figma + February where you can experiment
                 and design things daily to push the limits
               </p>
