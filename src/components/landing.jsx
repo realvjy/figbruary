@@ -71,11 +71,16 @@ export default function LandingPage() {
           <span>#figbruary2024</span>
         </p>
         <div className="credits">
-          <h3>❤️ Credits</h3>
+          <h3>❤️ Prompts Credits</h3>
           <div>
-            Thanks to <a href="https://x.com/realvjy">@realvjy</a>,
-            <a href="https://x.com/rogie">@rogie</a>,
-            <a href="https://x.com/miggi">@miggi</a>, & community members
+            Thanks to <a href="https://x.com/rogie">@rogie</a>,
+            <a href="https://x.com/miggi">@miggi</a>,
+            <a href="https://x.com/pablostanley">@pablostanley</a>,
+            <a href="https://x.com/realvjy">@realvjy</a>,
+            <a href="https://x.com/efedorenko">@efedorenko</a>,
+            <a href="https://x.com/vyshnav_xyz">@vyshnav_xyz</a>,
+            <a href="https://x.com/o_lonks">@o_lonks</a>,
+            <a href="https://x.com/mrstev3n">@mrstev3n</a>, & community members
           </div>
         </div>
         <div className="submissions">
@@ -136,11 +141,14 @@ const DescriptionWrap = styled.div`
   }
   .credits {
     margin-top: 70px;
+
     a {
       margin-left: 8px;
       letter-spacing: -0.5px;
       text-decoration: underline;
+      display: inline-block;
       font-weight: 600;
+      line-height: 150%;
       &:first-child {
         margin-left: 0px;
       }
