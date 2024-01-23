@@ -74,7 +74,7 @@ export default function LandingPage() {
           <h3>❤️ Credits</h3>
           <div>
             Thanks to <a href="https://x.com/realvjy">@realvjy</a>,
-            <a href="https://x.com/miggi">@rogie</a>,
+            <a href="https://x.com/rogie">@rogie</a>,
             <a href="https://x.com/miggi">@miggi</a>, & community members
           </div>
         </div>
