@@ -10,7 +10,7 @@ export default function Footer() {
           <CreditText>
             2023 - 24, Initiated by{" "}
             <span>
-              <a href="https//x.com/@realvjy">@realvjy</a>
+              <a href="https://x.com/@realvjy">@realvjy</a>
             </span>
             , contributed by community
           </CreditText>
