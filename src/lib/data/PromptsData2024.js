@@ -54,7 +54,7 @@ export const promptData2024 = [
     date: "4 Feb, 2024",
     name: `Keyboard Typing`,
     tag: ['prototype', 'Variable'],
-    description: `Create a widget for app or website.`,
+    description: `Create an interaction for an app or website that simulates typing.`,
     credit: "Olonk",
     creditLink: "https://twitter.com/o_lonks",
     hidden: false,
