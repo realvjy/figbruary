@@ -67,7 +67,7 @@ export default function LandingPage() {
           PS. - You don’t have to follow the prompt exactly. Or even at all.
         </p>
         <p className="submit-steps">
-          Share your work and tag it with <span>#figbruary</span> and{" "}
+          Share your work and tag it with <span>#figbruary</span> or{" "}
           <span>#figbruary2024</span>
         </p>
         <div className="credits">

@@ -29,6 +29,29 @@ export default function Page() {
                 <p>No</p>
               </Question>
               <Question>
+                <h3>If I don't understand prompt?</h3>
+                <p>
+                  It's simple to understand, but if it becomes complex, you can
+                  reach out to Twitter or the community."
+                </p>
+              </Question>
+              <Question>
+                <h3>Do I have to use Figma?</h3>
+                <p>
+                  No. Some prompts may be specifically for Figma, but most of
+                  them can be used with any graphic apps. You can also use
+                  either Sketch, Penpot, or maybe Illustrator. Give it a try;
+                  it's fun experimenting.
+                </p>
+              </Question>
+              <Question>
+                <h3>Is this a competition?</h3>
+                <p>
+                  No, it's not a competition. It's just for experimenting,
+                  learning, and pushing beyond the boundaries.
+                </p>
+              </Question>
+              <Question>
                 <h3>Other prompt based learning events</h3>
                 <p>
                   <a href="https://inktober.com/">Inktober</a>
@@ -101,6 +124,7 @@ const Question = styled.div`
     font-style: normal;
     font-weight: 600;
     line-height: 130%;
+    -webkit-text-stroke: 0.6px var(--font-dark);
   }
 
   a {
