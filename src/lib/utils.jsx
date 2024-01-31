@@ -33,8 +33,9 @@ export const getMetaDataForPage = (title) => {
 
 export const getCurrentDatePrompt = (data) => {
   const dateObj = new Date();
-  const month = dateObj.getUTCMonth() + 1; // months from 1-12
-  const day = dateObj.getUTCDate();
+  // const month = dateObj.getUTCMonth() + 1; // months from 1-12
+  const month = dateObj.getMonth() + 1; // months from 1-12
+  const day = dateObj.getDate();
   if (month == 2) {
     return data.find((date) => date.day == day);
   }
@@ -48,12 +49,14 @@ export const getTodayDay = () => {
 
 export const getCurrentDate = () => {
   const dateObj = new Date();
-  const day = dateObj.getUTCDate();
-  const month = dateObj.getUTCMonth() + 1;
+  const day = dateObj.getDate();
+
+  const month = dateObj.getMonth() + 1;
   return {
-    day, month
-  }
-}
+    day,
+    month,
+  };
+};
 
 export const getTagClass = (t) => {
   switch (t) {

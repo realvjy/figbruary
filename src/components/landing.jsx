@@ -4,7 +4,7 @@ import Layout from "./MainLayout";
 import Link from "next/link";
 import { promptData2024 } from "@/lib/data/PromptsData2024";
 
-import { getCurrentDatePrompt, getTagClass } from "@/lib/utils";
+import { getCurrentDatePrompt, getTagClass, getCurrentDate } from "@/lib/utils";
 import { Tag, Tags, PromptInfoCard } from "@/styles/globals/common";
 import { useEffect, useState } from "react";
 
@@ -14,7 +14,7 @@ export default function LandingPage() {
   if (!promptData) {
     promptData = promptData2024[1];
   }
-
+  console.log(promptData);
   return (
     <Layout>
       {/* change this to null */}
@@ -23,7 +23,7 @@ export default function LandingPage() {
           <PromptInfoCard>
             <div className="date-wrapper">
               <h3 className="shimmer">
-                {promptData.day == 1 ? "first" : "Today"}
+                {promptData.day == getCurrentDate.day ? "first" : "Today"}
               </h3>
               <div className="date-text-wrapper">
                 <span className="date">{promptData.day}</span>
