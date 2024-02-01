@@ -141,7 +141,7 @@ export const promptData2024 = [
     description: `Create the book cover of a science fiction novel titled 'Beyond the Autolayout Cosmos' using a constructivist art style with simple geometric shapes and a minimal color palette`,
     credit: "pablostanley",
     creditLink: "https://twitter.com/pablostanley",
-    hidden: true,
+    hidden: false,
     finished: true,
     link: "#"
   },
@@ -153,7 +153,7 @@ export const promptData2024 = [
     description: `A minimalistic countdown timer. Simple and elegant, where user can easily set and interact with the timer. With subtle animations for a delightful user experience.`,
     credit: "mrstev3n",
     creditLink: "https://twitter.com/mrstev3n",
-    hidden: true,
+    hidden: false,
     finished: true,
     link: "#"
   },
@@ -165,7 +165,7 @@ export const promptData2024 = [
     description: `Illustrate your desk setup and prototype the items.`,
     credit: "vyshnav_xyz",
     creditLink: "https://twitter.com/vyshnav_xyz",
-    hidden: true,
+    hidden: false,
     finished: true,
     link: "#"
   },
@@ -177,7 +177,7 @@ export const promptData2024 = [
     description: `Loading indicator inspired by Piet Mondrian.`,
     credit: "rogie",
     creditLink: "https://twitter.com/rogie",
-    hidden: true,
+    hidden: false,
     finished: true,
     link: "#"
   },
