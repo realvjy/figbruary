@@ -165,7 +165,7 @@ const Prompt = styled.li`
     background: var(--bright-yellow);
   }
   @media screen and (max-width: 725px) {
-    min-height: 200px;
+    height: max-content;
   }
   .header {
     display: flex;
