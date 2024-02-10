@@ -269,7 +269,7 @@ export const promptData2024 = [
     day: 22,
     date: "22 Feb, 2024",
     name: `Ducky Bar`,
-    tag: ['Animation', 'Prototype'],
+    tag: ['Animation', 'prototype'],
     description: `Create a progress bar that fills up with water up and down. As the bar progresses, a small duck floats on the water. If you also make the duck animate when pressed, you genius.`,
     credit: "pablostanley",
     creditLink: "https://twitter.com/pablostanley",
