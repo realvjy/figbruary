@@ -181,6 +181,126 @@ export const promptData2024 = [
     finished: true,
     link: "#"
   },
+  {
+    day: 15,
+    date: "15 Feb, 2024",
+    name: `Color Picker`,
+    tag: ['UI'],
+    description: `Create a color picker but wrong.`,
+    credit: "miggi",
+    creditLink: "https://twitter.com/miggi",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
+  {
+    day: 16,
+    date: "16 Feb, 2024",
+    name: `Graffiti Style`,
+    tag: ['illustration', 'anything'],
+    description: `Illustrate a scene or concept using a graffiti-style aesthetic.`,
+    credit: "mrstev3n",
+    creditLink: "https://twitter.com/mrstev3n",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
+  {
+    day: 17,
+    date: "17 Feb, 2024",
+    name: `Make-it-Pop Button`,
+    tag: ['UI'],
+    description: `Make a button that, on hover, bubbles form around the edges, and when it’s pressed, the bubbles pop! Go crazy and experiment with colors and shading, akin to a skeuomorphic.`,
+    credit: "pablostanley",
+    creditLink: "https://twitter.com/pablostanley",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
+  {
+    day: 18,
+    date: "18 Feb, 2024",
+    name: `Charging animation`,
+    tag: ['Animation'],
+    description: `Create a cool charging animation.`,
+    credit: "vyshnav_xyz",
+    creditLink: "https://twitter.com/vyshnav_xyz",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
+  {
+    day: 19,
+    date: "19 Feb, 2024",
+    name: `Food Icon`,
+    tag: ['Icon', 'illustration'],
+    description: `Create an icon to represent your favorite food.`,
+    credit: "miggi",
+    creditLink: "https://twitter.com/miggi",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
+  {
+    day: 20,
+    date: "20 Feb, 2024",
+    name: `Pentagon`,
+    tag: ['Anything'],
+    description: `You have pentagon shape to create something cool.`,
+    credit: "Olonk",
+    creditLink: "https://twitter.com/o_lonks",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
+  {
+    day: 21,
+    date: "21 Feb, 2024",
+    name: `Cyclic Chart`,
+    tag: ['UI'],
+    description: `Design a cyclical hourly chart of average calories burned over 24h.`,
+    credit: "Eugene",
+    creditLink: "https://x.com/efedorenko",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
+  {
+    day: 22,
+    date: "22 Feb, 2024",
+    name: `Ducky Bar`,
+    tag: ['Animation', 'Prototype'],
+    description: `Create a progress bar that fills up with water up and down. As the bar progresses, a small duck floats on the water. If you also make the duck animate when pressed, you genius.`,
+    credit: "pablostanley",
+    creditLink: "https://twitter.com/pablostanley",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
+  {
+    day: 23,
+    date: "21 Feb, 2024",
+    name: `3D effect`,
+    tag: ['Anything'],
+    description: `Let's simulate 3D effect to create something cool.`,
+    credit: "rogie",
+    creditLink: "https://twitter.com/rogie",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
+  {
+    day: 24,
+    date: "24 Feb, 2024",
+    name: `Variables`,
+    tag: ['Anything'],
+    description: `Use variables to create something crazy or coool.`,
+    credit: "realvjy",
+    creditLink: "https://twitter.com/realvjy",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
 ];
 
 

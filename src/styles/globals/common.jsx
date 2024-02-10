@@ -140,6 +140,7 @@ export const PromptInfoCard = styled.div`
   .info-wrapper {
     display: flex;
     flex-direction: column;
+    width: 100%;
     .credit {
       margin-top: auto;
     }
