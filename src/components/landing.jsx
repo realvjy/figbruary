@@ -85,7 +85,18 @@ export default function LandingPage() {
         </div>
         <div className="submissions">
           <h3>🔗 All submissions</h3>
-          <p>all the submissions will available soon</p>
+          <p>
+            Some of the submissions using hashtag on X/twitter is available here
+            <a href="https://www.joyn.xyz/contest/figbruary--042ccdc6d60f">
+              joyn.xyz
+            </a>
+          </p>
+          <p>
+            Community members share not just on Twitter, but also on all social
+            media platforms including LinkedIn, threads, Twitter, Instagram, and
+            more. So, you can find it using the hashtag{" "}
+            <strong>#figbruary</strong>.
+          </p>
         </div>
       </DescriptionWrap>
     </Layout>
@@ -159,6 +170,22 @@ const DescriptionWrap = styled.div`
   }
   .submissions {
     margin-top: 70px;
+    font-size: 20px;
+    strong {
+      font-weight: 600;
+    }
+    p {
+      margin-bottom: 12px;
+      line-height: 140%;
+    }
+    a {
+      margin-left: 8px;
+      letter-spacing: -0.5px;
+      text-decoration: underline;
+      display: inline-block;
+      font-weight: 600;
+      line-height: 150%;
+    }
   }
   h3 {
     font-size: 24px;

@@ -301,6 +301,68 @@ export const promptData2024 = [
     finished: true,
     link: "#"
   },
+  {
+    day: 25,
+    date: "25 Feb, 2024",
+    name: `Make It Loop`,
+    tag: ['Anything', 'Animation'],
+    description: `Create something as a looping animation.`,
+    credit: "miggi",
+    creditLink: "https://twitter.com/miggi",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
+  {
+    day: 26,
+    date: "26 Feb, 2024",
+    name: `Moon Spinner`,
+    tag: ['Prototype', 'Animation'],
+    description: `Design a looping loading spinner that looks like a planet with a moon rotating around it. Brownie points if it has a hover effect/animation.`,
+    credit: "pablostanley",
+    creditLink: "https://twitter.com/pablostanley",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
+  {
+    day: 27,
+    date: "27 Feb, 2024",
+    name: `Iridescent`,
+    tag: ['Anything'],
+    description: `We love colorful things. Create something shiny with iridescent colors.`,
+    credit: "rogie",
+    creditLink: "https://twitter.com/rogie",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
+
+  {
+    day: 28,
+    date: "28 Feb, 2024",
+    name: `Fuschia`,
+    tag: ['Anything'],
+    description: `Now, what about use fuschia to something shiny and cool`,
+    credit: "miggi",
+    creditLink: "https://twitter.com/miggi",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
+
+  {
+    day: 29,
+    date: "29 Feb, 2024",
+    name: `Ice Cream`,
+    tag: ['illustration'],
+    description: `Create an illustration system to rapidly generate a variety of ice cream illustration for any project.`,
+    credit: "realvjy",
+    creditLink: "https://twitter.com/realvjy",
+    hidden: false,
+    finished: true,
+    link: "#"
+  },
 ];
 
 

@@ -60,6 +60,21 @@ export default function Page() {
                   <a href="https://sculptober.com/">sculptober</a>
                 </p>
               </Question>
+              <Question>
+                <h3>Credits & Thank you</h3>
+                <p className="inline">
+                  <a href="https://x.com/miggi">@miggi</a>,
+                  <a href="https://x.com/pablostanley">@pablostanley</a>,
+                  <a href="https://x.com/realvjy">@realvjy</a>,
+                  <a href="https://x.com/efedorenko">@efedorenko</a>,
+                  <a href="https://x.com/vyshnav_xyz">@vyshnav_xyz</a>,
+                  <a href="https://x.com/o_lonks">@o_lonks</a>,
+                  <a href="https://x.com/mrstev3n">@mrstev3n</a>,
+                  <a href="https://twitter.com/0xgreenapple">@0xgreenapple</a>,
+                  <a href="https://twitter.com/Lay_Bacc">@Lay_Bacc</a>, and
+                  community members
+                </p>
+              </Question>
             </TextWrapper>
           </Wrapper>
         </div>
@@ -126,7 +141,15 @@ const Question = styled.div`
     line-height: 130%;
     -webkit-text-stroke: 0.6px var(--font-dark);
   }
-
+  p {
+    &.inline {
+      display: inline-block;
+      a {
+        display: inline-block;
+        margin-left: 4px;
+      }
+    }
+  }
   a {
     display: block;
     text-decoration: underline;

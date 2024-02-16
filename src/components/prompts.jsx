@@ -64,9 +64,6 @@ export default function PromptsPage() {
               );
             })}
           </PromptList>
-          <Soon>
-            <h3>✦ ✦ more soon.. ✦ ✦</h3>
-          </Soon>
         </Wrapper>
       </div>
       <SvgWrapper
