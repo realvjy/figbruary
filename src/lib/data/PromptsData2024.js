@@ -2,8 +2,8 @@
 // DD/MM/YYYY
 export const promptData2024 = [
   {
-    day: 18,
-    date: "18 Jan, 2024",
+    day: 0,
+    date: "0 Jan, 2024",
     name: `Landscape`,
     tag: ['testing'],
     description: `Create a cool landscape illustration, city, skyscraper, night, sky, forest etc.`,
