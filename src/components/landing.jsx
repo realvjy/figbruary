@@ -10,9 +10,14 @@ import { useEffect, useState } from "react";
 
 export default function LandingPage() {
   let promptData = getCurrentDatePrompt(promptData2024);
-
+  const month = getCurrentDate().month;
   if (!promptData) {
-    promptData = promptData2024[1];
+    if (month === 2) {
+      promptData = promptData2024[1];
+    }
+    if (month === 3) {
+      promptData = promptData2024[29];
+    }
   }
   console.log(promptData);
   return (
@@ -23,7 +28,9 @@ export default function LandingPage() {
           <PromptInfoCard>
             <div className="date-wrapper">
               <h3 className="shimmer">
-                {promptData.day == getCurrentDate.day ? "first" : "Today"}
+                {promptData.day === promptData.day && month === 3
+                  ? "last"
+                  : "Today"}
               </h3>
               <div className="date-text-wrapper">
                 <span className="date">{promptData.day}</span>

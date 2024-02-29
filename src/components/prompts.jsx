@@ -9,8 +9,8 @@ import SvgWrapper from "./svg-wrapper";
 
 export default function PromptsPage() {
   const promptToday = getCurrentDate().day;
+  const month = getCurrentDate().month;
   let prompts = promptData2024.filter((f) => f.hidden === false);
-
   return (
     <Section>
       <div className="container">
@@ -27,12 +27,14 @@ export default function PromptsPage() {
               return (
                 <Prompt
                   key={i}
-                  className={promptToday === promptData.day ? "today" : ""}
+                  className={
+                    promptToday === promptData.day && month === 2 ? "today" : ""
+                  }
                 >
                   <Info>
                     <h2 className="date">
                       {promptData.day} feb.{" "}
-                      {promptToday === promptData.day ? (
+                      {promptToday === promptData.day && month === 2 ? (
                         <span className="shimmer">today</span>
                       ) : (
                         ""
