@@ -23,7 +23,46 @@ export default function LandingPage() {
   return (
     <Layout>
       {/* change this to null */}
-
+      {promptData && (
+        <>
+          <PromptInfoCard>
+            <div className="date-wrapper">
+              <h3 className="shimmer">
+                {promptData.day === promptData.day && month === 3
+                  ? "last"
+                  : "Today"}
+              </h3>
+              <div className="date-text-wrapper">
+                <span className="date">{promptData.day}</span>
+                <span className="month">feb</span>
+              </div>
+            </div>
+            <div className="info-wrapper">
+              <MetaInfo>
+                <div className="header">
+                  <h2>{promptData.name}</h2>
+                </div>
+                <p className="description">{promptData.description}</p>
+              </MetaInfo>
+              <TagCredit>
+                <div className="credit">
+                  Credit :{" "}
+                  <span>
+                    <a href={promptData.creditLink}>@{promptData.credit}</a>
+                  </span>
+                </div>
+                <Tags>
+                  {promptData.tag.map((tag) => (
+                    <Tag className={getTagClass(tag)} key={tag}>
+                      {tag}
+                    </Tag>
+                  ))}
+                </Tags>
+              </TagCredit>
+            </div>
+          </PromptInfoCard>
+        </>
+      )}
       <DescriptionWrap className="desc-wrap">
         <p className="description">
           {`Figbruary is a fictional month created by combining Figma + February where you can experiment and design things daily to push the limits.

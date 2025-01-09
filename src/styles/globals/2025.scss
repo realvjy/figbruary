@@ -1,0 +1,239 @@
+
+:root {
+  // colors
+  --background-gray: #b3c9d7;
+  --background-yellow: #f4c94a;
+  --background-purple: #BFBCE3; 
+  --bright-yellow: #f9df2b;
+  --font-black: #000;
+  --max-width: 900px;
+  --gray: rgba(0, 0, 0, 0.64);
+  --gray-hex: #000000;
+  --orange: #FF9154;
+
+  // element colors
+  --background-color: var(--background-gray);
+  --font-color: var(--font-black);
+  --light-font-color: var(--gray);
+  --font-dark: var(--gray-hex);
+  --cursor-color: #A1D99E;
+  //header
+  --header-link-color: var(--font-color);
+  --header-button-color: var(--bright-yellow);
+  --header-button-text-color: var(var(--font-black));
+
+  //variables
+  --body-padding: 26px;
+
+  //landing
+  --fig-background: white;
+  --fig-stroke: black;
+  --submit-btn-background: var(--font-black);
+  --submit-btn-color: white;
+
+  //sizes 
+  --mobile-padding: 20px;
+  --resize-starts: calc(var(--max-width) + var(--mobile-padding));
+
+  // prompts
+  --min-prompt-box-width: 290px;
+  --prompt-tag-color: var(--orange);
+  --prompt-box-border: #000;
+  --prompt-box-background: white;
+  --prompt-box-shadow: 0px 4px 0px 0px black;
+  --prompt-shadow-transition: ease-in;
+
+
+  --prompt-card-background: var(--background-yellow);
+  --prompt-card-border: black;
+  --prompt-card-shadow: 0px 6px 0px 2px #000;
+  --prompt-card-date-bg: #fff0c9;
+  --prompt-card-translate: -6px;
+
+
+  --tag-color: var(--orange);
+  --tag-font-color: white;
+  --tag-border-color: #171717;
+  
+  //tag colros
+  
+  --tag-orange: #FF9154;
+  --tag-green: #92BF77;
+  --tag-dark-green: #7aa75e;
+  --tag-blue: #00B2FF;
+  --tag-purple: #CD97E9;
+  --tag-pink: #FF70D7;
+
+
+}
+
+
+body {
+  cursor: url("/cursor.svg"), auto;
+  background: black;
+  padding: var(--body-padding);
+
+  *:hover {
+    cursor: url("/cursor.svg"), auto;
+  }
+  &:active *:hover {
+    cursor: url("/cursor.svg"), auto;
+  }
+  
+  @media screen and (max-width: 984px){
+    padding: 16px;
+  };
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - var(--body-padding) * 2);
+  background: var(--background-color);
+  font-family: var(--syne-font);
+  border-radius: 32px;
+  position: relative;
+  overflow: hidden;
+  &.faq{
+    transition: background 1s ease ;
+    background: var(--background-yellow);
+  }
+  &.prompts{
+    transition: background 1s ease;
+    background: var(--background-purple);
+    @media screen and (max-width: 993px){
+      padding: 0 20px;
+
+    };
+  }
+  
+  @media screen and (max-width: 984px){
+    padding: 0 20px;
+    border-radius: 24px;
+  };
+
+};
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.main-svg-wrapper {
+  .svg-wrapper{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin-left:auto;
+    margin-right:auto;
+  
+    max-width: 1500px;
+    width: 100%;
+    height: 100%;  
+  }
+  
+  .shape1 {
+    top: 700px;
+    left: 82%;
+    svg {
+      transform: rotate(30deg);
+    }
+  }
+  .shape2 {
+    top: 140px;
+    left: 80%;
+  };
+  .shape3{
+    top: 1040px;
+    left: 77%;
+  }
+  .shape4{
+    top: 1200px;
+    left: 9%;
+  }
+  .shape6 {
+    top: 120px;
+    left: 5%;
+  }
+  .shape5 {
+    top: 600px;
+    left: 12%;
+  }
+  .shape7,.figma {
+    top: 37%;
+    left: 0;
+    transform: translateX(-50%);
+  }
+  .figma{
+    transform: translateX(0);
+    top: 38%;
+    z-index: -1;
+  }
+
+  .shape8{
+    top: 1498.5px;
+    left: 76%;
+    transform: rotate(20deg);
+  }
+  
+}
+
+.faq{
+  .svg-wrapper{
+    .shape1{
+      top: 543px;
+      left: 78%;  
+    }
+    .shape3{
+      top: 743px;
+      left: 6%;
+    }
+    .shape5 {
+      top: 407px;
+      left: 9%;
+  }
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(5%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    transform: translateY(-5%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+
+.shimmer {
+  color: grey;
+  display: inline-block;
+  -webkit-mask: linear-gradient(-60deg, #000 31%, transparent 31.2%, transparent 32%, #000 32.5%) right/300% 100%;
+  background-repeat: no-repeat;
+  animation: shimmer 2.5s infinite;
+  font-size: 50px;
+  max-width: 200px;
+  position: relative;
+}
+
+
+
+@keyframes shimmer {
+  100% {-webkit-mask-position:left}
+}

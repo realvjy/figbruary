@@ -1,8 +1,6 @@
-import '@/styles/globals/2024.scss'
-import PageLayout from '@/components/layout'
+import "@/styles/globals/2025.scss";
+import PageLayout from "@/components/layout";
 import seoData from "@/lib/next-seo.config";
-
-
 
 export const metadata = {
   metadataBase: new URL(seoData.openGraph.url),

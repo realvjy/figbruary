@@ -1,6 +1,6 @@
 "use client";
 import styled from "styled-components";
-import SvgWrapper from "./svg-wrapper";
+import SvgWrapper from "@/components/svg-wrapper";
 
 export default function Layout({ children }) {
   const shapes = [
@@ -18,7 +18,7 @@ export default function Layout({ children }) {
     <Section>
       <div className="container">
         <Wrapper>
-          <img className="logo" src="figbruary-logo.png" />
+          <img className="logo" src="/figbruary-logo.png" />
           <Description className="desc">
             Challenges using Figma for the next 29 days
           </Description>
