@@ -27,13 +27,10 @@ export default function Header() {
               home
             </NavLink>
             <NavLink
-              href="/prompts"
+              href="/2024/prompts"
               className={activePage("/prompts") ? "active" : ""}
             >
               prompts
-            </NavLink>
-            <NavLink href="/faq" className={activePage("/faq") ? "active" : ""}>
-              FAQs
             </NavLink>
 
             <V1NavigateLink href="/2023/home">2023</V1NavigateLink>

@@ -9,9 +9,9 @@ export default function PageLayout({ children }) {
   return (
     <>
       <main className={page + " " + syne.variable + " " + inter.variable}>
-        <Header />
+        {/* <Header /> */}
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </main>
     </>
   );

@@ -69,31 +69,17 @@
 
 
 body {
-  cursor: url("/cursor.svg"), auto;
-  background: black;
-  padding: var(--body-padding);
 
-  *:hover {
-    cursor: url("/cursor.svg"), auto;
-  }
-  &:active *:hover {
-    cursor: url("/cursor.svg"), auto;
-  }
-  
-  @media screen and (max-width: 984px){
-    padding: 16px;
-  };
 }
 
 main {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - var(--body-padding) * 2);
-  background: var(--background-color);
-  font-family: var(--syne-font);
-  border-radius: 32px;
+  font-family: var(--inter-font);
   position: relative;
-  overflow: hidden;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
   &.faq{
     transition: background 1s ease ;
     background: var(--background-yellow);
