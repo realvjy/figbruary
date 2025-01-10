@@ -20,90 +20,15 @@ export default function LandingPage() {
     }
   }
   console.log(promptData);
+
   return (
     <Layout>
-      {/* change this to null */}
-      {promptData && (
-        <>
-          <PromptInfoCard>
-            <div className="date-wrapper">
-              <h3 className="shimmer">
-                {promptData.day === promptData.day && month === 3
-                  ? "last"
-                  : "Today"}
-              </h3>
-              <div className="date-text-wrapper">
-                <span className="date">{promptData.day}</span>
-                <span className="month">feb</span>
-              </div>
-            </div>
-            <div className="info-wrapper">
-              <MetaInfo>
-                <div className="header">
-                  <h2>{promptData.name}</h2>
-                </div>
-                <p className="description">{promptData.description}</p>
-              </MetaInfo>
-              <TagCredit>
-                <div className="credit">
-                  Credit :{" "}
-                  <span>
-                    <a href={promptData.creditLink}>@{promptData.credit}</a>
-                  </span>
-                </div>
-                <Tags>
-                  {promptData.tag.map((tag) => (
-                    <Tag className={getTagClass(tag)} key={tag}>
-                      {tag}
-                    </Tag>
-                  ))}
-                </Tags>
-              </TagCredit>
-            </div>
-          </PromptInfoCard>
-        </>
-      )}
-      <DescriptionWrap className="desc-wrap">
-        <p className="description">
-          {`Figbruary is a fictional month created by combining Figma + February where you can experiment and design things daily to push the limits.
-                  
-                  For every 24 hour day within this 696 hour timespan of the month, we have prepared a prompt with instructions for you to design and create.
-                  `}
-        </p>
-        <p className="notes">
-          PS. - You don’t have to follow the prompt exactly. Or even at all.
-        </p>
-        <p className="submit-steps">
-          Share your work and tag it with <span>#figbruary</span> or{" "}
-          <span>#figbruary2024</span>
-        </p>
-        <div className="credits">
-          <h3>❤️ Prompts Credits</h3>
-          <div>
-            Thanks to <a href="https://x.com/rogie">@rogie</a>,
-            <a href="https://x.com/miggi">@miggi</a>,
-            <a href="https://x.com/pablostanley">@pablostanley</a>,
-            <a href="https://x.com/realvjy">@realvjy</a>,
-            <a href="https://x.com/efedorenko">@efedorenko</a>,
-            <a href="https://x.com/vyshnav_xyz">@vyshnav_xyz</a>,
-            <a href="https://x.com/o_lonks">@o_lonks</a>,
-            <a href="https://x.com/mrstev3n">@mrstev3n</a>, & community members
-          </div>
-        </div>
-        <div className="submissions">
-          <h3>🔗 All submissions</h3>
-          <p>
-            Some of the submissions using hashtag on X/twitter is available here
-            <a href="https://www.joyn.xyz/contest/figbruary--042ccdc6d60f">
-              joyn.xyz
-            </a>
-          </p>
-          <p>
-            Community members share not just on Twitter, but also on all social
-            media platforms including LinkedIn, threads, Twitter, Instagram, and
-            more. So, you can find it using the hashtag{" "}
-            <strong>#figbruary</strong>.
-          </p>
+      <DescriptionWrap>
+        <a className="bt" href="#">
+          Prompt Soon
+        </a>
+        <div className="arc">
+          <a href="/2024/home">2024</a> /<a href="/2023/home">2023</a>
         </div>
       </DescriptionWrap>
     </Layout>
@@ -139,7 +64,29 @@ const DescriptionWrap = styled.div`
   font-weight: 400;
   letter-spacing: -0.2px;
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
 
+  .bt {
+    padding: 12px 20px;
+    background: linear-gradient(180deg, #2566ff 0%, #0746d9 100%), #d9d9d9;
+    color: #fff;
+    box-shadow: 4px 68px 19px rgba(22, 39, 126, 0.01),
+      2px 44px 18px rgba(22, 39, 126, 0.04),
+      1px 25px 15px rgba(22, 39, 126, 0.14),
+      1px 11px 11px rgba(22, 39, 126, 0.23), 0px 3px 6px rgba(22, 39, 126, 0.27);
+    border-radius: 111px;
+    margin-bottom: 32px;
+  }
+
+  .arc {
+    font-size: 16px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+  }
   .description {
     display: flex;
     flex-direction: column;

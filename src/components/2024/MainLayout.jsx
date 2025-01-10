@@ -1,6 +1,6 @@
 "use client";
 import styled from "styled-components";
-import SvgWrapper from "./svg-wrapper";
+import SvgWrapper from "@/components/svg-wrapper";
 
 export default function Layout({ children }) {
   const shapes = [
@@ -18,16 +18,15 @@ export default function Layout({ children }) {
     <Section>
       <div className="container">
         <Wrapper>
-          <img className="logo" src="/2025/figbruary.svg" />
+          <img className="logo" src="/figbruary-logo.png" />
           <Description className="desc">
-            Challenges using Figma for the next 28 days
+            Challenges using Figma for the next 29 days
           </Description>
-          <h1 className="hash-tag">#Figbruary2025</h1>
+          <h1 className="hash-tag">#Figbruary2024</h1>
           {children}
         </Wrapper>
       </div>
-
-      {/* <SvgWrapper svgs={shapes} page={"landing"} /> */}
+      <SvgWrapper svgs={shapes} page={"landing"} />
     </Section>
   );
 }
@@ -38,9 +37,9 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   animation: 800ms fadeInUp;
-  margin-top: -120px;
+  padding-top: 100px;
   @media screen and (max-width: 721px) {
-    margin-top: -30px;
+    padding-top: 20px;
   }
   .fig-icon {
     .background {
