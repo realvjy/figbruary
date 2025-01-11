@@ -7,9 +7,8 @@ import { promptData2024 } from "@/lib/data/PromptsData2024";
 import { getCurrentDatePrompt, getTagClass, getCurrentDate } from "@/lib/utils";
 import { Tag, Tags, PromptInfoCard } from "@/styles/globals/common";
 import { useEffect, useState } from "react";
-import Header from "./header";
 
-export default function LandingPage() {
+export default function Faq() {
   let promptData = getCurrentDatePrompt(promptData2024);
   const month = getCurrentDate().month;
   if (!promptData) {
@@ -22,51 +21,7 @@ export default function LandingPage() {
   }
   console.log(promptData);
 
-  return (
-    <>
-      <div className="container-25">
-        <Header />
-        <DescriptionWrap className="desc-wrap">
-          <p className="description">
-            {`Figbruary is a fictional month created by combining Figma + February where you can experiment and design things daily to push the limits.
-                  
-                  For every 24 hour day within this 696 hour timespan of the month, we have prepared a prompt with instructions for you to design and create.
-                  `}
-          </p>
-          <p className="notes">
-            PS. - You don’t have to follow the prompt exactly. Or even at all.
-          </p>
-          <p className="submit-steps">
-            Share your work and tag it with <span>#figbruary</span> or{" "}
-            <span>#figbruary2024</span>
-          </p>
-          <div className="credits">
-            <h3>❤️ Prompts Credits</h3>
-            <div>
-              Thanks to <a href="https://x.com/rogie">@rogie</a>,
-              <a href="https://x.com/miggi">@miggi</a>,
-              <a href="https://x.com/pablostanley">@pablostanley</a>,
-              <a href="https://x.com/realvjy">@realvjy</a>,
-              <a href="https://x.com/efedorenko">@efedorenko</a>,
-              <a href="https://x.com/vyshnav_xyz">@vyshnav_xyz</a>,
-              <a href="https://x.com/o_lonks">@o_lonks</a>,
-              <a href="https://x.com/mrstev3n">@mrstev3n</a>, & community
-              members
-            </div>
-          </div>
-          <div className="submissions">
-            <h3>🔗 All submissions</h3>
-            <p>
-              Community members share not just on Twitter, but also on all
-              social media platforms including LinkedIn, threads, Twitter,
-              Instagram, and more. So, you can find it using the hashtag{" "}
-              <strong>#figbruary</strong>.
-            </p>
-          </div>
-        </DescriptionWrap>
-      </div>
-    </>
-  );
+  return <>Some text</>;
 }
 
 const TagText = styled.h4`

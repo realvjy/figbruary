@@ -1,12 +1,12 @@
 
 :root {
   // colors
-  --background-gray: #b3c9d7;
+  --background-gray: #F4F4F4;
   --background-yellow: #f4c94a;
   --background-purple: #BFBCE3; 
   --bright-yellow: #f9df2b;
   --font-black: #000;
-  --max-width: 900px;
+  --max-width: 600px;
   --gray: rgba(0, 0, 0, 0.64);
   --gray-hex: #000000;
   --orange: #FF9154;
@@ -54,7 +54,7 @@
   --tag-color: var(--orange);
   --tag-font-color: white;
   --tag-border-color: #171717;
-  
+  --white: white;
   //tag colros
   
   --tag-orange: #FF9154;
@@ -69,7 +69,8 @@
 
 
 body {
-
+  background-color: var(--background-gray);
+  font-family: var(--inter-font);
 }
 
 main {
@@ -100,8 +101,32 @@ main {
 
 };
 
-.container {
-  max-width: var(--max-width);
+main {
+  display: flex;
+  font-family: var(--inter-font);
+  position: relative;
+  &.faq{
+    transition: background 1s ease ;
+    background: var(--background-yellow);
+  }
+  &.prompts{
+    transition: background 1s ease;
+    background: var(--background-purple);
+    @media screen and (max-width: 993px){
+      padding: 0 20px;
+
+    };
+  }
+  
+  @media screen and (max-width: 984px){
+    padding: 0 20px;
+    border-radius: 24px;
+  };
+
+};
+
+.container-25 {
+  width: 500px;
   margin: 0 auto;
   position: relative;
   z-index: 2;

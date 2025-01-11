@@ -7,9 +7,8 @@ import { promptData2024 } from "@/lib/data/PromptsData2024";
 import { getCurrentDatePrompt, getTagClass, getCurrentDate } from "@/lib/utils";
 import { Tag, Tags, PromptInfoCard } from "@/styles/globals/common";
 import { useEffect, useState } from "react";
-import Header from "./header";
 
-export default function LandingPage() {
+export default function Soon() {
   let promptData = getCurrentDatePrompt(promptData2024);
   const month = getCurrentDate().month;
   if (!promptData) {
@@ -23,51 +22,106 @@ export default function LandingPage() {
   console.log(promptData);
 
   return (
-    <>
-      <div className="container-25">
-        <Header />
-        <DescriptionWrap className="desc-wrap">
-          <p className="description">
-            {`Figbruary is a fictional month created by combining Figma + February where you can experiment and design things daily to push the limits.
-                  
-                  For every 24 hour day within this 696 hour timespan of the month, we have prepared a prompt with instructions for you to design and create.
-                  `}
-          </p>
-          <p className="notes">
-            PS. - You don’t have to follow the prompt exactly. Or even at all.
-          </p>
-          <p className="submit-steps">
-            Share your work and tag it with <span>#figbruary</span> or{" "}
-            <span>#figbruary2024</span>
-          </p>
-          <div className="credits">
-            <h3>❤️ Prompts Credits</h3>
-            <div>
-              Thanks to <a href="https://x.com/rogie">@rogie</a>,
-              <a href="https://x.com/miggi">@miggi</a>,
-              <a href="https://x.com/pablostanley">@pablostanley</a>,
-              <a href="https://x.com/realvjy">@realvjy</a>,
-              <a href="https://x.com/efedorenko">@efedorenko</a>,
-              <a href="https://x.com/vyshnav_xyz">@vyshnav_xyz</a>,
-              <a href="https://x.com/o_lonks">@o_lonks</a>,
-              <a href="https://x.com/mrstev3n">@mrstev3n</a>, & community
-              members
-            </div>
-          </div>
-          <div className="submissions">
-            <h3>🔗 All submissions</h3>
-            <p>
-              Community members share not just on Twitter, but also on all
-              social media platforms including LinkedIn, threads, Twitter,
-              Instagram, and more. So, you can find it using the hashtag{" "}
-              <strong>#figbruary</strong>.
-            </p>
-          </div>
-        </DescriptionWrap>
+    <DescriptionWrap>
+      <div className="container">
+        <Wrapper>
+          <img className="logo" src="/2025/figbruary.svg" />
+          <Description className="desc">
+            Challenges using Figma for the next 28 days
+          </Description>
+          <h1 className="hash-tag">#Figbruary2025</h1>
+        </Wrapper>
       </div>
-    </>
+      <a className="bt" href="#">
+        Prompt Soon
+      </a>
+      <div className="arc">
+        <a href="/2024/home">2024</a> /<a href="/2023/home">2023</a>
+      </div>
+    </DescriptionWrap>
   );
 }
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: 800ms fadeInUp;
+  margin-top: -120px;
+  @media screen and (max-width: 721px) {
+    margin-top: -30px;
+  }
+  .fig-icon {
+    .background {
+      fill: var(--fig-background);
+    }
+    .stroke {
+      fill: var(--fig-stroke);
+    }
+  }
+
+  .hash-tag {
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: 16px 0;
+    line-height: 140%;
+    @media screen and (max-width: 721px) {
+      font-size: 20px;
+    }
+  }
+
+  @media screen and (max-width: 721px) {
+    .desc {
+      margin-top: 20px;
+      font-size: 30px;
+      max-width: 430px;
+    }
+    .tag-text {
+      font-size: 22px;
+      font-weight: 400;
+      margin-top: 10px;
+    }
+    .submit-btn {
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 20px;
+      padding: 16px 30px;
+    }
+    .logo {
+      max-width: 500px;
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .desc {
+      font-size: 26px;
+      max-width: 320px;
+      letter-spacing: -0.2px;
+      margin-top: 10px;
+    }
+    .tag-text {
+      font-size: 18px;
+    }
+    .submit-btn {
+      scale: 0.8;
+    }
+  }
+`;
+
+const Description = styled.h3`
+  margin-top: 30px;
+  text-align: center;
+  font-size: 48px;
+  font-style: normal;
+  letter-spacing: -1.5px;
+  font-weight: 400;
+  max-width: 565px;
+  @media screen and (max-width: 725px) {
+    font-size: 24px;
+  }
+`;
 
 const TagText = styled.h4`
   font-size: 32px;
@@ -100,9 +154,11 @@ const DescriptionWrap = styled.div`
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-
+  align-items: center;
   .bt {
     padding: 12px 20px;
+    display: flex;
+    width: fit-content;
     background: linear-gradient(180deg, #2566ff 0%, #0746d9 100%), #d9d9d9;
     color: #fff;
     box-shadow: 4px 68px 19px rgba(22, 39, 126, 0.01),

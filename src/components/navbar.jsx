@@ -3,23 +3,20 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styled from "styled-components";
 
-export default function Header() {
+export default function Nav() {
   const pathName = usePathname();
   const activePage = (page) => pathName == page;
 
   return (
     <Section>
-      <div className="container">
+      <div className="container-25">
         <Wrapper>
           <LogNHash>
-            <LogoWrapper className="logo-wrapper" href={"/"} scroll={false}>
-              <img src="/logo.svg" className="logo" />
-            </LogoWrapper>
             <FigButton
               href={"/"}
               className={`fig-btn ${activePage("/figbruary") ? "active" : ""}`}
             >
-              #figbruary
+              <img src="/2025/figbruary.svg" />
             </FigButton>
           </LogNHash>
           <NavLinkWrapper className="link-wrapper">
@@ -35,7 +32,6 @@ export default function Header() {
             <NavLink href="/faq" className={activePage("/faq") ? "active" : ""}>
               FAQs
             </NavLink>
-
             <V1NavigateLink href="/2023/home">2023</V1NavigateLink>
           </NavLinkWrapper>
         </Wrapper>
@@ -50,6 +46,10 @@ const Section = styled.section`
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  background-color: var(--white);
+  border-radius: 28px;
+  padding: 12px 24px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
   &:hover {
     .button-wrapper {
       width: 0;
@@ -84,11 +84,10 @@ const NavLinkWrapper = styled.div`
   transition: transform 500ms ease;
   display: flex;
   justify-content: right;
-  width: 100%;
-  align-items: center;
-  gap: 45px;
-  transition: all 1s ease;
 
+  align-items: center;
+  gap: 16px;
+  transition: all 1s ease;
   .button-wrapper {
     position: relative;
     max-width: 150px;
@@ -98,18 +97,18 @@ const NavLinkWrapper = styled.div`
   }
 `;
 const NavStyle = `
-  font-size: 21px;
+  font-size: 16px;
   color: var(--header-link-color);
   font-weight: 600;
   display: inline-flex;
 
   transition: transform 500ms cubic-bezier(0.59, 0.03, 0, 1.69);
   &.active {
-    font-weight: 700;
+    font-weight: 500;
     -webkit-text-stroke: 0.6px var(--font-dark);
   }
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.07);
   }
 `;
 const NavLink = styled(Link)`
@@ -123,16 +122,14 @@ const FigButton = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 150px;
-  height: 40px;
-  border: 2px solid black;
   color: var(--header-button-text-color);
-  background: var(--header-button-color);
   border-radius: 100px;
   text-align: center;
   white-space: nowrap;
-  padding: 20px !important;
-  transform: translateX(-24px);
+  img {
+    height: 24px;
+    max-width: fit-content;
+  }
 `;
 
 const LogoWrapper = styled(Link)`

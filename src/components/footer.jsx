@@ -8,7 +8,7 @@ export default function Footer() {
         <Wrapper>
           <NoticeText>This is not affiliated with Figma in any way</NoticeText>
           <CreditText>
-            2023 - 24, Initiated by{" "}
+            2023 - 25, Initiated by{" "}
             <span>
               <a href="https://x.com/@realvjy">@realvjy</a>
             </span>
@@ -28,11 +28,11 @@ const Wrapper = styled.div`
   text-align: center;
 `;
 const NoticeText = styled.p`
-  font-size: 16px;
+  font-size: 15px;
   color: var(--light-font-color);
 `;
 const CreditText = styled.p`
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 130%;
