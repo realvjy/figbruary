@@ -13,15 +13,15 @@ export default function Header() {
     <Section>
       <Wrapper>
         {/* <RiveComponent
-            style={{
-              width: "800px",
-              height: "600px",
-              display: "block", // Add this
-              margin: "0 auto", // Add this
-            }}
-          /> */}
+          style={{
+            width: "500px",
+            height: "300px",
+            display: "block", // Add this
+            margin: "0 auto", // Add this
+          }}
+        /> */}
         <Logo>
-          <img src="mark-2025.png" />
+          <img src="mark-2-2025.png" />
         </Logo>
         <HeadContent>
           <img src="/2025/figbruary.svg" />
@@ -33,8 +33,7 @@ export default function Header() {
 }
 
 const Section = styled.section`
-  margin: 60px 0;
-  margin-top: 40px;
+  margin: 80px 0;
   /* min-height: 400px; // Add this */
 `;
 

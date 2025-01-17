@@ -1,10 +1,11 @@
 "use client";
-import { syne, inter } from "@/styles/globals/fonts";
+import { syne, inter, bricolage } from "@/styles/globals/fonts";
 import { usePathname } from "next/navigation";
 import Footer from "./footer";
 import Nav from "./navbar";
 import styled from "styled-components";
-import SvgWrapper from "./svg-wrapper";
+import SvgWrapper from "@/components/svgs/svg-wrapper";
+
 export default function PageLayout({ children }) {
   const page = usePathname().split("/").slice(-1);
   const shapes = [
@@ -20,8 +21,18 @@ export default function PageLayout({ children }) {
   ];
   return (
     <>
-      <Main className={page + " " + syne.variable + " " + inter.variable}>
-        <SvgWrapper svgs={shapes} page={"landing"} />
+      <Main
+        className={
+          page +
+          " " +
+          syne.variable +
+          " " +
+          bricolage.variable +
+          " " +
+          inter.variable
+        }
+      >
+        {/* <SvgWrapper svgs={shapes} page={"landing"} /> */}
 
         <Nav />
         {children}
@@ -32,5 +43,8 @@ export default function PageLayout({ children }) {
 }
 
 const Main = styled.div`
+  position: relative;
+  min-height: 100vh;
   font-family: var(--inter-font);
+  z-index: 1;
 `;

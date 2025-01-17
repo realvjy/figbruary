@@ -58,6 +58,20 @@ export const getCurrentDate = () => {
   };
 };
 
+export const parseDate = (dateString) => {
+  // Parse the date string
+  const dateParts = dateString.split(","); // Split by comma
+  const [dayMonth, year] = [dateParts[0].trim(), dateParts[1].trim()]; // Separate day & month and year
+
+  const [day, month] = dayMonth.split(" "); // Split day and month
+
+  return {
+    day: parseInt(day, 10),
+    month,
+    year: parseInt(year.slice(-2), 10), // Get last 2 digits of the year
+  };
+};
+
 export const getTagClass = (t) => {
   switch (t) {
     case "illustration":

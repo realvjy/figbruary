@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@rive-app/react-canvas": "^4.17.5",
+    "gsap": "^3.12.7",
     "next": "^14.0.4",
     "next-seo": "^6.4.0",
     "nextjs-google-analytics": "^2.3.3",

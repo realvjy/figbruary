@@ -21,8 +21,8 @@ export default function Footer() {
 }
 
 const Section = styled.section`
-  margin: 60px 0;
-  margin-top: 120px;
+  margin: 20px 0;
+  padding-bottom: 40px;
 `;
 const Wrapper = styled.div`
   text-align: center;

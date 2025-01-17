@@ -48,8 +48,11 @@ const Wrapper = styled.div`
   justify-content: space-between;
   background-color: var(--white);
   border-radius: 28px;
-  padding: 12px 24px;
+  padding: 16px 24px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  /* box-shadow: var(--nav-shadow); */
+  background-blend-mode: luminosity;
   &:hover {
     .button-wrapper {
       width: 0;
@@ -127,7 +130,7 @@ const FigButton = styled.a`
   text-align: center;
   white-space: nowrap;
   img {
-    height: 24px;
+    height: 22px;
     max-width: fit-content;
   }
 `;

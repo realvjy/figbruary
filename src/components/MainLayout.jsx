@@ -1,6 +1,6 @@
 "use client";
 import styled from "styled-components";
-import SvgWrapper from "./svg-wrapper";
+import SvgWrapper from "@/components/svgs/svg-wrapper";
 import Nav from "./navbar";
 import Footer from "./footer";
 
