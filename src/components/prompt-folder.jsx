@@ -68,12 +68,15 @@ const Wrapper = styled.div`
       .hover {
         opacity: 1;
       }
-
       .shadow {
         opacity: 0.6;
         transform: translate(-12px, 12px);
       }
     }
+  }
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    height: auto;
   }
 `;
 const ContentWrap = styled.div`
@@ -89,15 +92,21 @@ const Content = styled.div`
   flex-direction: column;
   gap: 32px;
   text-align: left;
+  @media screen and (max-width: 600px) {
+    padding: 16px;
+    gap: 12px;
+  }
   h1 {
   }
-
   h3 {
     font-size: 26px;
     font-family: var(--bricolage-font);
     letter-spacing: -0.6px;
     font-weight: 700;
     margin-top: 8px;
+    @media screen and (max-width: 600px) {
+      font-size: 18px;
+    }
   }
   .new-prompt {
     display: flex;
@@ -120,6 +129,9 @@ const Content = styled.div`
             background: rgba(150, 150, 150, 0.1);
           }
         }
+        @media screen and (max-width: 600px) {
+          font-size: 12px;
+        }
       }
     }
   }
@@ -131,10 +143,19 @@ const Content = styled.div`
       font-size: 20px;
       font-weight: 600;
       letter-spacing: -0.3px;
+      @media screen and (max-width: 600px) {
+        font-size: 14px;
+      }
     }
-
+    @media screen and (max-width: 600px) {
+      gap: 8px;
+    }
     p {
       opacity: 0.6;
+      font-size: 16px;
+      @media screen and (max-width: 600px) {
+        font-size: 12px;
+      }
     }
   }
   .p-date {
@@ -189,6 +210,8 @@ const CardBase = styled.div`
   filter: drop-shadow(2px 44px 18px rgba(22, 39, 126, 0.04));
   .bg {
     position: relative;
+    height: 100%;
+    width: 100%;
     img {
       position: absolute;
       top: 0;
@@ -200,6 +223,14 @@ const CardBase = styled.div`
     }
     .shadow {
       opacity: 0;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    .bg {
+      img {
+        width: 100%;
+      }
     }
   }
 `;

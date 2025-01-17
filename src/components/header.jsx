@@ -34,6 +34,7 @@ export default function Header() {
 
 const Section = styled.section`
   margin: 80px 0;
+  margin-top: 40px;
   /* min-height: 400px; // Add this */
 `;
 
@@ -54,6 +55,10 @@ const Wrapper = styled.div`
 const HeadContent = styled.div`
   margin-top: 20px;
   h1 {
+    font-size: 24px;
+    margin-top: 20px;
+    line-height: 120%;
+    width: 400px;
   }
 `;
 const CreditText = styled.p`

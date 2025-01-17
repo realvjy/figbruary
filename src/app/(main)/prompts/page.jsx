@@ -10,7 +10,7 @@ export default function Prompts() {
     <Section>
       <div className="wrap">
         <h2>Prompts</h2>
-        <h4>#figbruary</h4>
+        <h4>#figbruary2025</h4>
       </div>
       <div className="p-wrap">
         {prompts.map((promptData, i) => {
@@ -39,16 +39,31 @@ const Section = styled.div`
     flex-direction: column;
     padding: 40px;
     h2 {
-      font-size: 44px;
+      font-size: 50px;
       font-family: var(--bricolage-font);
-      font-weight: 700;
+      font-weight: 800;
+    }
+
+    h4 {
+      font-size: 24px;
+      font-weight: 500;
+      margin-top: 8px;
+    }
+    @media screen and (max-width: 600px) {
+      width: 100%;
+      padding: 20px;
     }
   }
   .p-wrap {
     margin: 0 auto;
-    width: 840px;
+    width: 880px;
     display: grid;
     gap: 20px;
+    padding: 20px;
     grid-template-columns: repeat(2, 1fr);
+    @media screen and (max-width: 600px) {
+      grid-template-columns: repeat(1, 1fr);
+      width: 100%;
+    }
   }
 `;

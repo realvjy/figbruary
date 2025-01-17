@@ -42,7 +42,7 @@ export default function LandingPage() {
             </p>
             <p className="submit-steps">
               Share your work and tag it with <span>#figbruary</span> or{" "}
-              <span>#figbruary2024</span>
+              <span>#figbruary2025</span>
             </p>
           </div>
 

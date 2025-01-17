@@ -2,11 +2,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styled from "styled-components";
+import { useState } from "react";
 
 export default function Nav() {
   const pathName = usePathname();
   const activePage = (page) => pathName == page;
-
+  const [showArchive, setShowArchive] = useState(false);
   return (
     <Section>
       <div className="container-25">
@@ -32,7 +33,23 @@ export default function Nav() {
             <NavLink href="/faq" className={activePage("/faq") ? "active" : ""}>
               FAQs
             </NavLink>
-            <V1NavigateLink href="/2023/home">2023</V1NavigateLink>
+            <DropdownWrapper
+              onMouseEnter={() => setShowArchive(true)}
+              onMouseLeave={() => setShowArchive(false)}
+            >
+              <NavLink
+                href="#"
+                className={activePage("/archive") ? "active" : ""}
+              >
+                Archive
+              </NavLink>
+              {showArchive && (
+                <DropdownContent>
+                  <DropdownLink href="/2024/home">2024</DropdownLink>
+                  <DropdownLink href="/2023/home">2023</DropdownLink>
+                </DropdownContent>
+              )}
+            </DropdownWrapper>
           </NavLinkWrapper>
         </Wrapper>
       </div>
@@ -148,4 +165,43 @@ const LogoWrapper = styled(Link)`
 const LogNHash = styled.div`
   display: flex;
   align-items: center;
+`;
+
+const DropdownWrapper = styled.div`
+  position: relative;
+  display: inline-block;
+`;
+
+const DropdownContent = styled.div`
+  position: absolute;
+  top: 30px;
+  left: -20px;
+  background-color: var(--white);
+  min-width: 120px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  border-radius: 16px;
+  padding: 2px;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -15px; // Creates an invisible bridge to the main link
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: transparent;
+  }
+`;
+const DropdownLink = styled(Link)`
+  ${NavStyle}
+  padding: 8px 16px;
+  display: block;
+  white-space: nowrap;
+  border-radius: 12px;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    transform: none;
+  }
 `;
