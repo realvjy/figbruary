@@ -10,7 +10,7 @@ export default function Nav() {
   const [showArchive, setShowArchive] = useState(false);
   return (
     <Section>
-      <div className="container-25">
+      <div className="nav">
         <Wrapper>
           <LogNHash>
             <FigButton
@@ -58,7 +58,11 @@ export default function Nav() {
 }
 
 const Section = styled.section`
-  padding: 32px 0;
+  padding: 32px;
+  .nav {
+    max-width: 480px;
+    margin: 0 auto;
+  }
 `;
 const Wrapper = styled.div`
   display: flex;
@@ -83,6 +87,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     .link-wrapper {
       margin-top: 20px;
       justify-content: space-between;

@@ -75,7 +75,7 @@ export const parseDate = (dateString) => {
 export const getTagClass = (t) => {
   switch (t) {
     case "illustration":
-      return "orage";
+      return "orange";
       break;
     case "prototype":
       return "purple";

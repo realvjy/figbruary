@@ -1,4 +1,5 @@
 "use client";
+import Community from "@/components/community";
 import Faq from "@/components/faq";
 import Landing from "@/components/landing";
 import styled from "styled-components";
@@ -25,59 +26,47 @@ export default function Page() {
               <h3>Do I have to follow prompts strictly?</h3>
               <p className="description">No</p>
             </div>
-          </div>
-          <div className="question border">
             <div className="ques">
-              <h3>Other prompt based learning events</h3>
-              <p className="description">
-                Inktober Genuary Nodevember sculptober
-              </p>
-            </div>
-
-            <div className="ques">
-              <h3>Do I have to follow prompts strictly?</h3>
+              <h3>Do I have to post daily?</h3>
               <p className="description">No</p>
             </div>
-          </div>
-          <div className="credits border">
-            <h3>❤️ Thank you</h3>
-            <p>
-              This not possibile without contribution of time to share the cool
-              prompts by all community members and specially
-            </p>
-            <div className="profile">
-              <a href="https://x.com/rogie">
-                <img src="profile/miggi.png" />
-              </a>
-              <a href="https://x.com/rogie">
-                <img src="profile/rogie.png" />
-              </a>
-              <a href="https://x.com/rogie">
-                <img src="profile/realvjy.png" />
-              </a>
-              <a href="https://x.com/rogie">
-                <img src="profile/efedorenko.png" />
-              </a>
-              <a href="https://x.com/rogie">
-                <img src="profile/realvjy.png" />
-              </a>
-              <a href="https://x.com/rogie">
-                <img src="profile/realvjy.png" />
-              </a>
-              <a href="https://x.com/rogie">
-                <img src="profile/realvjy.png" />
-              </a>
-              <div className="com">And all community</div>
-              {/* <a href="https://x.com/miggi">@miggi</a>
-              <a href="https://x.com/pablostanley">@pablostanley</a>,
-              <a href="https://x.com/realvjy">@realvjy</a>,
-              <a href="https://x.com/efedorenko">@efedorenko</a>,
-              <a href="https://x.com/vyshnav_xyz">@vyshnav_xyz</a>,
-              <a href="https://x.com/o_lonks">@o_lonks</a>,
-              <a href="https://x.com/mrstev3n">@mrstev3n</a>, & community
-              members for all prompt credits */}
+            <div className="ques">
+              <h3>If I don't understand prompt?</h3>
+              <p className="description">
+                It's simple to understand, but if it becomes complex, you can
+                reach out to X/Twitter or the community.
+              </p>
+            </div>
+            <div className="ques">
+              <h3>Do I have to use Figma?</h3>
+              <p className="description">
+                No. Some prompts may be specifically for Figma, but most of them
+                can be used with any graphic apps. You can also use either
+                Sketch, Penpot, or maybe Illustrator. Give it a try; it's fun
+                experimenting.
+              </p>
+            </div>
+            <div className="ques">
+              <h3>Is this a competition?</h3>
+              <p className="description">
+                No, it's not a competition. It's just for experimenting,
+                learning, and pushing beyond the boundaries.
+              </p>
             </div>
           </div>
+
+          <div className="credits border">
+            <div className="ques">
+              <h3>Other prompt based learning events</h3>
+              <div className="links">
+                <a href="https://inktober.com/">Inktober</a>
+                <a href="https://genuary.art/">Genuary</a>
+                <a href="https://nodevember.io/">Nodevember</a>
+                <a href="https://sculptober.com/">Sculptober</a>
+              </div>
+            </div>
+          </div>
+          <Community />
         </DescriptionWrap>
       </div>
     </Section>
@@ -140,6 +129,10 @@ const DescriptionWrap = styled.div`
     flex-direction: column;
     gap: 32px;
   }
+
+  .question {
+    margin-top: 20px;
+  }
   .bt {
     padding: 12px 20px;
     background: linear-gradient(180deg, #2566ff 0%, #0746d9 100%), #d9d9d9;
@@ -178,10 +171,21 @@ const DescriptionWrap = styled.div`
       font-weight: 700;
     }
   }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    a {
+      opacity: 0.5;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
   .credits {
     a {
       letter-spacing: -0.5px;
-      text-decoration: underline;
       display: inline-block;
       font-weight: 600;
       line-height: 150%;
@@ -191,7 +195,6 @@ const DescriptionWrap = styled.div`
     }
 
     p {
-      margin-bottom: 18px;
       font-size: 16px;
     }
     .profile {

@@ -410,8 +410,8 @@ export const Tag25 = styled.div`
     color: rgba(0, 113, 194, 0.8);
   }
   &.orange{
-    background:linear-gradient(270deg, #FFCEDF 0%, #F7D1FF 100%);
-    color: rgba(140, 0, 126, 0.8);
+    background:linear-gradient(270deg, #FFEEE0 0%, #FFE4C2 100%);
+    color: rgba(240, 60, 0, 0.9);
   }
   &.yellow{
     background: linear-gradient(90deg,#ffd566 0%,#fff8e6 100%);

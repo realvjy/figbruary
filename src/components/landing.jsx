@@ -2,32 +2,36 @@
 import styled from "styled-components";
 import Layout from "./MainLayout";
 import Link from "next/link";
-import { promptData2024 } from "@/lib/data/PromptsData2024";
+import { promptData2025 } from "@/lib/data/PromptsData2025";
 
 import { getCurrentDatePrompt, getTagClass, getCurrentDate } from "@/lib/utils";
 import { Tag, Tags, PromptInfoCard } from "@/styles/globals/common";
 import { useEffect, useState } from "react";
 import Header from "./header";
 import PromptCard from "./prompt-folder";
+import Community from "./community";
 
 export default function LandingPage() {
-  let promptData = getCurrentDatePrompt(promptData2024);
+  let promptData = getCurrentDatePrompt(promptData2025);
   const month = getCurrentDate().month;
   if (!promptData) {
-    if (month === 2) {
-      promptData = promptData2024[1];
+    if (month < 2) {
+      promptData = promptData2025[1];
     }
     if (month === 3) {
-      promptData = promptData2024[29];
+      promptData = promptData2025[29];
     }
   }
-  console.log(promptData2024);
+
+  console.log(promptData2025);
 
   return (
     <>
       <div className="container-25">
         <Header />
-        <PromptCard data={promptData2024[0]} />
+        <PCard className="p-card">
+          <PromptCard data={promptData} />
+        </PCard>
         <DescriptionWrap className="desc-wrap">
           <div className="question border">
             <h3>💡 What is this?</h3>
@@ -46,45 +50,7 @@ export default function LandingPage() {
             </p>
           </div>
 
-          <div className="credits border">
-            <h3>❤️ Thank you</h3>
-            <p>
-              This not possibile without contribution of time to share the cool
-              prompts by all community members and specially
-            </p>
-            <div className="profile">
-              <a href="https://x.com/rogie">
-                <img src="profile/miggi.png" />
-              </a>
-              <a href="https://x.com/rogie">
-                <img src="profile/rogie.png" />
-              </a>
-              <a href="https://x.com/rogie">
-                <img src="profile/realvjy.png" />
-              </a>
-              <a href="https://x.com/rogie">
-                <img src="profile/efedorenko.png" />
-              </a>
-              <a href="https://x.com/rogie">
-                <img src="profile/realvjy.png" />
-              </a>
-              <a href="https://x.com/rogie">
-                <img src="profile/realvjy.png" />
-              </a>
-              <a href="https://x.com/rogie">
-                <img src="profile/realvjy.png" />
-              </a>
-              <div className="com">And all community</div>
-              {/* <a href="https://x.com/miggi">@miggi</a>
-              <a href="https://x.com/pablostanley">@pablostanley</a>,
-              <a href="https://x.com/realvjy">@realvjy</a>,
-              <a href="https://x.com/efedorenko">@efedorenko</a>,
-              <a href="https://x.com/vyshnav_xyz">@vyshnav_xyz</a>,
-              <a href="https://x.com/o_lonks">@o_lonks</a>,
-              <a href="https://x.com/mrstev3n">@mrstev3n</a>, & community
-              members for all prompt credits */}
-            </div>
-          </div>
+          <Community />
           <div className="submissions border">
             <h3>🔗 All submissions</h3>
             <p>
@@ -100,12 +66,11 @@ export default function LandingPage() {
   );
 }
 
-const TagText = styled.h4`
-  font-size: 32px;
+const PCard = styled.div`
   font-style: normal;
   font-weight: 400;
-  margin-top: 35px;
   letter-spacing: -0.5px;
+  padding: 16px;
 `;
 const SubmitButton = styled(Link)`
   font-size: 20px;

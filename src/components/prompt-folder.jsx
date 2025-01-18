@@ -1,17 +1,29 @@
 "use client";
 import styled from "styled-components";
 import { Tag25 } from "./2025Styled";
-import { parseDate } from "@/lib/utils";
+import { parseDate, getTagClass, getCurrentDate } from "@/lib/utils";
 
 export default function PromptCard({ data }) {
   const date = parseDate(data.date);
-  // const formatedDate = date.day + " " + date.month + ", " + date.year;
   const formatedDate = date.day + " " + date.month;
-  console.log(date);
+  const { day: currentDay, month: currentMonth } = getCurrentDate();
 
+  // Determine card states
+  const isFirst = data.day === 1 && currentMonth < 2;
+  const isToday = data.day === currentDay && currentMonth === 2;
+  const isLast = data.day === 28 && currentMonth > 2;
+
+  // Determine status text and gradient
+  let statusText = "";
+  if (isFirst) statusText = "first";
+  if (isToday) statusText = "today";
+  if (isLast) statusText = "last";
+
+  // Any special card should have gradient
+  const hasGradient = isFirst || isToday || isLast;
   return (
     <Wrapper>
-      <CardBase>
+      <CardBase hasGradient={hasGradient}>
         <div className="bg">
           <img src="/2025/card-shadow.png" className="shadow" />
           <img src="/2025/card-base.png" className="base" />
@@ -23,28 +35,29 @@ export default function PromptCard({ data }) {
           <div className="p-date">
             <h3>
               {formatedDate}
-              <div className="today">
-                <div className="blob" />
-                Today
-              </div>
+              {statusText && (
+                <div className="today">
+                  <div className="blob" />
+                  {statusText}
+                </div>
+              )}
             </h3>
           </div>
           <div className="new-prompt">
             <div className="p-content">
-              <h4>Prompt Title</h4>
-              <p>
-                Create an illustration system to rapidly generate a variety of
-                ice cream illustration for any project.
-              </p>
+              <h4>{data.name}</h4>
+              <p>{data.description}</p>
             </div>
             <div className="p-meta">
               <h5>
-                Credit:<a href="#">realvjy</a>
+                Credit:<a href={data.creditLink}>{data.credit}</a>
               </h5>
               <div className="tag-wrap">
-                <Tag25 className="red"> Box</Tag25>
-                <Tag25 className="blue"> Box New</Tag25>
-                <Tag25 className="green"> Green</Tag25>
+                {data.tag.map((tag) => (
+                  <Tag25 className={getTagClass(tag)} key={tag}>
+                    {tag}
+                  </Tag25>
+                ))}
               </div>
             </div>
           </div>
@@ -58,7 +71,7 @@ const Wrapper = styled.div`
   text-align: center;
   position: relative;
   width: 414px;
-  height: 310px;
+  aspect-ratio: 414/300; // Add aspect ratio instead of fixed height
   cursor: pointer;
   transition: all 0.3s ease;
 
@@ -76,7 +89,7 @@ const Wrapper = styled.div`
   }
   @media screen and (max-width: 600px) {
     width: 100%;
-    height: auto;
+    aspect-ratio: 414/300; // Maintain aspect ratio on mobile
   }
 `;
 const ContentWrap = styled.div`
@@ -90,22 +103,22 @@ const Content = styled.div`
   padding: 32px;
   height: 100%;
   flex-direction: column;
-  gap: 32px;
+  gap: 20px;
   text-align: left;
   @media screen and (max-width: 600px) {
-    padding: 16px;
+    padding: 24px;
     gap: 12px;
   }
   h1 {
   }
   h3 {
-    font-size: 26px;
+    font-size: 24px;
     font-family: var(--bricolage-font);
-    letter-spacing: -0.6px;
-    font-weight: 700;
+    letter-spacing: -0.7px;
+    font-weight: 900;
     margin-top: 8px;
     @media screen and (max-width: 600px) {
-      font-size: 18px;
+      font-size: 22px;
     }
   }
   .new-prompt {
@@ -130,7 +143,7 @@ const Content = styled.div`
           }
         }
         @media screen and (max-width: 600px) {
-          font-size: 12px;
+          font-size: 13px;
         }
       }
     }
@@ -144,7 +157,7 @@ const Content = styled.div`
       font-weight: 600;
       letter-spacing: -0.3px;
       @media screen and (max-width: 600px) {
-        font-size: 14px;
+        font-size: 16px;
       }
     }
     @media screen and (max-width: 600px) {
@@ -154,7 +167,7 @@ const Content = styled.div`
       opacity: 0.6;
       font-size: 16px;
       @media screen and (max-width: 600px) {
-        font-size: 12px;
+        font-size: 14px;
       }
     }
   }
@@ -167,6 +180,7 @@ const Content = styled.div`
       .today {
         font-size: 12px;
         font-family: var(--inter-font);
+        background-color: var(--white);
         display: flex;
         border-radius: 14px;
         font-weight: 500;
@@ -216,21 +230,22 @@ const CardBase = styled.div`
       position: absolute;
       top: 0;
       left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       transition: all 0.3s ease;
     }
     .hover {
-      opacity: 0;
+      opacity: ${(props) => (props.hasGradient ? 1 : 0)};
     }
     .shadow {
       opacity: 0;
     }
   }
-  @media screen and (max-width: 600px) {
-    width: 100%;
-    .bg {
-      img {
-        width: 100%;
-      }
+
+  &:hover {
+    .hover {
+      opacity: 1;
     }
   }
 `;
