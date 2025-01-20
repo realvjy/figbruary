@@ -190,7 +190,6 @@ const Wrapper = styled.div`
     margin-bottom: 12px;
   }
   @media screen and (max-width: 725px) {
-    max-width: 90%;
     font-size: 18px;
     .submit-steps {
       margin-top: 4px;

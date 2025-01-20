@@ -22,23 +22,25 @@ export default function Soon() {
   console.log(promptData);
 
   return (
-    <DescriptionWrap>
-      <div className="container">
-        <Wrapper>
-          <img className="logo" src="/2025/figbruary.svg" />
-          <Description className="desc">
-            Challenges using Figma for the next 28 days
-          </Description>
-          <h1 className="hash-tag">#Figbruary2025</h1>
-        </Wrapper>
-      </div>
-      <a className="bt" href="#">
-        Prompt Soon
-      </a>
-      <div className="arc">
-        <a href="/2024/home">2024</a> /<a href="/2023/home">2023</a>
-      </div>
-    </DescriptionWrap>
+    <div className="container-25">
+      <DescriptionWrap>
+        <div>
+          <Wrapper>
+            <img className="logo" src="/2025/figbruary.svg" />
+            <Description className="desc">
+              Challenges using Figma for the next 28 days
+            </Description>
+            <h1 className="hash-tag">#Figbruary2025</h1>
+          </Wrapper>
+        </div>
+        <a className="bt" href="#">
+          Prompt Soon
+        </a>
+        <div className="arc">
+          <a href="/2024/home">2024</a> /<a href="/2023/home">2023</a>
+        </div>
+      </DescriptionWrap>
+    </div>
   );
 }
 
@@ -151,10 +153,11 @@ const DescriptionWrap = styled.div`
   font-size: 21px;
   font-weight: 400;
   letter-spacing: -0.2px;
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
+  justify-content: center;
   .bt {
     padding: 12px 20px;
     display: flex;

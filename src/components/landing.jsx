@@ -70,7 +70,7 @@ const PCard = styled.div`
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.5px;
-  padding: 16px;
+  padding: 0 16px;
 `;
 const SubmitButton = styled(Link)`
   font-size: 20px;

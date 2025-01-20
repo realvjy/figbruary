@@ -33,7 +33,7 @@ export const promptData2025 = [
     description: `A menu for your dashboard or app. Create something cool.`,
     credit: "miggi",
     creditLink: "https://x.com/miggi",
-    hidden: false,
+    hidden: true,
     finished: true,
     link: "#"
   },
@@ -45,7 +45,7 @@ export const promptData2025 = [
     description: `You have only frames to create something creative.`,
     credit: "rogie",
     creditLink: "https://x.com/rogie",
-    hidden: false,
+    hidden: true,
     finished: true,
     link: "#"
   },
@@ -57,7 +57,7 @@ export const promptData2025 = [
     description: `Create an interaction for an app or website that simulates typing.`,
     credit: "Olonk",
     creditLink: "https://twitter.com/o_lonks",
-    hidden: false,
+    hidden: true,
     finished: true,
     link: "#"
   },
@@ -69,7 +69,7 @@ export const promptData2025 = [
     description: `A watch UI animation showing grattitude.`,
     credit: "miggi",
     creditLink: "https://x.com/miggi",
-    hidden: false,
+    hidden: true,
     finished: true,
     link: "#"
   },
@@ -81,7 +81,7 @@ export const promptData2025 = [
     description: `Use a plugin to create something cool.`,
     credit: "realvjy",
     creditLink: "https://x.com/realvjy",
-    hidden: false,
+    hidden: true,
     finished: true,
     link: "#"
   },
@@ -93,7 +93,7 @@ export const promptData2025 = [
     description: `Create a visually engaging interaction to creatively represent speech or talking.`,
     credit: "Olonk",
     creditLink: "https://twitter.com/o_lonks",
-    hidden: false,
+    hidden: true,
     finished: true,
     link: "#"
   },
@@ -105,7 +105,7 @@ export const promptData2025 = [
     description: `Create a widget for app or website.`,
     credit: "realvjy",
     creditLink: "https://x.com/realvjy",
-    hidden: false,
+    hidden: true,
     finished: true,
     link: "#"
   },
@@ -117,7 +117,7 @@ export const promptData2025 = [
     description: `A responsive ui card for plant care instructions.`,
     credit: "miggi",
     creditLink: "https://x.com/miggi",
-    hidden: false,
+    hidden: true,
     finished: true,
     link: "#"
   },
@@ -129,7 +129,7 @@ export const promptData2025 = [
     description: `Make an animated line chart.`,
     credit: "Eugene",
     creditLink: "https://x.com/efedorenko",
-    hidden: false,
+    hidden: true,
     finished: true,
     link: "#"
   },
@@ -141,7 +141,7 @@ export const promptData2025 = [
     description: `Create the book cover of a science fiction novel titled 'Beyond the Autolayout Cosmos' using a constructivist art style with simple geometric shapes and a minimal color palette`,
     credit: "pablostanley",
     creditLink: "https://twitter.com/pablostanley",
-    hidden: false,
+    hidden: true,
     finished: true,
     link: "#"
   },
@@ -153,7 +153,7 @@ export const promptData2025 = [
     description: `A minimalistic countdown timer. Simple and elegant, where user can easily set and interact with the timer. With subtle animations for a delightful user experience.`,
     credit: "mrstev3n",
     creditLink: "https://twitter.com/mrstev3n",
-    hidden: false,
+    hidden: true,
     finished: true,
     link: "#"
   },
@@ -165,7 +165,7 @@ export const promptData2025 = [
     description: `Illustrate your desk setup and prototype the items.`,
     credit: "vyshnav_xyz",
     creditLink: "https://twitter.com/vyshnav_xyz",
-    hidden: false,
+    hidden: true,
     finished: true,
     link: "#"
   },
@@ -177,7 +177,7 @@ export const promptData2025 = [
     description: `Loading indicator inspired by Piet Mondrian.`,
     credit: "rogie",
     creditLink: "https://twitter.com/rogie",
-    hidden: false,
+    hidden: true,
     finished: true,
     link: "#"
   },
@@ -189,7 +189,7 @@ export const promptData2025 = [
     description: `Create a color picker but wrong.`,
     credit: "miggi",
     creditLink: "https://twitter.com/miggi",
-    hidden: false,
+    hidden: true,
     finished: true,
     link: "#"
   },

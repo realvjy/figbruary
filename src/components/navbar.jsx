@@ -59,10 +59,12 @@ export default function Nav() {
 
 const Section = styled.section`
   padding: 32px;
+  position: relative;
   .nav {
     max-width: 480px;
     margin: 0 auto;
   }
+  z-index: 999;
 `;
 const Wrapper = styled.div`
   display: flex;
