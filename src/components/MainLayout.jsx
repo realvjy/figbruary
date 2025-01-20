@@ -1,6 +1,8 @@
 "use client";
 import styled from "styled-components";
-import SvgWrapper from "./svg-wrapper";
+import SvgWrapper from "@/components/svgs/svg-wrapper";
+import Nav from "./navbar";
+import Footer from "./footer";
 
 export default function Layout({ children }) {
   const shapes = [
@@ -16,18 +18,7 @@ export default function Layout({ children }) {
   ];
   return (
     <Section>
-      <div className="container">
-        <Wrapper>
-          <img className="logo" src="/2025/figbruary.svg" />
-          <Description className="desc">
-            Challenges using Figma for the next 28 days
-          </Description>
-          <h1 className="hash-tag">#Figbruary2025</h1>
-          {children}
-        </Wrapper>
-      </div>
-
-      {/* <SvgWrapper svgs={shapes} page={"landing"} /> */}
+      <SvgWrapper svgs={shapes} page={"landing"} />
     </Section>
   );
 }

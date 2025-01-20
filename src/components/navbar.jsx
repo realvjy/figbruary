@@ -2,24 +2,22 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styled from "styled-components";
+import { useState } from "react";
 
-export default function Header() {
+export default function Nav() {
   const pathName = usePathname();
   const activePage = (page) => pathName == page;
-
+  const [showArchive, setShowArchive] = useState(false);
   return (
     <Section>
-      <div className="container">
+      <div className="nav">
         <Wrapper>
           <LogNHash>
-            <LogoWrapper className="logo-wrapper" href={"/"} scroll={false}>
-              <img src="/logo.svg" className="logo" />
-            </LogoWrapper>
             <FigButton
               href={"/"}
               className={`fig-btn ${activePage("/figbruary") ? "active" : ""}`}
             >
-              #figbruary
+              <img src="/2025/figbruary.svg" />
             </FigButton>
           </LogNHash>
           <NavLinkWrapper className="link-wrapper">
@@ -35,8 +33,23 @@ export default function Header() {
             <NavLink href="/faq" className={activePage("/faq") ? "active" : ""}>
               FAQs
             </NavLink>
-
-            <V1NavigateLink href="/2023/home">2023</V1NavigateLink>
+            <DropdownWrapper
+              onMouseEnter={() => setShowArchive(true)}
+              onMouseLeave={() => setShowArchive(false)}
+            >
+              <NavLink
+                href="#"
+                className={activePage("/archive") ? "active" : ""}
+              >
+                Archive
+              </NavLink>
+              {showArchive && (
+                <DropdownContent>
+                  <DropdownLink href="/2024/home">2024</DropdownLink>
+                  <DropdownLink href="/2023/home">2023</DropdownLink>
+                </DropdownContent>
+              )}
+            </DropdownWrapper>
           </NavLinkWrapper>
         </Wrapper>
       </div>
@@ -45,11 +58,24 @@ export default function Header() {
 }
 
 const Section = styled.section`
-  padding: 32px 0;
+  padding: 32px;
+  position: relative;
+  .nav {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  z-index: 999;
 `;
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  background-color: var(--white);
+  border-radius: 28px;
+  padding: 16px 24px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  /* box-shadow: var(--nav-shadow); */
+  background-blend-mode: luminosity;
   &:hover {
     .button-wrapper {
       width: 0;
@@ -63,6 +89,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     .link-wrapper {
       margin-top: 20px;
       justify-content: space-between;
@@ -84,11 +111,10 @@ const NavLinkWrapper = styled.div`
   transition: transform 500ms ease;
   display: flex;
   justify-content: right;
-  width: 100%;
-  align-items: center;
-  gap: 45px;
-  transition: all 1s ease;
 
+  align-items: center;
+  gap: 16px;
+  transition: all 1s ease;
   .button-wrapper {
     position: relative;
     max-width: 150px;
@@ -98,18 +124,18 @@ const NavLinkWrapper = styled.div`
   }
 `;
 const NavStyle = `
-  font-size: 21px;
+  font-size: 16px;
   color: var(--header-link-color);
   font-weight: 600;
   display: inline-flex;
 
   transition: transform 500ms cubic-bezier(0.59, 0.03, 0, 1.69);
   &.active {
-    font-weight: 700;
+    font-weight: 500;
     -webkit-text-stroke: 0.6px var(--font-dark);
   }
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.07);
   }
 `;
 const NavLink = styled(Link)`
@@ -123,16 +149,14 @@ const FigButton = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 150px;
-  height: 40px;
-  border: 2px solid black;
   color: var(--header-button-text-color);
-  background: var(--header-button-color);
   border-radius: 100px;
   text-align: center;
   white-space: nowrap;
-  padding: 20px !important;
-  transform: translateX(-24px);
+  img {
+    height: 22px;
+    max-width: fit-content;
+  }
 `;
 
 const LogoWrapper = styled(Link)`
@@ -148,4 +172,43 @@ const LogoWrapper = styled(Link)`
 const LogNHash = styled.div`
   display: flex;
   align-items: center;
+`;
+
+const DropdownWrapper = styled.div`
+  position: relative;
+  display: inline-block;
+`;
+
+const DropdownContent = styled.div`
+  position: absolute;
+  top: 30px;
+  left: -20px;
+  background-color: var(--white);
+  min-width: 120px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  border-radius: 16px;
+  padding: 2px;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -15px; // Creates an invisible bridge to the main link
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: transparent;
+  }
+`;
+const DropdownLink = styled(Link)`
+  ${NavStyle}
+  padding: 8px 16px;
+  display: block;
+  white-space: nowrap;
+  border-radius: 12px;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    transform: none;
+  }
 `;

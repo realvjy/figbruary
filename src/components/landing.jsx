@@ -2,45 +2,75 @@
 import styled from "styled-components";
 import Layout from "./MainLayout";
 import Link from "next/link";
-import { promptData2024 } from "@/lib/data/PromptsData2024";
+import { promptData2025 } from "@/lib/data/PromptsData2025";
 
 import { getCurrentDatePrompt, getTagClass, getCurrentDate } from "@/lib/utils";
 import { Tag, Tags, PromptInfoCard } from "@/styles/globals/common";
 import { useEffect, useState } from "react";
+import Header from "./header";
+import PromptCard from "./prompt-folder";
+import Community from "./community";
 
 export default function LandingPage() {
-  let promptData = getCurrentDatePrompt(promptData2024);
+  let promptData = getCurrentDatePrompt(promptData2025);
   const month = getCurrentDate().month;
   if (!promptData) {
-    if (month === 2) {
-      promptData = promptData2024[1];
+    if (month < 2) {
+      promptData = promptData2025[1];
     }
     if (month === 3) {
-      promptData = promptData2024[29];
+      promptData = promptData2025[29];
     }
   }
-  console.log(promptData);
+
+  console.log(promptData2025);
 
   return (
-    <Layout>
-      <DescriptionWrap>
-        <a className="bt" href="#">
-          Prompt Soon
-        </a>
-        <div className="arc">
-          <a href="/2024/home">2024</a> /<a href="/2023/home">2023</a>
-        </div>
-      </DescriptionWrap>
-    </Layout>
+    <>
+      <div className="container-25">
+        <Header />
+        <PCard className="p-card">
+          <PromptCard data={promptData} />
+        </PCard>
+        <DescriptionWrap className="desc-wrap">
+          <div className="question border">
+            <h3>💡 What is this?</h3>
+            <p className="description">
+              {`Figbruary is a fictional month created by combining Figma + February where you can experiment and design things daily to push the limits.
+                  
+                  For every 24 hour day within this 696 hour timespan of the month, we have prepared a prompt with instructions for you to design and create.
+                  `}
+            </p>
+            <p className="notes">
+              PS. - You don’t have to follow the prompt exactly. Or even at all.
+            </p>
+            <p className="submit-steps">
+              Share your work and tag it with <span>#figbruary</span> or{" "}
+              <span>#figbruary2025</span>
+            </p>
+          </div>
+
+          <Community />
+          <div className="submissions border">
+            <h3>🔗 All submissions</h3>
+            <p>
+              Community members share not just on Twitter, but also on all
+              social media platforms including LinkedIn, threads, Twitter,
+              Instagram, and more. So, you can find it using the hashtag{" "}
+              <strong>#figbruary</strong>.
+            </p>
+          </div>
+        </DescriptionWrap>
+      </div>
+    </>
   );
 }
 
-const TagText = styled.h4`
-  font-size: 32px;
+const PCard = styled.div`
   font-style: normal;
   font-weight: 400;
-  margin-top: 35px;
   letter-spacing: -0.5px;
+  padding: 0 16px;
 `;
 const SubmitButton = styled(Link)`
   font-size: 20px;
@@ -59,14 +89,18 @@ const SubmitButton = styled(Link)`
 `;
 
 const DescriptionWrap = styled.div`
-  max-width: 500px;
-  font-size: 21px;
+  max-width: 400px;
   font-weight: 400;
   letter-spacing: -0.2px;
-  margin-top: 20px;
+  margin: 60px auto;
   display: flex;
   flex-direction: column;
-
+  .border {
+    padding: 32px 24px;
+    border: 1px solid rgba(150, 150, 150, 0.15);
+    border-radius: 32px;
+    margin: 20px 0;
+  }
   .bt {
     padding: 12px 20px;
     background: linear-gradient(180deg, #2566ff 0%, #0746d9 100%), #d9d9d9;
@@ -92,45 +126,66 @@ const DescriptionWrap = styled.div`
     flex-direction: column;
     white-space: pre-line;
     line-height: 140%;
+    font-size: 18px;
+    font-weight: 00;
   }
   .notes {
     margin: 20px 0;
-    font-size: 16px;
+    font-size: 15px;
     color: rgba(0, 0, 0, 0.77);
   }
   .submit-steps {
-    margin-top: 50px;
     span {
       font-weight: 700;
     }
   }
   .credits {
-    margin-top: 70px;
-
     a {
-      margin-left: 8px;
       letter-spacing: -0.5px;
       text-decoration: underline;
       display: inline-block;
       font-weight: 600;
       line-height: 150%;
-      &:first-child {
-        margin-left: 0px;
-      }
       &:hover {
         opacity: 1;
       }
     }
+
+    p {
+      margin-bottom: 18px;
+      font-size: 16px;
+    }
+    .profile {
+      display: flex;
+      gap: 8px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      img {
+        height: 58px;
+        border-radius: 123px;
+        border: 1px solid rgba(150, 150, 150, 0.15);
+      }
+
+      .com {
+        width: 100px;
+        font-size: 14px;
+        line-height: 120%;
+        margin-left: 4px;
+        opacity: 0.2;
+        font-weight: 600;
+      }
+    }
   }
   .submissions {
-    margin-top: 70px;
-    font-size: 20px;
+    font-size: 18px;
     strong {
       font-weight: 600;
     }
     p {
       margin-bottom: 12px;
       line-height: 140%;
+      font-size: 16px;
     }
     a {
       margin-left: 8px;
@@ -139,19 +194,20 @@ const DescriptionWrap = styled.div`
       display: inline-block;
       font-weight: 600;
       line-height: 150%;
+      font-size: 16px;
     }
   }
   h3 {
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 22px;
+    font-weight: 700;
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
   }
   @media screen and (max-width: 725px) {
     max-width: 90%;
     font-size: 18px;
     .submit-steps {
-      margin-top: 14px;
+      margin-top: 4px;
     }
     .credits,
     .submissions {
