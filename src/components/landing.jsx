@@ -38,7 +38,7 @@ export default function LandingPage() {
             <p className="description">
               {`Figbruary is a fictional month created by combining Figma + February where you can experiment and design things daily to push the limits.
                   
-                  For every 24 hour day within this 696 hour timespan of the month, we have prepared a prompt with instructions for you to design and create.
+                  For every 24 hour day within this 672 hour timespan of the month, we have prepared a prompt with instructions for you to design and create.
                   `}
             </p>
             <p className="notes">

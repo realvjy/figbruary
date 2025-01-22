@@ -32,10 +32,10 @@ export default function PageLayout({ children }) {
           inter.variable
         }
       >
-        {/* <Nav /> */}
+        <Nav />
         {children}
 
-        {/* <Footer /> */}
+        <Footer />
         {/* <SvgWrapper svgs={shapes} page={"landing"} /> */}
       </Main>
     </>
