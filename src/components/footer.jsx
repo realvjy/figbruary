@@ -28,16 +28,16 @@ const Wrapper = styled.div`
   text-align: center;
 `;
 const NoticeText = styled.p`
-  font-size: 14px;
+  font-size: 13px;
   color: var(--light-font-color);
 `;
 const CreditText = styled.p`
-  font-size: 15px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: 130%;
   margin-top: 10px;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.4px;
   span {
     a {
       &:hover {

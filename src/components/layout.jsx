@@ -32,6 +32,9 @@ export default function PageLayout({ children }) {
           inter.variable
         }
       >
+        <GradientBox>
+          <div className="top-grad"></div>
+        </GradientBox>
         <Nav />
         {children}
 
@@ -47,4 +50,37 @@ const Main = styled.div`
   min-height: 100vh;
   font-family: var(--inter-font);
   z-index: 1;
+`;
+
+const GradientBox = styled.div`
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  z-index: -1;
+  .top-grad {
+    width: calc(100% + 100px);
+    height: 200px;
+    background: conic-gradient(
+      from 1.5708rad at 50% 50%,
+      var(--background-gray) 0%,
+      var(--background-gray) 25%,
+      var(--background-gray) 50%,
+      #45ffce 50%,
+      #006fff 52%,
+      #8e68fe 55%,
+      #ae75fe 90%,
+      #ff2929 97%,
+      #ff9a11 98%,
+      #ffd711 100%
+    );
+    width: calc(100% + 100px);
+    height: 400px;
+    position: absolute;
+    left: -50px;
+    top: -180px;
+    filter: blur(40px);
+    overflow: hidden;
+  }
 `;
