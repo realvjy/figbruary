@@ -113,9 +113,8 @@ const Content = styled.div`
   }
   h3 {
     font-size: 24px;
-    font-family: var(--bricolage-font);
     letter-spacing: -0.7px;
-    font-weight: 900;
+    font-weight: 600;
     margin-top: 8px;
     @media screen and (max-width: 600px) {
       font-size: 22px;
@@ -134,6 +133,7 @@ const Content = styled.div`
       justify-content: space-between;
       h5 {
         font-size: 15px;
+
         a {
           font-weight: 500;
           padding: 2px 8px;
@@ -154,8 +154,9 @@ const Content = styled.div`
     gap: 16px;
     h4 {
       font-size: 20px;
-      font-weight: 600;
+      font-weight: 800;
       letter-spacing: -0.3px;
+      font-family: var(--bricolage-font);
       @media screen and (max-width: 600px) {
         font-size: 16px;
       }
