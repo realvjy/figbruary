@@ -244,6 +244,11 @@ const DescriptionWrap = styled.div`
     font-weight: 700;
     display: block;
     margin-bottom: 12px;
+    font-family: var(--bricolage-font);
+    letter-spacing: -1px;
+    @media screen and (max-width: 993px) {
+      font-size: 18px;
+    }
   }
   @media screen and (max-width: 725px) {
     max-width: 90%;

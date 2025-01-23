@@ -54,7 +54,7 @@ export default function LandingPage() {
           <div className="submissions border">
             <h3>🔗 All submissions</h3>
             <p>
-              Community members share not just on Twitter, but also on all
+              Community members share not just on X/Twitter, but also on all
               social media platforms including LinkedIn, threads, Twitter,
               Instagram, and more. So, you can find it using the hashtag{" "}
               <strong>#figbruary</strong>.
@@ -202,6 +202,11 @@ const DescriptionWrap = styled.div`
     font-weight: 700;
     display: block;
     margin-bottom: 12px;
+    font-family: var(--bricolage-font);
+    letter-spacing: -1px;
+    @media screen and (max-width: 993px) {
+      font-size: 18px;
+    }
   }
   @media screen and (max-width: 725px) {
     max-width: 90%;

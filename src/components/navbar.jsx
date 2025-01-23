@@ -22,13 +22,13 @@ export default function Nav() {
           </LogNHash>
           <NavLinkWrapper className="link-wrapper">
             <NavLink href="/" className={activePage("/") ? "active" : ""}>
-              home
+              Home
             </NavLink>
             <NavLink
               href="/prompts"
               className={activePage("/prompts") ? "active" : ""}
             >
-              prompts
+              Prompts
             </NavLink>
             <NavLink href="/faq" className={activePage("/faq") ? "active" : ""}>
               FAQs
@@ -72,7 +72,7 @@ const Wrapper = styled.div`
   background-color: var(--white);
   border-radius: 28px;
   padding: 16px 24px;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.03);
   width: 100%;
   /* box-shadow: var(--nav-shadow); */
   background-blend-mode: luminosity;
@@ -89,15 +89,17 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    /* overflow: hidden; */
     .link-wrapper {
       margin-top: 20px;
       justify-content: space-between;
       gap: 10px;
       width: 100%;
       @media screen and (max-width: 610px) {
+        margin-top: 10px;
+        padding: 0 4px;
         a {
-          font-size: 16px;
+          font-size: 14px;
         }
       }
       .fig-btn {
@@ -124,7 +126,7 @@ const NavLinkWrapper = styled.div`
   }
 `;
 const NavStyle = `
-  font-size: 16px;
+  font-size: 15px;
   color: var(--header-link-color);
   font-weight: 600;
   display: inline-flex;
@@ -135,7 +137,7 @@ const NavStyle = `
     -webkit-text-stroke: 0.6px var(--font-dark);
   }
   &:hover {
-    transform: scale(1.07);
+    transform: scale(1.02);
   }
 `;
 const NavLink = styled(Link)`

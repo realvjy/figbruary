@@ -55,9 +55,9 @@ export default function Prompts() {
             return;
           }
           return (
-            <>
+            <div key={i}>
               <PromptCard data={promptData} />
-            </>
+            </div>
           );
         })}
         <div className="more">More Prompts Coming...</div>
@@ -79,13 +79,14 @@ const Section = styled.div`
     h2 {
       font-size: 50px;
       font-family: var(--bricolage-font);
-      font-weight: 800;
+      font-weight: 900;
+      line-height: 54px;
+      letter-spacing: -1.5px;
     }
 
     h4 {
       font-size: 24px;
       font-weight: 500;
-      margin-top: 8px;
     }
     @media screen and (max-width: 600px) {
       width: 100%;

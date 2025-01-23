@@ -33,9 +33,12 @@ export default function Header() {
 }
 
 const Section = styled.section`
-  margin: 80px 0;
+  margin: 60px 0;
   margin-top: 40px;
   /* min-height: 400px; // Add this */
+  width: 400px;
+  @media screen and (max-width: 600px) {
+  }
 `;
 
 const Logo = styled.div`
@@ -45,6 +48,8 @@ const Logo = styled.div`
       drop-shadow(1px 25px 15px rgba(22, 39, 126, 0.14))
       drop-shadow(1px 11px 11px rgba(22, 39, 126, 0.23))
       drop-shadow(0px 3px 6px rgba(22, 39, 126, 0.27));
+    @media screen and (max-width: 993px) {
+    }
   }
 `;
 const Wrapper = styled.div`
@@ -56,9 +61,23 @@ const HeadContent = styled.div`
   margin-top: 20px;
   h1 {
     font-size: 24px;
+    margin: auto;
     margin-top: 20px;
     line-height: 120%;
     width: 400px;
+    @media screen and (max-width: 600px) {
+      font-size: 20px;
+      max-width: 300px;
+
+      margin-top: 10px;
+    }
+  }
+
+  img {
+    width: 340px;
+    @media screen and (max-width: 600px) {
+      width: 300px;
+    }
   }
 `;
 const CreditText = styled.p`
