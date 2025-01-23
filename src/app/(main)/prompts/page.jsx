@@ -55,9 +55,9 @@ export default function Prompts() {
             return;
           }
           return (
-            <>
+            <div key={i}>
               <PromptCard data={promptData} />
-            </>
+            </div>
           );
         })}
         <div className="more">More Prompts Coming...</div>
