@@ -39,6 +39,9 @@ export default function Community() {
           <a href="https://x.com/gleb_sexy">
             <img src="profile/gleb_sexy.png" />
           </a>
+          <a href="https://x.com/lottiefiles">
+            <img src="profile/lottiefiles.png" />
+          </a>
           <div className="com">And all community</div>
           {/* <a href="https://x.com/miggi">@miggi</a>
               <a href="https://x.com/pablostanley">@pablostanley</a>,
@@ -197,7 +200,6 @@ const Wrapper = styled.div`
     .credits,
     .submissions {
       text-align: left;
-      margin-top: 34px;
       h3 {
         font-size: 16px;
       }

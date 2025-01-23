@@ -61,7 +61,7 @@ const Section = styled.section`
   padding: 32px;
   position: relative;
   .nav {
-    max-width: 480px;
+    max-width: 440px;
     margin: 0 auto;
   }
   z-index: 999;
@@ -69,10 +69,11 @@ const Section = styled.section`
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  background-color: var(--white);
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
   border-radius: 28px;
   padding: 16px 24px;
-  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.03);
+  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.03);
   width: 100%;
   /* box-shadow: var(--nav-shadow); */
   background-blend-mode: luminosity;
@@ -137,7 +138,7 @@ const NavStyle = `
     -webkit-text-stroke: 0.6px var(--font-dark);
   }
   &:hover {
-    transform: scale(1.02);
+    opacity: 0.8;
   }
 `;
 const NavLink = styled(Link)`
