@@ -32,9 +32,7 @@ export default function PageLayout({ children }) {
           inter.variable
         }
       >
-        <GradientBox>
-          <div className="top-grad"></div>
-        </GradientBox>
+        <GradientBox></GradientBox>
         <Nav />
         {children}
 
@@ -62,6 +60,23 @@ const Main = styled.div`
   min-height: 100vh;
   font-family: var(--inter-font);
   z-index: 1;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -100;
+    background-image: url("/gradient-bg.svg");
+    background-repeat: no-repeat;
+    background-position: top, bottom;
+    background-size: 1200px auto;
+    top: -500px;
+    filter: blur(12px);
+    @media screen and (max-width: 700px) {
+      background-size: 900px auto;
+      margin-top: -70px;
+      filter: blur(8px);
+    }
+  }
   #texture {
     position: fixed;
     top: 0px;
@@ -69,7 +84,7 @@ const Main = styled.div`
     z-index: -99;
     width: 100%;
     height: calc(100vh + 200px);
-    opacity: 0.25;
+    opacity: 0.2;
     pointer-events: none;
     transform: translateY(0px);
     filter: contrast(120%) brightness(120%);
@@ -79,15 +94,28 @@ const Main = styled.div`
 const GradientBox = styled.div`
   position: absolute;
   content: "";
-  width: 700px;
+  width: 100%;
   height: 300px;
-  overflow: hidden;
   z-index: -1;
   margin-left: 50%;
   transform: translateX(-50%);
-  filter: blur(60px);
   @media screen and (max-width: 600px) {
     width: 100%;
+  }
+  .svg-grad {
+    height: 200px;
+    width: 100%;
+    z-index: -100;
+    background-image: url("/gradient-bg.svg");
+    background-repeat: no-repeat;
+    background-position: top, bottom;
+    background-size: 1400px auto;
+    filter: blur(12px);
+    @media screen and (max-width: 720px) {
+      background-size: 900px auto;
+      margin-top: -70px;
+      filter: blur(8px);
+    }
   }
   .top-grad {
     width: calc(100% + 100px);
