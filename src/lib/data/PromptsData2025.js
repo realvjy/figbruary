@@ -89,7 +89,7 @@ export const promptData2025 = [
     day: 7,
     date: "7 Feb, 2025",
     name: `Dynamic Gradient Animation`,
-    tag: ['UI', 'Prototype'],
+    tag: ['Animation', 'UI', 'Prototype'],
     description: `Create an animation where gradients transition dynamically like - simulating sunrise to sunset.`,
     credit: "realvjy",
     creditLink: "https://x.com/realvjy",
@@ -165,7 +165,7 @@ export const promptData2025 = [
     description: `Design enamel pins for your favourite brand.`,
     credit: "vyshnav_xyz",
     creditLink: "https://twitter.com/vyshnav_xyz",
-    hidden: false,
+    hidden: true,
     finished: true,
     link: "#"
   },
@@ -177,7 +177,7 @@ export const promptData2025 = [
     description: `Loading indicator inspired by Piet MondrianDesign the main screen for an AI image generation app.  Because designing creative tools is fun.`,
     credit: "gleb_sexy",
     creditLink: "https://x.com/gleb_sexy",
-    hidden: false,
+    hidden: true,
     finished: true,
     link: "#"
   },

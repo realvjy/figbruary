@@ -19,15 +19,35 @@ export default function PromptCard({ data }) {
   if (isToday) statusText = "today";
   if (isLast) statusText = "last";
 
+  const getGradientImage = (tag) => {
+    const lowercaseTag = tag.toLowerCase();
+    switch (lowercaseTag) {
+      case "illustration":
+        return "card-gradient-o.png";
+      case "ui":
+        return "card-gradient-s.png";
+      case "animation":
+        return "card-gradient-p.png";
+      case "prototype":
+        return "card-gradient-g.png";
+      default:
+        return "card-gradient-r.png";
+    }
+  };
+
+  const gradientImage = getGradientImage(data.tag[0]); // Using first tag if multiple exist
+
   // Any special card should have gradient
   const hasGradient = isFirst || isToday || isLast;
   return (
     <Wrapper>
       <CardBase hasGradient={hasGradient}>
         <div className="bg">
+          <img src="/2025/card-gradient-d.png" className="back" />
           <img src="/2025/card-shadow.png" className="shadow" />
-          <img src="/2025/card-base.png" className="base" />
-          <img src="/2025/card-gradient.png" className="hover" />
+          <img src={`/2025/${gradientImage}`} className="base" />
+
+          <img src={`/2025/${gradientImage}`} className="hover" />
         </div>
       </CardBase>
       <ContentWrap>
@@ -82,6 +102,10 @@ const Wrapper = styled.div`
         opacity: 1;
       }
       .shadow {
+        opacity: 0.6;
+        transform: translate(-12px, 12px);
+      }
+      .back {
         opacity: 0.6;
         transform: translate(-12px, 12px);
       }
@@ -153,7 +177,7 @@ const Content = styled.div`
     flex-direction: column;
     gap: 16px;
     h4 {
-      font-size: 20px;
+      font-size: 22px;
       font-weight: 800;
       letter-spacing: -0.3px;
       font-family: var(--bricolage-font);
@@ -166,7 +190,9 @@ const Content = styled.div`
     }
     p {
       opacity: 0.6;
-      font-size: 16px;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: -0.3px;
       @media screen and (max-width: 600px) {
         font-size: 14px;
       }
@@ -222,7 +248,7 @@ const CardBase = styled.div`
   z-index: -1;
   height: 100%;
   width: 100%;
-  filter: drop-shadow(2px 44px 18px rgba(22, 39, 126, 0.04));
+  filter: drop-shadow(0px 3px 6px rgba(22, 39, 126, 0.07));
   .bg {
     position: relative;
     height: 100%;
@@ -238,6 +264,9 @@ const CardBase = styled.div`
     }
     .hover {
       opacity: ${(props) => (props.hasGradient ? 1 : 0)};
+    }
+    .back {
+      transform: translate(4px, -4px);
     }
     .shadow {
       opacity: 0;

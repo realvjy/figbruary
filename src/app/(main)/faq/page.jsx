@@ -128,6 +128,7 @@ const DescriptionWrap = styled.div`
     flex-direction: column;
     gap: 32px;
     margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
   }
 
   .question {

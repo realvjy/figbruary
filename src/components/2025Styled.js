@@ -397,20 +397,20 @@ export const Tag25 = styled.div`
     color: rgba(211,0,0, .7);
   }
   &.pink{
-    background:  linear-gradient(90deg, #FFD5E3 0%, #FFF0F8 100%);
+    background:  linear-gradient(90deg, #FFD5E3 0%, #FFFEEF 100%);
     color: rgba(216, 44, 106, 0.8);
   }
   &.purple{
-    background: linear-gradient(180deg, #F5F1FF 0%, #EBE9FF 100%);
+    background: linear-gradient(270deg, #FFFEEF 0%, #EBE9FF 100%);
     color: rgba(92, 27, 174, 0.8);
   }
   
   &.teal{
-    background: linear-gradient(270deg, #CCFAFF 0%, #AFD4FF 99.55%);
+    background: linear-gradient(270deg, #FFFEEF 0%, #29FEF7 99.55%);
     color: rgba(0, 113, 194, 0.8);
   }
   &.orange{
-    background:linear-gradient(270deg, #FFEEE0 0%, #FFE4C2 100%);
+    background:linear-gradient(270deg, #FFFEEF 0%, #FFE4C2 100%);
     color: rgba(240, 60, 0, 0.9);
   }
   &.yellow{

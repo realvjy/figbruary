@@ -72,16 +72,20 @@ export const parseDate = (dateString) => {
   };
 };
 
-export const getTagClass = (t) => {
-  switch (t) {
+export const getTagClass = (tag) => {
+  const lowercaseTag = tag.toLowerCase();
+  switch (lowercaseTag) {
     case "illustration":
       return "orange";
       break;
     case "prototype":
+      return "green";
+      break;
+    case "animation":
       return "purple";
       break;
-    case "UI":
-      return "blue";
+    case "ui":
+      return "teal";
       break;
     default:
       return "pink";

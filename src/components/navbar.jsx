@@ -69,7 +69,7 @@ const Section = styled.section`
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(12px);
   border-radius: 28px;
   padding: 16px 24px;
