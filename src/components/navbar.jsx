@@ -69,13 +69,14 @@ const Section = styled.section`
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  background-color: rgba(255, 255, 255, 0.8);
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  background-color: var(--nav-bg);
   backdrop-filter: blur(12px);
-  border-radius: 28px;
-  padding: 16px 24px;
+  border-radius: 32px;
+  padding: 20px 30px;
   box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.03);
   width: 100%;
-  /* box-shadow: var(--nav-shadow); */
+  box-shadow: var(--nav-shadow);
   background-blend-mode: luminosity;
   &:hover {
     .button-wrapper {
@@ -116,7 +117,7 @@ const NavLinkWrapper = styled.div`
   justify-content: right;
 
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   transition: all 1s ease;
   .button-wrapper {
     position: relative;
@@ -131,22 +132,20 @@ const NavStyle = `
   color: var(--header-link-color);
   font-weight: 600;
   display: inline-flex;
-
+  opacity: 0.8;
   transition: transform 500ms cubic-bezier(0.59, 0.03, 0, 1.69);
   &.active {
-    font-weight: 500;
+    font-weight: 00;
     -webkit-text-stroke: 0.6px var(--font-dark);
   }
   &:hover {
-    opacity: 0.8;
+    opacity: 0.7;
   }
 `;
 const NavLink = styled(Link)`
   ${NavStyle}
 `;
-const V1NavigateLink = styled.a`
-  ${NavStyle}
-`;
+
 const FigButton = styled.a`
   font-size: 22px;
   display: flex;
@@ -162,19 +161,12 @@ const FigButton = styled.a`
   }
 `;
 
-const LogoWrapper = styled(Link)`
-  z-index: 1;
-  .logo {
-    width: 120px;
-    @media screen and (max-width: 910px) {
-      width: 60px;
-    }
-  }
-`;
-
 const LogNHash = styled.div`
   display: flex;
   align-items: center;
+  img {
+    height: 22px;
+  }
 `;
 
 const DropdownWrapper = styled.div`
@@ -186,11 +178,12 @@ const DropdownContent = styled.div`
   position: absolute;
   top: 30px;
   left: -20px;
-  background-color: var(--white);
+  background-color: rgba(255, 255, 255, 0.5);
   min-width: 120px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(0, 0, 0, 0.02);
   border-radius: 16px;
+  backdrop-filter: blur(12px);
   padding: 2px;
   z-index: 1;
 

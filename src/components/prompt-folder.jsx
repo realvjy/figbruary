@@ -177,18 +177,18 @@ const Content = styled.div`
   .p-content {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 18px;
     h4 {
       font-size: 22px;
       font-weight: 800;
       letter-spacing: -0.3px;
       font-family: var(--bricolage-font);
       @media screen and (max-width: 600px) {
-        font-size: 16px;
+        font-size: 20px;
       }
     }
     @media screen and (max-width: 600px) {
-      gap: 8px;
+      gap: 12px;
     }
     p {
       opacity: 0.6;
@@ -196,7 +196,7 @@ const Content = styled.div`
       line-height: 24px;
       letter-spacing: -0.3px;
       @media screen and (max-width: 600px) {
-        font-size: 14px;
+        font-size: 16px;
       }
     }
   }

@@ -40,6 +40,18 @@ export default function PageLayout({ children }) {
 
         <Footer />
         {/* <SvgWrapper svgs={shapes} page={"landing"} /> */}
+        <svg id="texture">
+          <filter id="noise">
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency=".8"
+              numOctaves="4"
+              stitchTiles="stitch"
+            ></feTurbulence>
+            <feColorMatrix type="saturate" values="0"></feColorMatrix>
+          </filter>
+          <rect width="100%" height="100%" filter="url(#noise)"></rect>
+        </svg>
       </Main>
     </>
   );
@@ -50,6 +62,18 @@ const Main = styled.div`
   min-height: 100vh;
   font-family: var(--inter-font);
   z-index: 1;
+  #texture {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: -99;
+    width: 100%;
+    height: calc(100vh + 200px);
+    opacity: 0.25;
+    pointer-events: none;
+    transform: translateY(0px);
+    filter: contrast(120%) brightness(120%);
+  }
 `;
 
 const GradientBox = styled.div`
@@ -61,7 +85,7 @@ const GradientBox = styled.div`
   z-index: -1;
   margin-left: 50%;
   transform: translateX(-50%);
-  filter: blur(70px);
+  filter: blur(60px);
   @media screen and (max-width: 600px) {
     width: 100%;
   }
