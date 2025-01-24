@@ -71,11 +71,6 @@ const Main = styled.div`
     background-size: 1200px auto;
     top: -500px;
     filter: blur(12px);
-    @media screen and (max-width: 700px) {
-      background-size: 900px auto;
-      margin-top: -70px;
-      filter: blur(8px);
-    }
   }
   #texture {
     position: fixed;
