@@ -129,6 +129,7 @@ const Wrapper = styled.div`
     border: 1px solid rgba(150, 150, 150, 0.15);
     border-radius: 32px;
     margin: 0;
+    background-color: rgba(255, 255, 255, 0.3);
     a {
       letter-spacing: -0.5px;
       text-decoration: underline;

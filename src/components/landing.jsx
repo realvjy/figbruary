@@ -95,11 +95,13 @@ const DescriptionWrap = styled.div`
   margin: 60px auto;
   display: flex;
   flex-direction: column;
+
   .border {
     padding: 32px 24px;
     border: 1px solid rgba(150, 150, 150, 0.15);
     border-radius: 32px;
     margin: 20px 0;
+    background-color: rgba(255, 255, 255, 0.3);
   }
   .bt {
     padding: 12px 20px;
