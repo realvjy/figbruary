@@ -127,7 +127,9 @@ const DescriptionWrap = styled.div`
     white-space: pre-line;
     line-height: 140%;
     font-size: 18px;
-    font-weight: 00;
+    @media screen and (max-width: 993px) {
+      font-size: 16px;
+    }
   }
   .notes {
     margin: 20px 0;
@@ -204,9 +206,6 @@ const DescriptionWrap = styled.div`
     margin-bottom: 12px;
     font-family: var(--bricolage-font);
     letter-spacing: -1px;
-    @media screen and (max-width: 993px) {
-      font-size: 18px;
-    }
   }
   @media screen and (max-width: 725px) {
     max-width: 90%;
@@ -218,7 +217,7 @@ const DescriptionWrap = styled.div`
     .submissions {
       text-align: left;
       h3 {
-        font-size: 16px;
+        font-size: 20px;
       }
     }
   }
