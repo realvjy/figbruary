@@ -44,6 +44,7 @@ export default function Prompts() {
         <h2>Prompts</h2>
         <h4>#figbruary2025</h4>
       </div>
+
       <div className="p-wrap">
         {todayPrompt && (
           <>
@@ -97,7 +98,7 @@ const Section = styled.div`
     margin: 0 auto;
     width: 880px;
     display: grid;
-    gap: 20px;
+    gap: 24px;
     padding: 20px;
     align-items: center;
     justify-content: center;

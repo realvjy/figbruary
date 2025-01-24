@@ -46,8 +46,10 @@ export default function PromptCard({ data }) {
           <img src="/2025/card-gradient-d.png" className="back" />
           <img src="/2025/card-shadow.png" className="shadow" />
           <img src={`/2025/${gradientImage}`} className="base" />
-
           <img src={`/2025/${gradientImage}`} className="hover" />
+          {hasGradient && (
+            <ShimmerOverlay maskSrc={"/2025/card-gradient.png"} />
+          )}
         </div>
       </CardBase>
       <ContentWrap>
@@ -276,6 +278,43 @@ const CardBase = styled.div`
   &:hover {
     .hover {
       opacity: 1;
+    }
+  }
+`;
+
+const ShimmerOverlay = styled.div`
+  position: absolute;
+  inset: 0;
+  mask-image: url(${(props) => props.maskSrc});
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(255, 255, 255, 0.8) 50%,
+      transparent 100%
+    );
+    mix-blend-mode: overlay;
+    transform: skewX(-25deg);
+    animation: shimmer 3.5s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      left: -75%;
+    }
+    100% {
+      left: 125%;
     }
   }
 `;

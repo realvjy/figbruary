@@ -23,8 +23,6 @@ export default function LandingPage() {
     }
   }
 
-  console.log(promptData2025);
-
   return (
     <>
       <div className="container-25">
