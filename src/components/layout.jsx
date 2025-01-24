@@ -55,10 +55,16 @@ const Main = styled.div`
 const GradientBox = styled.div`
   position: absolute;
   content: "";
-  width: 100%;
-  height: 500px;
+  width: 700px;
+  height: 300px;
   overflow: hidden;
   z-index: -1;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  filter: blur(70px);
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
   .top-grad {
     width: calc(100% + 100px);
     height: 200px;
@@ -79,7 +85,7 @@ const GradientBox = styled.div`
     height: 400px;
     position: absolute;
     left: -50px;
-    top: -180px;
+    top: -160px;
     filter: blur(40px);
     overflow: hidden;
   }

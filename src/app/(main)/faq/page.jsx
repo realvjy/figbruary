@@ -124,10 +124,10 @@ const DescriptionWrap = styled.div`
     padding: 32px 24px;
     border: 1px solid rgba(150, 150, 150, 0.15);
     border-radius: 32px;
-    margin: 20px 0;
     display: flex;
     flex-direction: column;
     gap: 32px;
+    margin-bottom: 20px;
   }
 
   .question {
@@ -259,7 +259,6 @@ const DescriptionWrap = styled.div`
     .credits,
     .submissions {
       text-align: left;
-      margin-top: 34px;
       h3 {
         font-size: 16px;
       }

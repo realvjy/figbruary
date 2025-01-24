@@ -217,7 +217,6 @@ const DescriptionWrap = styled.div`
     .credits,
     .submissions {
       text-align: left;
-      margin-top: 34px;
       h3 {
         font-size: 16px;
       }
