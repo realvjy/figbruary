@@ -71,7 +71,6 @@ const Wrapper = styled.div`
   justify-content: space-between;
   /* background-color: rgba(255, 255, 255, 0.8); */
   background-color: var(--nav-bg);
-  backdrop-filter: blur(12px);
   border-radius: 32px;
   padding: 20px 30px;
   box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.03);
