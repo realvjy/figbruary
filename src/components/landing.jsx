@@ -54,8 +54,9 @@ export default function LandingPage() {
             <p>
               Community members share not just on X/Twitter, but also on all
               social media platforms including LinkedIn, threads, Twitter,
-              Instagram, and more. So, you can find it using the hashtag{" "}
-              <strong>#figbruary</strong>.
+              Instagram, Peerlist and more. So, you can find it using the
+              hashtag <strong>#figbruary</strong> or{" "}
+              <strong>#figbruary2025</strong>.
             </p>
           </div>
         </DescriptionWrap>
