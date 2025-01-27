@@ -36,7 +36,7 @@ const Section = styled.section`
   margin: 60px 0;
   margin-top: 40px;
   /* min-height: 400px; // Add this */
-  width: 400px;
+  max-width: 400px;
   @media screen and (max-width: 600px) {
   }
 `;
@@ -64,7 +64,6 @@ const HeadContent = styled.div`
     margin: auto;
     margin-top: 20px;
     line-height: 120%;
-    width: 400px;
     @media screen and (max-width: 600px) {
       font-size: 20px;
       max-width: 300px;
@@ -74,9 +73,9 @@ const HeadContent = styled.div`
   }
 
   img {
-    width: 340px;
+    width: min(340px, 100%);
     @media screen and (max-width: 600px) {
-      width: 300px;
+      width: min(300px, 80%);
     }
   }
 `;
