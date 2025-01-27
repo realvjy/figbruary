@@ -58,7 +58,7 @@ export default function Nav() {
 }
 
 const Section = styled.section`
-  padding: 32px;
+  padding: 32px 16px;
   position: relative;
   .nav {
     max-width: 440px;
@@ -88,6 +88,7 @@ const Wrapper = styled.div`
     }
   }
   @media screen and (max-width: 800px) {
+  padding: 20px 20px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -114,6 +115,7 @@ const Wrapper = styled.div`
 const NavLinkWrapper = styled.div`
   transition: transform 500ms ease;
   display: flex;
+  flex-wrap: wrap;
   justify-content: right;
 
   align-items: center;
