@@ -36,13 +36,16 @@ export default function Community() {
           <a href="https://x.com/o_lonks">
             <img src="profile/o_lonks.png" />
           </a>
+          <a href="https://x.com/pablostanley">
+            <img src="profile/pablo.png" />
+          </a>
           <a href="https://x.com/gleb_sexy">
             <img src="profile/gleb_sexy.png" />
           </a>
           <a href="https://x.com/lottiefiles">
             <img src="profile/lottiefiles.png" />
           </a>
-          <div className="com">And all community</div>
+          <div className="com">all community</div>
           {/* <a href="https://x.com/miggi">@miggi</a>
               <a href="https://x.com/pablostanley">@pablostanley</a>,
               <a href="https://x.com/realvjy">@realvjy</a>,
@@ -158,8 +161,8 @@ const Wrapper = styled.div`
       }
 
       .com {
-        width: 100px;
-        font-size: 14px;
+        width: 40px;
+        font-size: 12px;
         line-height: 120%;
         margin-left: 4px;
         opacity: 0.2;
