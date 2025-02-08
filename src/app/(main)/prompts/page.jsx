@@ -61,7 +61,7 @@ export default function Prompts() {
             </div>
           );
         })}
-        <div className="more">More Prompts Coming...</div>
+        {/* <div className="more">See ...</div> */}
       </div>
     </Section>
   );
