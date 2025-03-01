@@ -59,7 +59,9 @@ export default function PromptCard({ data }) {
               {formatedDate}
               {statusText && (
                 <div className="today">
-                  <div className="blob" />
+                  <div
+                    className={`blob + ${statusText === "last" ? "red" : ""}`}
+                  />
                   {statusText}
                 </div>
               )}
@@ -238,6 +240,12 @@ const Content = styled.div`
           background: rgba(0, 221, 98, 1);
           box-shadow: 0 0 0 0 rgba(51, 217, 178, 1);
           animation: pulse-green 2s infinite;
+          &.red {
+            background: rgb(255, 30, 41);
+            box-shadow: 0 0 0 0 rgba(51, 217, 178, 1);
+            animation: none;
+            transform: scale(1) translateX(0);
+          }
         }
       }
     }
