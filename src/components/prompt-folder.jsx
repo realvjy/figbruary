@@ -4,6 +4,10 @@ import { Tag25 } from "./2025Styled";
 import { parseDate, getTagClass, getCurrentDate } from "@/lib/utils";
 
 export default function PromptCard({ data }) {
+  if (!data) {
+    return null; // or return a loading/error state
+  }
+
   const date = parseDate(data.date);
   const formatedDate = date.day + " " + date.month;
   const { day: currentDay, month: currentMonth } = getCurrentDate();

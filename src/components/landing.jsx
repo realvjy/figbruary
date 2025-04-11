@@ -13,12 +13,13 @@ import Community from "./community";
 
 export default function LandingPage() {
   let promptData = getCurrentDatePrompt(promptData2025);
+
   const month = getCurrentDate().month;
   if (!promptData) {
     if (month < 2) {
       promptData = promptData2025[1];
     }
-    if (month === 3) {
+    if (month > 2) {
       promptData = promptData2025[29];
     }
   }
